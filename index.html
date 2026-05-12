@@ -2,161 +2,206 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>정군 모닝 v10 — 2026.05.13 (수) PRE-MARKET</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{background:#080C14;color:#E8EEF7;font-family:-apple-system,"Apple SD Gothic Neo",Pretendard,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
-body{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory}
-.strip{position:fixed;top:0;left:0;right:0;background:rgba(8,12,20,.92);backdrop-filter:blur(10px);padding:8px 18px;font-size:11px;letter-spacing:.05em;color:#7B8CA8;z-index:100;border-bottom:1px solid rgba(255,255,255,.05);font-weight:600}
-.strip b{color:#FF6B35}
-.card{height:100vh;scroll-snap-align:start;padding:54px 22px 28px;display:flex;flex-direction:column;justify-content:flex-start;position:relative;overflow:hidden}
-.bar{position:absolute;top:0;left:0;right:0;height:4px;background:var(--c);box-shadow:0 0 24px var(--c);opacity:.95}
-.tag{font-size:13px;letter-spacing:.18em;color:var(--c);font-weight:700;text-transform:uppercase;margin-bottom:14px;opacity:.88}
-.emo{font-size:44px;line-height:1;margin-bottom:14px}
-h1{font-size:28px;font-weight:800;letter-spacing:-.02em;color:#fff;margin-bottom:18px;line-height:1.18}
-h1 span{color:var(--c)}
-p{font-size:17px;color:#C7D2E4;margin-bottom:12px}
-p b{color:#fff;font-weight:700}
-.kv{font-size:16px;color:#A8B5CC;margin:6px 0;padding-left:14px;position:relative}
-.kv:before{content:"▸";position:absolute;left:0;color:var(--c);font-weight:700}
-.kv b{color:#fff}
-.kv .up{color:#34D399;font-weight:700}
-.kv .dn{color:#FF6B35;font-weight:700}
-.kv .neu{color:#FFD700;font-weight:700}
-.hint{margin-top:auto;margin-bottom:6px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 18%,transparent),color-mix(in srgb,var(--c) 6%,transparent));border:1px solid color-mix(in srgb,var(--c) 35%,transparent);border-radius:14px;padding:14px 16px;font-size:15px;color:#D8E1F2;line-height:1.55}
-.hint b{color:var(--c);font-weight:800}
-.topic{background:rgba(255,255,255,.03);border-left:3px solid var(--c);padding:10px 14px;margin:8px 0;border-radius:0 10px 10px 0;font-size:15px}
-.topic b{color:#fff}
-.matrix{display:grid;grid-template-columns:auto 1fr auto auto;gap:8px 12px;background:rgba(255,255,255,.04);padding:14px;border-radius:14px;font-size:14px;margin:10px 0}
-.matrix .hd{font-size:11px;color:#7B8CA8;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
-.matrix .lbl{color:#fff;font-weight:700}
-.matrix .dir{color:var(--c);font-weight:800;text-align:center}
-.matrix .kk{color:#C7D2E4}
-.matrix .cf{color:#FFD700;text-align:center}
-.foot{font-size:12px;color:#5B6B85;margin-top:10px;text-align:right;letter-spacing:.04em}
-.warn{color:#FF6B35;font-weight:800}
-.ok{color:#34D399;font-weight:800}
+html,body{background:#080C14;color:#E8EEF7;font-family:-apple-system,"Apple SD Gothic Neo",Pretendard,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{scroll-snap-type:y mandatory;height:100vh;overflow-y:scroll;line-height:1.6}
+.strip{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,12,20,0.92);backdrop-filter:blur(20px);padding:10px 16px;font-size:12px;color:#8BA1BC;border-bottom:1px solid rgba(255,255,255,0.06);letter-spacing:0.3px;font-weight:500}
+.strip b{color:#00D4FF}
+.card{height:100vh;scroll-snap-align:start;padding:60px 22px 30px;display:flex;flex-direction:column;justify-content:flex-start;position:relative;overflow:hidden}
+.bar{position:absolute;top:0;left:0;right:0;height:4px;background:var(--c);box-shadow:0 0 24px var(--c),0 0 48px var(--c)}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--c);letter-spacing:2px;margin-top:8px;margin-bottom:14px;text-transform:uppercase;opacity:0.85}
+.emo{font-size:44px;line-height:1;margin-bottom:10px;filter:drop-shadow(0 0 16px var(--c))}
+.title{font-size:28px;font-weight:800;color:#fff;margin-bottom:22px;letter-spacing:-0.5px;line-height:1.25}
+.title b{color:var(--c)}
+.body{font-size:17px;color:#D5DEF0;line-height:1.65;margin-bottom:18px}
+.body p{margin-bottom:12px}
+.kv{font-size:16px;color:#B8C5DC;margin:5px 0;display:flex;justify-content:space-between;border-bottom:1px dashed rgba(255,255,255,0.08);padding:7px 0}
+.kv span:first-child{color:#8BA1BC;font-weight:500}
+.kv span:last-child{color:#fff;font-weight:700;text-align:right}
+.kv .up{color:#34D399}.kv .dn{color:#FF6B6B}.kv .nu{color:#FFD700}
+.hidden{margin-top:auto;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,rgba(255,255,255,0.04),var(--c-bg));border:1px solid var(--c-border);font-size:15px;line-height:1.55;color:#E8EEF7}
+.hidden b{color:var(--c);display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+.topic{padding:11px 13px;border-radius:11px;background:rgba(244,114,182,0.07);border-left:3px solid #F472B6;margin-bottom:10px;font-size:15px}
+.topic b{color:#F472B6;display:block;margin-bottom:4px;font-size:14px}
+.matrix{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0 8px}
+.matrix th,.matrix td{padding:9px 6px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.06)}
+.matrix th{color:#A78BFA;font-size:12px;font-weight:600;letter-spacing:1px}
+.matrix td{color:#E8EEF7;font-size:14px}
+.matrix .dir{font-size:18px}
+.score{color:#FFD700;font-size:13px}
+.alert{padding:10px 13px;border-radius:10px;background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.3);color:#FFB99B;font-size:14px;margin:8px 0;font-weight:500}
+.elw{padding:13px 15px;border-radius:12px;background:rgba(167,139,250,0.08);border:1px solid rgba(167,139,250,0.25);margin-top:12px;font-size:15px}
+.elw b{color:#A78BFA;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
 </style>
 </head>
 <body>
-<div class="strip">2026.05.13 수요일 · <b>PRE-MARKET</b> · v10 · 9/9</div>
 
-<section class="card" style="--c:#00D4FF">
-<div class="bar"></div>
-<div class="tag">01 / CORE THESIS</div>
-<div class="emo">🎯</div>
-<h1>표면은 <span>美 인플레 쇼크</span><br>본질은 <span>유동성 압축 + 환율</span></h1>
-<p><b>결론부터 말씀드리면</b>, 정군은 시초가 <b class="warn">갭다운 -0.5~-1.5% 우세</b>로 봅니다. 단일 변수 아닙니다 — 美 CPI 3.8% 상회 → 美 10Y 4.42% 급등, 이란 휴전 불확실성 → WTI $100 돌파, 환율 +17.5원 급등, 외인 반도체 5.3조 매도가 <b>동시 발생</b>한 복합 충격.</p>
-<p>시장 지배력 1~3순위(외인 선물·SOX·환율) 모두 <b class="warn">韓 음(-) 방향 정렬</b>. 신뢰도 <b>★★★★★</b>.</p>
-<div class="hint">🔍 <b>숨은 원리</b> — 환율 +17.5원 갭은 단순 약세가 아닙니다. 외인 입장 원화 보유 자산이 1.2% 자동 평가절하 → 매도로 환차손 헷지 + 미국채 4.42%로 자본 유턴. 즉 <b>환율·금리·외인매도</b>가 한 사이클로 결합된 구조.</div>
-<div class="foot">PRE-MARKET · 시장 지배력 ★★★★★</div>
+<div class="strip">2026.05.13 (수) · <b>PRE-MARKET</b> · v10 · 9/9</div>
+
+<section class="card" style="--c:#00D4FF;--c-bg:rgba(0,212,255,0.05);--c-border:rgba(0,212,255,0.2)">
+  <div class="bar"></div>
+  <div class="tag">01 / CORE THESIS</div>
+  <div class="emo">🎯</div>
+  <div class="title">표면은 <b>인플레 쇼크</b>, 본질은 <b>옵션만기 D-1</b></div>
+  <div class="body">
+    <p>고객님, 정군이 말씀드립니다. 어제 5/12 코스피 -3.49% 급락은 표면적으로 美 CPI 0.6% MoM (연 3.8%, 2년래 최고) 충격이지만, 본질은 <b style="color:#00D4FF">내일 5/14 옵션만기 직전 외인의 선제적 청산</b>입니다.</p>
+    <p>외인 코스피 -2.78조 (반도체 양사만 -5.3조), 환율 +17.5원 폭등. 단일 변수가 아닙니다 — CPI + 옵션만기 + WTI $101 + 이란 긴장이 동시에 겹친 복합 충격.</p>
+  </div>
+  <div class="hidden">
+    <b>🔍 숨은 원리</b>
+    옵션만기 1~2일 전 외인이 풋옵션 헤지로 현물을 던지면 시장은 반사적으로 흔들립니다. 만기 통과 후 헤지 청산 시 반등 여지 존재. 단, NVIDIA 실적 (5/20) 전까지는 변동성 구간.
+  </div>
 </section>
 
-<section class="card" style="--c:#F472B6">
-<div class="bar"></div>
-<div class="tag">02 / TODAY TOPICS</div>
-<div class="emo">📰</div>
-<h1>오늘의 <span>3대 토픽</span></h1>
-<div class="topic"><b>📰 美 CPI 3.8%</b> (예상 3.7%↑) → <b>🎯 판단:</b> 인플레 재가속, 6월 금리인하 베팅 후퇴 → <b>⚡ 영향:</b> 10Y 4.42%, 위험자산 압박</div>
-<div class="topic"><b>📰 외인 반도체 5.3조 매도</b> (5/12) → <b>🎯 판단:</b> 단순 차익실현 아닌 환차손 헷지 → <b>⚡ 영향:</b> 삼전·하닉 갭다운 우세</div>
-<div class="topic"><b>📰 WTI $101 + 美·이란 휴전 불확실</b> → <b>🎯 판단:</b> Trump 휴전안 부정 → <b>⚡ 영향:</b> 정유·해운 ↑, 항공·소비재 ↓</div>
-<div class="hint">🔍 <b>숨은 원리</b> — 3개 토픽이 독립적으로 보이지만 <b>인플레→금리→환율→외인매도</b>의 한 개 인과사슬. 한 토픽만 해소돼도 반등 가능, 모두 지속되면 추가 하락.</div>
-<div class="foot">교차검증 · CNBC + 머니투데이</div>
+<section class="card" style="--c:#F472B6;--c-bg:rgba(244,114,182,0.05);--c-border:rgba(244,114,182,0.2)">
+  <div class="bar"></div>
+  <div class="tag">02 / TODAY TOPICS</div>
+  <div class="emo">📰</div>
+  <div class="title">오늘 시장을 흔드는 <b>3가지</b></div>
+  <div class="topic">
+    <b>📰 美 CPI 0.6% 충격 → 🎯 연 3.8%, 2023년 5월 이후 최고 → ⚡ 금리인하 후퇴, 美 10Y 4.46%</b>
+  </div>
+  <div class="topic">
+    <b>📰 외인 코스피 -2.78조 매도 → 🎯 반도체 양사만 -5.3조 청산 → ⚡ 시초가 갭다운 위험 -0.5~-1%</b>
+  </div>
+  <div class="topic">
+    <b>📰 WTI $101 돌파 → 🎯 美-이란 휴전 "생명유지장치" → ⚡ 호르무즈 해협 폐쇄 우려 지속</b>
+  </div>
+  <div class="hidden">
+    <b>🔍 숨은 원리</b>
+    세 가지가 모두 같은 방향(긴축 = 약세). 1순위(외인 선물) + 2순위(SOX) + 3순위(환율) 동시 빨간불 = ★★★★★ 약세 신호.
+  </div>
 </section>
 
-<section class="card" style="--c:#FFD700">
-<div class="bar"></div>
-<div class="tag">03 / PATTERN</div>
-<div class="emo">📊</div>
-<h1>美 <span>고점 조정</span> + 韓 <span>환율 트리거</span></h1>
-<div class="kv"><b>S&P 500</b> ~7,400 <span class="dn">-0.16%</span> (전 고점 부근 조정)</div>
-<div class="kv"><b>Nasdaq</b> 장중 -2% → 회복 (테크 변동성 ↑)</div>
-<div class="kv"><b>Dow</b> 49,760 <span class="up">+0.11%</span> (방어주 매수)</div>
-<div class="kv"><b>SOX</b> ~11,717 (5/8 고점 11,776 대비 <span class="dn">-0.5%</span>)</div>
-<div class="kv"><b>美 10Y</b> <span class="dn">4.42%</span> (1주 고점, +7bp)</div>
-<div class="kv"><b>WTI</b> <span class="dn">$101</span> (이란 휴전 균열)</div>
-<div class="kv"><b>원/달러</b> 1425~1454 레인지 · <span class="dn">+17.5원 급등</span></div>
-<div class="hint">🔍 <b>숨은 원리</b> — Nasdaq -2% → 회복은 <b>저가 매수 vs 매도세 균형</b>의 신호. 단 SOX가 회복 못한 점은 메모리 우려 잔존 = 韓 반도체 시초 약세 시그널.</div>
+<section class="card" style="--c:#FFD700;--c-bg:rgba(255,215,0,0.05);--c-border:rgba(255,215,0,0.2)">
+  <div class="bar"></div>
+  <div class="tag">03 / PATTERN</div>
+  <div class="emo">📊</div>
+  <div class="title">전일 美 마감 <b>혼조</b>, 한국 시초 부담</div>
+  <div class="kv"><span>S&P 500</span><span class="dn">7,400대 -0.16%</span></div>
+  <div class="kv"><span>Nasdaq</span><span class="dn">26,088 -0.71%</span></div>
+  <div class="kv"><span>Dow</span><span class="up">49,761 +0.11%</span></div>
+  <div class="kv"><span>SOX 반도체</span><span class="dn">11,717 (-0.50%↓)</span></div>
+  <div class="kv"><span>USD/KRW</span><span class="dn">~1,491원 (+17.5↑)</span></div>
+  <div class="kv"><span>WTI</span><span class="nu">$101+ (+3%↑)</span></div>
+  <div class="kv"><span>美 10Y</span><span class="dn">4.46% (긴축 우호)</span></div>
+  <div class="kv"><span>KOSPI 전일</span><span class="dn">7,549.47 -3.49%</span></div>
+  <div class="hidden">
+    <b>🔍 숨은 원리</b>
+    Dow 단독 상승 = 방어주 매수, 기술주 회피. 한국은 반도체 비중이 높아 Nasdaq+SOX 약세에 더 민감. 시초가 -0.5~-1% 가능성.
+  </div>
 </section>
 
-<section class="card" style="--c:#34D399">
-<div class="bar"></div>
-<div class="tag">04 / VALUATION</div>
-<div class="emo">💎</div>
-<h1>저평가 영역 <span>아직 진입 이름</span></h1>
-<p>KOSPI 12MF PER 추정 ~10배대, 历사 평균 11배 대비 -10% 할인. 다만 <b>외인 5.3조 매도 = -2% 추가 압력</b> 잔존.</p>
-<div class="kv"><b>삼성전자</b> 26만원대 (목표 50만원 — SK증권)</div>
-<div class="kv"><b>SK하이닉스</b> ~172만원 (목표 300만원 — SK증권)</div>
-<div class="kv"><b>현대차</b> 데이터 미확보 <span class="warn">— 후속 점검 필요</span></div>
-<div class="hint">🔍 <b>숨은 원리</b> — 목표가 50만원·300만원은 <b>2027년 HBM 사이클</b> 가정. 현 시점 매수 신호 아닌 <b>방향성 가이드</b>. 환율 1450 이하 안정 + 외인 매도 진정이 선행 조건.</div>
+<section class="card" style="--c:#34D399;--c-bg:rgba(52,211,153,0.05);--c-border:rgba(52,211,153,0.2)">
+  <div class="bar"></div>
+  <div class="tag">04 / VALUATION</div>
+  <div class="emo">💎</div>
+  <div class="title">반도체 <b>밸류 부담</b> vs 목표가 갭</div>
+  <div class="body">
+    <p>SK증권 등 일부 리서치: 삼성전자 50만원 / SK하이닉스 300만원 목표가 제시. 5/11 종가 168.6만 (SK하닉) 대비 +77% 갭.</p>
+    <p>다만 7,900선 돌파 직후 -3.49% 급락은 <b style="color:#34D399">단기 과열 + 옵션만기 조정</b>. 펀더멘털 훼손은 아니나, 만기 통과 전까지 추격매수 보류.</p>
+  </div>
+  <div class="kv"><span>삼성전자 (5/8)</span><span class="nu">268,500원</span></div>
+  <div class="kv"><span>SK하이닉스 (5/11)</span><span class="nu">1,686,000원</span></div>
+  <div class="hidden">
+    <b>🔍 숨은 원리</b>
+    목표가 200만→300만은 "당위"이지 "타이밍"이 아닙니다. 만기 통과 + NVIDIA 실적(5/20) 확인 후 분할 진입이 정답.
+  </div>
 </section>
 
-<section class="card" style="--c:#FF6B35">
-<div class="bar"></div>
-<div class="tag">05 / HIDDEN RISK</div>
-<div class="emo">⚠️</div>
-<h1>보이지 않는 <span>3대 위험</span></h1>
-<div class="kv"><b>보이는 위험</b>: 외인 매도, 환율 급등, 유가 상승</div>
-<div class="kv"><b>숨은 위험 1</b>: 환율 <span class="warn">1450 돌파 시</span> 외평채 신용스프레드 확대 → 채권→주식 동반 매도</div>
-<div class="kv"><b>숨은 위험 2</b>: NVDA 5/20 실적 가이던스 <span class="warn">컨센 하회</span> 시 SOX -5% 시나리오</div>
-<div class="kv"><b>숨은 위험 3</b>: 美·이란 군사 충돌 재개 → WTI $120 → 韓 무역적자 가속</div>
-<div class="hint">🔍 <b>숨은 원리</b> — 위험들이 <b>순차 발생이 아닌 동시 다발</b> 가능성. 환율 1450 이상은 단순 통화 약세가 아닌 <b>한국 시스템 리스크 trigger</b>. 정군이 가장 경계.</div>
+<section class="card" style="--c:#FF6B35;--c-bg:rgba(255,107,53,0.05);--c-border:rgba(255,107,53,0.2)">
+  <div class="bar"></div>
+  <div class="tag">05 / HIDDEN RISK</div>
+  <div class="emo">⚠️</div>
+  <div class="title"><b>보이는</b>건 CPI, <b>안 보이는</b>건 환율</div>
+  <div class="alert">⚠️ 환율 +17.5원/일 = 외인 추가 이탈 트리거. 1,500원 돌파 시 패닉 가능.</div>
+  <div class="body">
+    <p><b style="color:#FF6B35">보이는 위험:</b> CPI 충격 + Fed 금리인하 후퇴 + WTI $100+ 인플레 재점화.</p>
+    <p><b style="color:#FF6B35">안 보이는 위험:</b> ① 환율 1,500원 임박 (외인 헤지 비용 폭증) ② 파월 임기 종료, 연준 리더십 불확실성 ③ MSCI 반기 리뷰 수급 충격 가능.</p>
+  </div>
+  <div class="hidden">
+    <b>🔍 숨은 원리</b>
+    한 가지 원인(CPI)만으로는 -3.49%가 안 나옵니다. 환율 + 옵션만기 + 인플레 + 지정학 4중 충격이 동시 발현된 것. 복합 원인 인식 필수.
+  </div>
 </section>
 
-<section class="card" style="--c:#06B6D4">
-<div class="bar"></div>
-<div class="tag">06 / SECTOR THEME</div>
-<div class="emo">🔄</div>
-<h1>섹터 <span>로테이션 맵</span></h1>
-<div class="kv"><b class="up">↑ 강세 후보</b>: 정유(S-Oil·SK이노), 해운(HMM), 방산(한화에어로)</div>
-<div class="kv"><b class="dn">↓ 약세 후보</b>: 반도체(삼전·SK하닉), 2차전지(LG엔솔), 항공(대한항공)</div>
-<div class="kv"><b class="neu">⇌ 중립</b>: 금융(KB·신한 — 금리 ↑ 호재 vs 외인 매도)</div>
-<div class="kv"><b>주도주 후보</b>: <b>방산·정유</b> (지정학 + 유가)</div>
-<div class="hint">🔍 <b>숨은 원리</b> — 환율 약세 = 수출주 호재라는 단순 공식 성립 안 함. <b>반도체는 외인 매도 압력이 환율 효과 압도</b>. 진짜 환율 수혜는 <b>방산·조선·해운</b>처럼 외인 보유율 낮은 섹터.</div>
+<section class="card" style="--c:#06B6D4;--c-bg:rgba(6,182,212,0.05);--c-border:rgba(6,182,212,0.2)">
+  <div class="bar"></div>
+  <div class="tag">06 / SECTOR THEME</div>
+  <div class="emo">🏭</div>
+  <div class="title">반도체 <b>방어</b>, 에너지·조선 <b>주목</b></div>
+  <div class="body">
+    <p><b style="color:#06B6D4">약세 예상:</b> 삼성전자·SK하이닉스 (외인 -5.3조 청산 잔류), NAVER·카카오 (기술주 동조).</p>
+    <p><b style="color:#06B6D4">상대 강세 후보:</b> 정유·조선 (WTI $101 수혜), 방산 (이란 긴장), 금융 (금리 상승 우호).</p>
+    <p>POSCO홀딩스·현대차는 환율 약세에 수출주 프리미엄, 단 美 관세 변수 잔존.</p>
+  </div>
+  <div class="hidden">
+    <b>🔍 숨은 원리</b>
+    "급락장 = 전부 하락"은 착각. WTI $100+ 구도에서는 에너지 섹터가 알파 창출. 만기일 1일 전엔 방어주가 상대적으로 안전.
+  </div>
 </section>
 
-<section class="card" style="--c:#EC4899">
-<div class="bar"></div>
-<div class="tag">07 / EVENT CATALYST</div>
-<div class="emo">📅</div>
-<h1>7일 내 <span>빅 이벤트</span></h1>
-<div class="kv"><b>5/15 (금)</b> KOSPI200 옵션만기 (D-2) <span class="warn">⚠️ T5 발동</span></div>
-<div class="kv"><b>5/20 (화)</b> 엔비디아 1Q26 실적 (장후) · 컨센 78.6B</div>
-<div class="kv"><b>5/14 (목)</b> 美 4월 PPI 발표</div>
-<div class="kv"><b>5/15 (금)</b> 美 5월 미시간 소비자심리 (인플레 기대치)</div>
-<div class="hint">🔍 <b>숨은 원리</b> — 옵션만기 D-2 + NVDA 실적 D-7 = <b>변동성 압축 후 폭발 패턴</b>. 만기 전 외인 헷지 청산이 KOSPI 추가 압력. 만기 후 ~5/19은 변동성 축소 구간, 그러나 5/20 NVDA가 방향 결정.</div>
+<section class="card" style="--c:#EC4899;--c-bg:rgba(236,72,153,0.05);--c-border:rgba(236,72,153,0.2)">
+  <div class="bar"></div>
+  <div class="tag">07 / EVENT CATALYST</div>
+  <div class="emo">🎪</div>
+  <div class="title">7일 이내 <b>3대 빅이벤트</b></div>
+  <div class="kv"><span>5/14 (목) 내일</span><span class="dn">KOSPI200 옵션만기 ⚡</span></div>
+  <div class="kv"><span>5/15 (금)</span><span class="nu">중국 4월 산업생산</span></div>
+  <div class="kv"><span>5/20 (수)</span><span class="up">NVIDIA 실적 발표 🚀</span></div>
+  <div class="body">
+    <p>가장 임박한 이벤트는 <b style="color:#EC4899">내일 옵션만기</b>. 오늘 종일 변동성 구간, 오후 동시호가 부근 청산 매물 주의.</p>
+    <p>NVIDIA 실적 (5/20) 까지 1주 — 그 이전엔 큰 베팅 보류 권고.</p>
+  </div>
+  <div class="hidden">
+    <b>🔍 숨은 원리</b>
+    옵션만기 + NVIDIA 실적 사이 1주가 "관망 구간". 만기 후 NVIDIA 실적 호조 시 V자 반등, 부진 시 추가 조정.
+  </div>
 </section>
 
-<section class="card" style="--c:#14B8A6">
-<div class="bar"></div>
-<div class="tag">08 / F&O SIGNAL — T5 발동</div>
-<div class="emo">⚡</div>
-<h1>옵션만기 <span>D-2</span> 시그널</h1>
-<div class="kv"><b>T5 발동</b>: 옵션만기 7일 이내 (5/15, D-2)</div>
-<div class="kv"><b>T1 미발동</b>: 외인 선물 누적 데이터 미확보 <span class="warn">— 후속 점검</span></div>
-<div class="kv"><b>만기 시나리오</b>: 외인 5.3조 매도 + 만기 청산 = <b class="warn">PUT 우세</b></div>
-<div class="kv"><b>변동성</b>: VIX 상승 추정, 만기 직전 추가 변동성 확대</div>
-<div class="hint">🔍 <b>숨은 원리</b> — 옵션만기 D-2에 현물 외인이 5.3조 매도한 것은 <b>합성포지션 청산 신호</b>. 만기일 KOSPI200 위쪽 강제 행사 회피 의도 → 만기일까지 약세 압력 지속 가능. 만기 후 baseline 회복 여부가 5월 후반 방향 결정.</div>
+<section class="card" style="--c:#14B8A6;--c-bg:rgba(20,184,166,0.05);--c-border:rgba(20,184,166,0.2)">
+  <div class="bar"></div>
+  <div class="tag">08 / F&O SIGNAL ⚡ 발동</div>
+  <div class="emo">🚨</div>
+  <div class="title">T1 + T5 <b>동시 발동</b></div>
+  <div class="alert">⚡ T1: 외인 -2.78조 (기준 ±1.5조 초과) — 강력 약세</div>
+  <div class="alert">⚡ T5: 옵션만기 D-1 (5/14) — 변동성 폭발 임박</div>
+  <div class="body">
+    <p>두 시그널 동시 발동은 드뭅니다. <b style="color:#14B8A6">의미: 외인이 만기 청산을 1~2일 전에 선제적으로 단행</b> = 만기일 당일 변동성 더 커질 수 있음.</p>
+    <p>경험칙: 만기 통과 후 5거래일 내 단기 반등 확률 60%. 다만 NVIDIA 실적 전까지 추세 회복은 어려움.</p>
+  </div>
+  <div class="hidden">
+    <b>🔍 숨은 원리</b>
+    외인 선물·옵션 수급은 한국 시장의 1순위 변수. SOX·환율·10Y가 동조하면 단기 방향성은 외인이 결정. 오늘은 4중 동조.
+  </div>
 </section>
 
-<section class="card" style="--c:#A78BFA">
-<div class="bar"></div>
-<div class="tag">09 / ACTION — KICK 매트릭스</div>
-<div class="emo">🚀</div>
-<h1>시간축 <span>KICK</span> + ELW</h1>
-<div class="matrix">
-<div class="hd">기간</div><div class="hd">KICK</div><div class="hd">방향</div><div class="hd">신뢰</div>
-<div class="lbl">당일</div><div class="kk">시초 갭다운 -0.5~-1.5%, 반등 시 정유·방산</div><div class="dir">↘</div><div class="cf">★★★★★</div>
-<div class="lbl">내일</div><div class="kk">美 PPI 결과 + 만기 직전 변동성</div><div class="dir">↕</div><div class="cf">★★★★</div>
-<div class="lbl">1주</div><div class="kk">옵션만기(5/15) 통과 + NVDA 실적(5/20) 기대</div><div class="dir">↕</div><div class="cf">★★★</div>
-<div class="lbl">1개월</div><div class="kk">환율 1450 방어 + 미·이란 협상 결말</div><div class="dir">↗</div><div class="cf">★★★</div>
-</div>
-<div class="kv"><b>ELW 방향</b>: <b class="warn">PUT</b> (KOSPI200 풋 OTM) · 손절 <b class="warn">-0.5%</b></div>
-<div class="kv"><b>회피 조건</b>: 잔존 7일 이하 / 기어링 500 이상</div>
-<div class="kv"><b>대안 헷지</b>: 인버스 ETF (KODEX 200 선물인버스2X — 부분 비중)</div>
-<div class="hint">🔍 <b>숨은 원리</b> — 당일 하락에 베팅하되 <b>1개월 시계에선 반등 가능성</b> 고려. 단기 PUT + 중기 현금 비중 확대가 정군 권고. 환율 1450 방어 시 매수 전환 시그널.</div>
-<div class="foot">💡 KICK 정렬: 당일 ↘ → 1주 ↕ → 1개월 ↗</div>
+<section class="card" style="--c:#A78BFA;--c-bg:rgba(167,139,250,0.05);--c-border:rgba(167,139,250,0.25)">
+  <div class="bar"></div>
+  <div class="tag">09 / ACTION — KICK MATRIX</div>
+  <div class="emo">🎬</div>
+  <div class="title">시간축 <b>KICK</b> 정렬</div>
+  <table class="matrix">
+    <thead><tr><th>기간</th><th>방향</th><th>KICK</th><th>신뢰</th></tr></thead>
+    <tbody>
+      <tr><td>당일 5/13</td><td class="dir">↘</td><td>외인 매도+만기 부담</td><td class="score">★★★★☆</td></tr>
+      <tr><td>내일 5/14</td><td class="dir">↕</td><td>옵션만기 변동성 폭발</td><td class="score">★★★★★</td></tr>
+      <tr><td>1주</td><td class="dir">↕→↗</td><td>NVIDIA 실적 대기</td><td class="score">★★★☆☆</td></tr>
+      <tr><td>1개월</td><td class="dir">↗</td><td>실적·반도체 사이클</td><td class="score">★★★☆☆</td></tr>
+    </tbody>
+  </table>
+  <div class="elw">
+    <b>🎯 ELW 전략</b>
+    오늘~내일: <b style="color:#FF6B6B">PUT 우세</b> (만기 + 외인 매도). 단 만기 후 헤지 청산 반등 대비 → <b style="color:#34D399">CALL 분할 진입</b> 병행 가능. <br>
+    🛑 손절: <b>-0.5%</b> 엄격 (만기일 변동성 ↑) | ⛔ 회피: 잔존 7일↓ / 기어링 500↑
+  </div>
+  <div class="hidden">
+    <b>🔍 숨은 원리</b>
+    만기 1일 전 PUT 베팅은 정석이나, 만기 통과 후 반등 확률(60%)도 무시 못함. 한쪽 베팅보다 양방 분할이 안전. 데이터 미확보(외인 선물 누적): 후속 점검 필요.
+  </div>
 </section>
 
 </body>
