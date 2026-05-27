@@ -3,287 +3,281 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>정군 모닝 v11 — 2026.05.26 (화) PRE-MARKET</title>
+<title>정군 모닝 v11 — 2026.05.27 (수) [LIVE]</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{background:#080C14;color:#E6EDF3;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",Pretendard,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-body{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory}
-.info-strip{position:fixed;top:0;left:0;right:0;height:32px;background:rgba(8,12,20,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);z-index:100;display:flex;align-items:center;justify-content:center;font-size:12px;color:#7C8896;letter-spacing:0.05em}
-.card{height:100vh;scroll-snap-align:start;scroll-snap-stop:always;padding:56px 22px 32px;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.accent-bar{position:absolute;top:32px;left:0;right:0;height:4px;background:var(--accent);box-shadow:0 0 24px var(--accent),0 0 48px var(--accent)}
-.tag{font-size:11px;letter-spacing:0.18em;color:var(--accent);font-weight:600;margin-bottom:18px;text-transform:uppercase;opacity:0.85}
-.emoji{font-size:44px;margin-bottom:12px;line-height:1}
-.title{font-size:28px;font-weight:800;line-height:1.25;margin-bottom:18px;letter-spacing:-0.02em}
-.title b{color:var(--accent)}
-.body{font-size:16px;line-height:1.65;color:#C9D1D9;flex:1;overflow-y:auto}
-.body p{margin-bottom:12px}
-.kv{font-size:15px;line-height:1.6;color:#B0BAC6}
-.kv .label{color:#7C8896;font-size:13px;display:inline-block;min-width:78px}
-.kv .num{color:#E6EDF3;font-weight:700;font-variant-numeric:tabular-nums}
-.up{color:#34D399}.dn{color:#FF6B35}.flat{color:#7C8896}
-.view{margin:12px 0;padding:13px 14px;border-radius:10px;background:rgba(255,255,255,0.025);border-left:3px solid #444}
-.view-bull{border-left-color:#34D399;background:rgba(52,211,153,0.06)}
-.view-bear{border-left-color:#FF6B35;background:rgba(255,107,53,0.06)}
-.view-head{font-size:11px;letter-spacing:0.16em;font-weight:700;margin-bottom:6px;text-transform:uppercase}
-.view-bull .view-head{color:#34D399}
-.view-bear .view-head{color:#FF6B35}
-.view p{font-size:14px;line-height:1.55;color:#D0D8E0;margin:0}
-.src{font-size:11px;font-style:italic;color:#6B7684;margin-top:6px;display:block}
-.topic{margin:14px 0;padding:14px;border-radius:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05)}
-.topic-num{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.1em;margin-bottom:4px}
-.topic-head{font-size:16px;font-weight:700;color:#E6EDF3;margin-bottom:8px;line-height:1.4}
-.topic-bull{font-size:14px;line-height:1.55;color:#C0C8D2;margin:4px 0}
-.topic-src{font-size:11px;font-style:italic;color:#6B7684;margin-top:6px}
-.action{margin-top:14px;padding:12px 14px;border-radius:10px;background:rgba(167,139,250,0.08);border-left:3px solid #A78BFA}
-.action .view-head{color:#A78BFA}
-.alert{margin:12px 0;padding:12px 14px;border-radius:10px;background:rgba(255,107,53,0.08);border-left:3px solid #FF6B35}
-.alert .view-head{color:#FF6B35}
-.hidden{margin-top:14px;padding:12px 14px;background:rgba(0,212,255,0.06);border-radius:10px;border:1px dashed rgba(0,212,255,0.3)}
-.hidden .view-head{color:#00D4FF;margin-bottom:6px}
-.hidden p{font-size:13px;color:#A8B3C0;line-height:1.55}
-.body::-webkit-scrollbar{display:none}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{background:#080C14;color:#E5E7EB;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",Pretendard,system-ui,sans-serif;font-size:16px;line-height:1.55;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased}
+  body{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;scroll-behavior:smooth}
+  .strip{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(8,12,20,.92);backdrop-filter:blur(10px);padding:9px 18px;font-size:12px;color:#94A3B8;border-bottom:1px solid rgba(255,255,255,.06);font-weight:500;letter-spacing:0.02em;text-align:center}
+  .strip b{color:#00D4FF}
+  .card{height:100vh;scroll-snap-align:start;scroll-snap-stop:always;padding:54px 22px 30px;display:flex;flex-direction:column;justify-content:flex-start;position:relative;overflow:hidden}
+  .accent{position:absolute;top:0;left:0;right:0;height:4px;background:var(--c);box-shadow:0 0 24px var(--c)}
+  .tag{font-size:11px;letter-spacing:0.18em;color:var(--c);font-weight:700;margin-bottom:14px;text-transform:uppercase}
+  .emoji{font-size:44px;margin-bottom:8px;line-height:1}
+  h1{font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.02em;line-height:1.25;margin-bottom:16px}
+  h1 b{color:var(--c);font-weight:800}
+  .body{font-size:16px;color:#CBD5E1;line-height:1.6}
+  .body p{margin-bottom:11px}
+  .kv{font-size:15px;color:#94A3B8;margin-bottom:6px}
+  .kv b{color:#E5E7EB;font-weight:600}
+  .view{border-radius:12px;padding:14px 16px;margin:10px 0;border-left:3px solid;background:rgba(255,255,255,.025)}
+  .view-bull{border-color:#34D399}
+  .view-bear{border-color:#FF6B35}
+  .view-head{font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px}
+  .view-bull .view-head{color:#34D399}
+  .view-bear .view-head{color:#FF6B35}
+  .view p{font-size:15px;color:#CBD5E1;line-height:1.55}
+  .src{font-size:12px;color:#64748B;font-style:italic;margin-top:5px;display:block}
+  .topic{border-radius:12px;padding:14px;margin:9px 0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)}
+  .topic-num{display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.15em;color:var(--c);margin-bottom:5px}
+  .topic-head{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.35}
+  .topic-bull{font-size:14px;color:#CBD5E1;margin:5px 0;padding-left:18px;position:relative;line-height:1.5}
+  .topic-bull::before{content:"→";position:absolute;left:0;color:var(--c)}
+  .topic-src{font-size:11px;color:#64748B;font-style:italic;margin-top:6px}
+  .action{background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.3);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .action-head{font-size:12px;font-weight:700;color:#A78BFA;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px}
+  .action p{font-size:15px;color:#E5E7EB;line-height:1.55}
+  .alert{background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.3);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .alert-head{font-size:12px;font-weight:700;color:#FF6B35;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px}
+  .alert p{font-size:15px;color:#E5E7EB;line-height:1.55}
+  .hidden{background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.22);border-radius:12px;padding:13px 15px;margin-top:14px}
+  .hidden-head{font-size:12px;font-weight:700;color:#00D4FF;letter-spacing:0.10em;margin-bottom:5px}
+  .hidden p{font-size:14px;color:#CBD5E1;line-height:1.5}
+  .star{color:#FFD700;font-size:18px;letter-spacing:0.05em}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+  .grid-cell{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:10px;padding:10px;font-size:13px}
+  .grid-cell b{display:block;color:var(--c);font-size:11px;letter-spacing:0.08em;margin-bottom:4px}
+  .up{color:#34D399;font-weight:600}
+  .down{color:#FF6B35;font-weight:600}
 </style>
 </head>
 <body>
 
-<div class="info-strip">2026.05.26 (화) · PRE-MARKET · v11 · 9/9</div>
+<div class="strip">2026.05.27 (수) · <b>LIVE</b> · v11 · 8/9</div>
 
-<section class="card" style="--accent:#00D4FF">
-<div class="accent-bar"></div>
-<div class="tag">01 / CORE THESIS</div>
-<div class="emoji">🎯</div>
-<h1 class="title">한국 휴장 끼인 <b>美 강세 갭업</b> vs <b>고환율·고금리</b> 줄다리기</h1>
-<div class="body">
-<div class="kv">
-<span class="label">전일 상황</span>·5/25 한국 휴장(부처님오신날 대체)<br>
-<span class="label">美 마감</span>·Dow <span class="up num">+0.58%</span> S&P <span class="up num">+0.37%</span> Nas <span class="up num">+0.19%</span><br>
-<span class="label">예상 갭</span>·KOSPI 약보합~+0.4% 갭업 시도
-</div>
-<div class="view view-bull">
-<div class="view-head">🟢 BULL · IB 8,000~8,500 컨센서스</div>
-<p>JP모건 코스피 목표 <b>8,500</b>, 골드만·노무라 <b>8,000</b> 제시. 美 3대 지수 동반 상승 + SOX 12,202 강세 흐름 유지 시 이틀치 갭업 반영 가능.</p>
-<span class="src">JP모건·골드만삭스·노무라 2026 한국 전망</span>
-</div>
-<div class="view view-bear">
-<div class="view-head">🔴 BEAR · 원화·금리 부담</div>
-<p>원/달러 <b>1,510원대</b>(한 달여 만 최저), 美 10Y <b>4.56%</b> 고금리. 외인 차익실현 트리거. WTI -5% 급락은 수요 둔화 신호로 읽힐 위험.</p>
-<span class="src">Investing.com 환율·CNBC 채권</span>
-</div>
-<div class="hidden">
-<div class="view-head">🔍 정군 시각</div>
-<p>지배력 순위(외인선물→SOX→환율→10Y→WTI) 중 1·2위 강세, 3·4위 약세 → 신호 엇갈림. 갭업 시도하되 상단 저항 명확. 추격매수 보다 <b>분할 진입</b> 권고. ★★★</p>
-</div>
-</div>
+<section class="card" style="--c:#00D4FF">
+  <div class="accent"></div>
+  <div class="tag">01 / CORE THESIS</div>
+  <div class="emoji">🎯</div>
+  <h1>美 신고가 vs SOX <b>-5% 급락</b>의 갭, 한국엔 <b>양날의 검</b></h1>
+  <div class="body">
+    <p class="kv">5/26 美 마감: <b class="up">S&P 7,519.12 (+0.61%)</b> · <b class="up">Nasdaq 26,656.18 (+1.19%)</b> · <b class="down">Dow 50,461.68 (-0.23%)</b><span class="src">출처: CNBC, TheStreet (5/26)</span></p>
+    <p class="kv">SOX 장중 <b class="down">-5%</b> · Qualcomm <b class="down">-10%</b> · 한국 "AI 세금" 우려 확산<span class="src">출처: Stocks Down Under, 한국 입법동향</span></p>
+    <div class="view view-bull">
+      <div class="view-head">🟢 BULL — 한국 강세 모멘텀</div>
+      <p>KOSPI <b>8,047.51 (+2.55%, 사상 첫 8000)</b>, 외인 12거래일 만에 매수 전환(+6,048억). S&P/Nasdaq 동반 신고가는 위험자산 우호.</p>
+      <span class="src">JP모건: "AI 랠리 + 신흥국 매력도 ↑", Goldman: "Some Like It Hot"</span>
+    </div>
+    <div class="view view-bear">
+      <div class="view-head">🔴 BEAR — 반도체 갭 + 밸류 과열</div>
+      <p>美 SOX -5% 급락(Qualcomm -10%) 갭 → 삼전/SK하닉 매물 출회 위험. 한국 'AI 세금' 입법 리스크 가중. PCE(5/28)·NFP(6/5) 통과 전 차익실현 압력.</p>
+      <span class="src">Goldman Sachs: "valuations running hot, volatility ↑"</span>
+    </div>
+    <div class="hidden">
+      <div class="hidden-head">🔍 정군 종합 판단 <span class="star">★★★★</span></div>
+      <p>정군이 보기엔 단일 변수로 단정 못 함. 미국 빅테크 신고가 / 반도체 SOX 갭 / 한국 사상 첫 8000 — 세 시그널이 엇갈림. <b>"상승 추세 유지 + 단기 변동성 확대"</b>가 가장 합리적 시나리오. 외인 6,048억은 T1(±1.5조) 미달 → 추세 전환 신호 아닌 '돌아온다' 정도.</p>
+    </div>
+  </div>
 </section>
 
-<section class="card" style="--accent:#F472B6">
-<div class="accent-bar"></div>
-<div class="tag">02 / TODAY TOPICS</div>
-<div class="emoji">📰</div>
-<h1 class="title">오늘 시장 <b>3대 토픽</b></h1>
-<div class="body">
-<div class="topic">
-<div class="topic-num">TOPIC 01</div>
-<div class="topic-head">엔비디아 어닝 비트 — AI 사이클 재점화</div>
-<p class="topic-bull">📰 사건 · 5/20 NVDA Q1 매출 <b>$44.1B (+69% YoY)</b>, EPS 서프라이즈 +5.65%, 데이터센터 +73% YoY</p>
-<p class="topic-bull">⚡ 영향 · SOX 5/22 종가 12,202 (+1.99%), 美 빅테크 강세 → 삼전·하닉 동조 기대</p>
-<p class="topic-bull">💡 권고 · 반도체 비중 유지, 단 추격매수 자제. <b>조정 시 분할매수</b></p>
-<p class="topic-src">자료: SEC 공시, Bloomberg 컨센서스</p>
-</div>
-<div class="topic">
-<div class="topic-num">TOPIC 02</div>
-<div class="topic-head">WTI -5% 급락 — 美·이란 합의 진전</div>
-<p class="topic-bull">📰 사건 · WTI 약 <b>$91 (-5%)</b> 급락, 美·이란 핵협상 진전 보도</p>
-<p class="topic-bull">⚡ 영향 · 정유·조선 단기 압박, 항공·물류·화학 비용 완화 → 섹터 로테이션</p>
-<p class="topic-bull">💡 권고 · 정유주 비중 축소, <b>저가 항공·화학 분할 매수</b> 관찰</p>
-<p class="topic-src">자료: TradingEconomics 원자재</p>
-</div>
-<div class="topic">
-<div class="topic-num">TOPIC 03</div>
-<div class="topic-head">원/달러 1,510원대 — 외인 수급 변수</div>
-<p class="topic-bull">📰 사건 · 한국 원화 한 달여 만 최저, <b>1,510원</b> 부근 마감</p>
-<p class="topic-bull">⚡ 영향 · 외인 환차손 부담 → KOSPI 외인 매도 압력 상존</p>
-<p class="topic-bull">💡 권고 · 환율 1,520 돌파 시 외인 순매도 확대 경계. <b>현금 비중 30%</b> 유지</p>
-<p class="topic-src">자료: Wise·Investing.com USD/KRW</p>
-</div>
-</div>
+<section class="card" style="--c:#F472B6">
+  <div class="accent"></div>
+  <div class="tag">02 / TODAY TOPICS</div>
+  <div class="emoji">📰</div>
+  <h1>오늘 시장을 흔드는 <b>3가지 사건</b></h1>
+  <div class="body">
+    <div class="topic">
+      <div class="topic-num">TOPIC 01 · 美 신고가 / SOX 급락 갭</div>
+      <div class="topic-head">📰 사건: S&P·Nasdaq 사상 최고, 그러나 반도체만 -5%</div>
+      <div class="topic-bull">⚡ 영향: 美 위험자산 우호 ↔ 한국 반도체株 차익실현 압력 동시</div>
+      <div class="topic-bull">⚡ 한국 'AI 세금' 입법 우려가 SOX 약세의 핵심 원인</div>
+      <div class="action">
+        <div class="action-head">💡 정군 권고</div>
+        <p>삼전·SK하닉 갭다운 시 단기 매수 유혹 — 그러나 손절 -0.5% 엄격 적용. 'AI 세금'은 6월 입법 일정 확인 후 판단.</p>
+      </div>
+      <div class="topic-src">출처: CNBC 5/26, 한국 국회 동향</div>
+    </div>
+    <div class="topic">
+      <div class="topic-num">TOPIC 02 · KOSPI 8000 사상 첫 돌파</div>
+      <div class="topic-head">📰 사건: KOSPI 8,047.51 마감 (+2.55%)</div>
+      <div class="topic-bull">⚡ 외인 +6,048억 (12일 만에 매수 전환), 기관 +1.21조</div>
+      <div class="topic-bull">⚡ 개인 -1.69조 순매도 — 차익실현 압력 진행 중</div>
+      <div class="action">
+        <div class="action-head">💡 정군 권고</div>
+        <p>8000 돌파 후 첫 시험대. 외인 추가 매수 1.5조 도달 시 ★★★★★. 개인 차익실현은 단기 조정 빌미가 될 수 있음.</p>
+      </div>
+      <div class="topic-src">출처: Asia Business Daily, Seoul Economic Daily (5/26)</div>
+    </div>
+    <div class="topic">
+      <div class="topic-num">TOPIC 03 · 美-이란 휴전 베팅</div>
+      <div class="topic-head">📰 사건: WTI $92~93 (-월간 하락), 시장 위험선호</div>
+      <div class="topic-bull">⚡ 영향: 유가 하락 = 인플레 우호, 美 10Y 4.56%로 안정화</div>
+      <div class="topic-bull">⚡ 다만 휴전 결렬·호르무즈 재봉쇄 가능성 잠재</div>
+      <div class="action">
+        <div class="action-head">💡 정군 권고</div>
+        <p>유가·금리 동반 안정은 KOSPI 우호. 단 휴전 불발 헤드라인 즉시 방향 전환 — 새벽 4시 美 시간외 체크 권장.</p>
+      </div>
+      <div class="topic-src">출처: CNBC, Trading Economics (5/26)</div>
+    </div>
+  </div>
 </section>
 
-<section class="card" style="--accent:#FFD700">
-<div class="accent-bar"></div>
-<div class="tag">03 / PATTERN</div>
-<div class="emoji">📊</div>
-<h1 class="title">5/22 KOSPI <b>7,848</b> 휴장 직전 흐름</h1>
-<div class="body">
-<div class="kv">
-<span class="label">KOSPI 5/22</span>·<span class="num up">7,848 (+0.41%)</span><br>
-<span class="label">SOX 5/22</span>·<span class="num up">12,202.54 (+1.99%)</span> 신고가권<br>
-<span class="label">美 10Y</span>·<span class="num">4.56%</span> 박스권 상단<br>
-<span class="label">WTI</span>·<span class="num dn">$91 (-5%)</span> 1주 약세 지속<br>
-<span class="label">USD/KRW</span>·<span class="num dn">1,510원</span> 1개월 약세
-</div>
-<div class="view view-bull">
-<div class="view-head">🟢 추세 신호</div>
-<p>SOX 신고가 갱신 + 美 3대 지수 동반 상승 = 글로벌 위험선호 회복. 휴장 효과로 갭업 모멘텀 누적 가능.</p>
-<span class="src">Nasdaq Indexes, FRED</span>
-</div>
-<div class="view view-bear">
-<div class="view-head">🔴 경고 신호</div>
-<p>금리·환율 동반 상승은 과거 1~2주 내 외인 누적 매도로 전환된 패턴. WTI 급락은 글로벌 수요 둔화 시그널.</p>
-<span class="src">CNBC, TradingEconomics</span>
-</div>
-<div class="hidden">
-<div class="view-head">🔍 패턴 정리</div>
-<p>위험선호(SOX·美 지수) ↔ 매크로 부담(금리·환율·유가). 어느 한쪽 단정 금지. <b>5/26 시초 +0.3% 이내 갭업이면 정상, +0.7% 이상 갭업은 익일 차익실현 경계.</b></p>
-</div>
-</div>
+<section class="card" style="--c:#FFD700">
+  <div class="accent"></div>
+  <div class="tag">03 / PATTERN</div>
+  <div class="emoji">📊</div>
+  <h1>시장 지배력 시그널 <b>1~3순위 점검</b></h1>
+  <div class="body">
+    <div class="grid">
+      <div class="grid-cell"><b>① 외인 선물</b>현물 +6,048억<br>선물 데이터 미확보</div>
+      <div class="grid-cell"><b>② SOX</b><span class="down">-5%</span><br>(반도체 약세)</div>
+      <div class="grid-cell"><b>③ 원/달러</b>~1,543원 예상<br>(실시간 미확보)</div>
+      <div class="grid-cell"><b>④ 美 10Y</b>4.56%<br>(안정 구간)</div>
+      <div class="grid-cell"><b>⑤ WTI</b>$92~93<br>(이란 휴전 베팅)</div>
+      <div class="grid-cell"><b>⑥ VIX</b>데이터 미확보<br>(후속 점검)</div>
+    </div>
+    <p class="kv" style="margin-top:14px"><b>합산 판정:</b> 1순위 외인 매수 전환(+) / 2순위 SOX -5%(-) / 3순위 환율 1543 예상(-) → <b>엇갈림 → ★★★ (양가)</b></p>
+    <span class="src">출처: KRX, CNBC, Stocks Down Under 종합 (5/26 기준)</span>
+    <div class="hidden">
+      <div class="hidden-head">🔍 정군 시각</div>
+      <p>1~3순위가 한 방향이 아니라 <b>"외인 +/반도체 -/환율 -"</b>로 엇갈림. 단정 못 함. 외인이 1.5조 본격 매수로 전환되거나, SOX가 갭 메우는 반등 나와야 명확해짐. 데이터 한계 솔직히 인정 — 선물 누적, VIX, 실시간 환율은 개장 후 후속 점검 필요.</p>
+    </div>
+  </div>
 </section>
 
-<section class="card" style="--accent:#34D399">
-<div class="accent-bar"></div>
-<div class="tag">04 / VALUATION</div>
-<div class="emoji">💰</div>
-<h1 class="title">밸류에이션 <b>고점 영역</b> 도달 여부</h1>
-<div class="body">
-<div class="kv">
-<span class="label">KOSPI 7,848</span>·연초 대비 강한 상승, IB 목표 8,000~8,500 근접<br>
-<span class="label">S&P 500</span>·<span class="num up">7,473</span> 사상 최고가 권역<br>
-<span class="label">SOX</span>·<span class="num up">12,202</span> 5/14 신고가 12,141 갱신
-</div>
-<div class="view view-bull">
-<div class="view-head">🟢 BULL · 실적 사이클</div>
-<p>NVDA 어닝 서프라이즈 + 데이터센터 +73% → AI 자본 지출 사이클 연장. 한국 반도체 2H 실적 개선 컨센 강화. PER 부담 있어도 EPS 상향이 이를 흡수.</p>
-<span class="src">JP모건·골드만 시각</span>
-</div>
-<div class="view view-bear">
-<div class="view-head">🔴 BEAR · 마이클 버리식 경계</div>
-<p>美 S&P 신고가 + SOX 신고가 + KOSPI 코앞 8,000 → 동시 다발적 신고가는 역사적으로 단기 조정 빈도 ↑. 10Y 4.56% 유지 시 멀티플 부담.</p>
-<span class="src">시장 합의 컨센서스 종합</span>
-</div>
-<div class="hidden">
-<div class="view-head">🔍 정군 판단</div>
-<p>고점이라기보다 <b>중기 상승 추세 + 단기 과열</b>. 추격매수 ✗, 신규 진입은 <b>5% 조정 시 분할</b>. 핵심 보유 종목은 트레일링 스탑 -3~5%.</p>
-</div>
-</div>
+<section class="card" style="--c:#34D399">
+  <div class="accent"></div>
+  <div class="tag">04 / VALUATION</div>
+  <div class="emoji">💰</div>
+  <h1>밸류 과열 vs 이익 모멘텀 <b>양면 점검</b></h1>
+  <div class="body">
+    <div class="view view-bull">
+      <div class="view-head">🟢 BULL — 이익이 받쳐준다</div>
+      <p>Goldman Sachs Research: <b>"AI sector CapEx·sales·earnings·buybacks 모두 견조"</b>. JP모건: 2026 신흥국 매력도 상승, 한국은 KOSPI 8000 돌파로 글로벌 자금 회귀 후보.</p>
+      <span class="src">출처: Goldman Sachs 2026 Outlooks, JP Morgan Mid-Year 2026</span>
+    </div>
+    <div class="view view-bear">
+      <div class="view-head">🔴 BEAR — 밸류는 뜨겁다</div>
+      <p>Goldman: <b>"valuations running hot, AI hype 지속성에 의문 시작"</b>. JPM: "Big rally 후 fuller valuation, 변동성 episode 배제 못함". KOSPI 8000은 PER 13~14배 → 역사 평균 상단.</p>
+      <span class="src">출처: Goldman Sachs Markets Outlook 2026, JPM Outlook 2026</span>
+    </div>
+    <div class="hidden">
+      <div class="hidden-head">🔍 정군 시각</div>
+      <p>밸류와 이익의 균형 — 이익이 계속 증가하면 정당화, 모멘텀 둔화 시 즉시 -10% 조정 가능. 5/28 PCE가 첫 시험대.</p>
+    </div>
+  </div>
 </section>
 
-<section class="card" style="--accent:#FF6B35">
-<div class="accent-bar"></div>
-<div class="tag">05 / HIDDEN RISK</div>
-<div class="emoji">⚠️</div>
-<h1 class="title">시장이 <b>놓치고 있는</b> 리스크</h1>
-<div class="body">
-<div class="view view-bear">
-<div class="view-head">👁️ 보이는 리스크</div>
-<p>5/28 PCE 발표 — 시장은 디스인플레 지속 가정. 컨센 상회 시 10Y 4.7% 돌파 시나리오, 위험자산 동시 압박.</p>
-<span class="src">美 BEA 경제캘린더</span>
-</div>
-<div class="alert">
-<div class="view-head">🔻 안 보이는 리스크</div>
-<p>WTI -5% = 미·이란 합의 베팅이지만, 동시에 <b>글로벌 수요 둔화</b> 신호일 가능성. 시장은 전자만 반영, 후자 시현 시 경기민감주 동반 하락.</p>
-<span class="src">정군 관찰</span>
-</div>
-<div class="view view-bear">
-<div class="view-head">🔻 미확보 데이터</div>
-<p>한국 5/25 휴장으로 외인 일일/누적 선물 포지션 확인 불가. F&O T1 (외인 ±1.5조) 시그널 판정 보류. <b>5/26 09:30 이후 재확인 필수.</b></p>
-</div>
-</div>
+<section class="card" style="--c:#FF6B35">
+  <div class="accent"></div>
+  <div class="tag">05 / HIDDEN RISK</div>
+  <div class="emoji">⚠️</div>
+  <h1>보이는 위험과 <b>안 보이는 위험</b></h1>
+  <div class="body">
+    <div class="alert">
+      <div class="alert-head">⚠️ 보이는 위험</div>
+      <p>① <b>5/28 美 4월 PCE + Q1 GDP 2차</b> — 인플레 surprise 시 즉시 변동성<br>② <b>한국 'AI 세금' 입법</b> — 삼전·SK하닉 직격<br>③ KOSPI 8000 차익실현 — 개인 -1.69조 이미 매도 중</p>
+      <span class="src">출처: BEA, 한국 국회 동향, KRX</span>
+    </div>
+    <div class="alert">
+      <div class="alert-head">🌒 안 보이는 위험</div>
+      <p>① <b>Kevin Warsh Fed 의장 첫 FOMC (6/16-17)</b> — 매파/비둘기 정체성 불확실<br>② <b>SOX -5% 갭의 한국 전이</b> — 시간외 추가 매물 가능성<br>③ Qualcomm -10% 같은 개별 종목 쇼크가 섹터 전체 확산하는 '체인 리스크'</p>
+      <span class="src">출처: Fed FOMC calendar, Kraken Brief 5/20</span>
+    </div>
+    <div class="hidden">
+      <div class="hidden-head">🔍 정군 시각</div>
+      <p>실수는 <b>한 가지 원인</b>에 매달리는 것. 'AI 세금' 우려가 SOX 약세의 전부가 아닐 가능성 — 美 소비 둔화 데이터, 휴전 베팅 차익실현, 만기 다가오는 옵션 포지션 청산 모두 동시에 작용 중.</p>
+    </div>
+  </div>
 </section>
 
-<section class="card" style="--accent:#06B6D4">
-<div class="accent-bar"></div>
-<div class="tag">06 / SECTOR THEME</div>
-<div class="emoji">🏭</div>
-<h1 class="title">섹터 로테이션 — <b>반도체 vs 정유</b></h1>
-<div class="body">
-<div class="view view-bull">
-<div class="view-head">🟢 매수 우위 · 반도체·AI 인프라</div>
-<p>NVDA 비트 + SOX 신고가 → 삼전·하닉 갭업 시도. 데이터센터 전력·HBM·AI 서버 ODM 동조. <b>HBM·전력 인프라</b> 우선.</p>
-<span class="src">SOX 12,202, NVDA Q1 +69% YoY</span>
-</div>
-<div class="view view-bear">
-<div class="view-head">🔴 매도 우위 · 정유·조선·방산 단기</div>
-<p>WTI -5% + 미·이란 합의 진전 → 정유 마진 압박, 중동 긴장 완화로 방산 단기 차익실현 압력. 단, 장기 펀더멘털 훼손 아님.</p>
-<span class="src">WTI 트레이딩이코노믹스</span>
-</div>
-<div class="hidden">
-<div class="view-head">🔍 정군 로테이션</div>
-<p>비중 가이드: <b>반도체·AI +5%p / 정유 -3%p / 항공·화학 +2%p</b>. 단정 금지, 1주 이내 환율·유가 추세 재확인.</p>
-</div>
-</div>
+<section class="card" style="--c:#06B6D4">
+  <div class="accent"></div>
+  <div class="tag">06 / SECTOR THEME</div>
+  <div class="emoji">🏭</div>
+  <h1>반도체·메모리, <b>오늘의 양면</b></h1>
+  <div class="body">
+    <div class="view view-bull">
+      <div class="view-head">🟢 BULL — 메모리 사이클 지속</div>
+      <p>JP모건: HBM 수요 견조, AI CapEx는 2026 하반기도 우상향. 삼전 5월 추정가 ~30만원대, SK하닉 ~189만원대 시장 컨센서스. 외인 12일 만에 매수 전환은 우호 시그널.</p>
+      <span class="src">출처: 머니투데이 5/12 인터뷰, KRX</span>
+    </div>
+    <div class="view view-bear">
+      <div class="view-head">🔴 BEAR — '한국 AI 세금' 직격</div>
+      <p>美 SOX -5%, Qualcomm -10% 급락의 트리거가 한국 입법 우려. 삼전·SK하닉은 글로벌 메모리 양강 → 입법 현실화 시 마진 직격. 만기 6/11까지 외인 선물 포지션 청산 압력.</p>
+      <span class="src">출처: Stocks Down Under 5/26, 한국 국회</span>
+    </div>
+    <div class="action">
+      <div class="action-head">💡 정군 권고</div>
+      <p>섹터 트레이딩은 갭다운 시 일단 관찰 → 오전 11시 외인 흐름 확정 후 진입. 'AI 세금' 입법안 텍스트가 나오기 전까진 헤지 동반 필수.</p>
+    </div>
+  </div>
 </section>
 
-<section class="card" style="--accent:#EC4899">
-<div class="accent-bar"></div>
-<div class="tag">07 / EVENT CATALYST</div>
-<div class="emoji">📅</div>
-<h1 class="title">7일 이내 <b>핵심 이벤트</b></h1>
-<div class="body">
-<div class="kv">
-<span class="label">5/26 (화)</span>·한국 시장 재개장 — 휴장 갭 반영<br>
-<span class="label">5/27 (수)</span>·美 5년물 입찰, 베이지북<br>
-<span class="label">5/28 (목)</span>·<b class="dn">美 4월 근원 PCE 발표</b>(최대 변수)<br>
-<span class="label">5/29 (금)</span>·MSCI 반기 리뷰 리밸런싱 (장 마감 후)<br>
-<span class="label">6/1 (월)</span>·MSCI 리밸런싱 반영, ISM 제조업<br>
-<span class="label">6/11 (목)</span>·KOSPI200 6월물 옵션만기 (D-16)
-</div>
-<div class="action">
-<div class="view-head">💡 정군 권고</div>
-<p>5/28 PCE 컨센 부합 → 위험선호 추가 강화. 상회 → 차익실현 빠른 진입. 5/29 MSCI는 한국 편입/축소 종목 사전 점검 필수.</p>
-</div>
-</div>
+<section class="card" style="--c:#EC4899">
+  <div class="accent"></div>
+  <div class="tag">07 / EVENT CATALYST</div>
+  <div class="emoji">📅</div>
+  <h1>7일 이내 <b>4개 빅이벤트</b></h1>
+  <div class="body">
+    <div class="topic">
+      <div class="topic-num">★★★★★ · 임박</div>
+      <div class="topic-head">5/28 (목) · 美 4월 PCE + Q1 GDP 2차</div>
+      <div class="topic-bull">컨센서스 Core PCE YoY 둔화 기대 → surprise upside가 가장 큰 리스크</div>
+      <div class="topic-src">출처: BEA</div>
+    </div>
+    <div class="topic">
+      <div class="topic-num">★★★★ · 다음주</div>
+      <div class="topic-head">6/5 (금) · 美 5월 NFP (비농업)</div>
+      <div class="topic-bull">Warsh 첫 FOMC(6/16-17) 직전 마지막 노동 데이터</div>
+      <div class="topic-src">출처: Fed FOMC calendar</div>
+    </div>
+    <div class="topic">
+      <div class="topic-num">★★★ · 한국 일정</div>
+      <div class="topic-head">6/11 (목) · KOSPI200 6월물 옵션 만기</div>
+      <div class="topic-bull">15일 후 — T5(7일 내) 미발동, 단 외인 선물 포지션 사전 청산 가능</div>
+      <div class="topic-src">출처: KRX 만기일정</div>
+    </div>
+    <div class="topic">
+      <div class="topic-num">★★★ · 중간 점검</div>
+      <div class="topic-head">5월 말 ~ 6월 초 · 한국 'AI 세금' 입법 동향</div>
+      <div class="topic-bull">법안 텍스트 공개 시점이 반도체株의 분기점</div>
+      <div class="topic-src">출처: 국회 동향</div>
+    </div>
+  </div>
 </section>
 
-<section class="card" style="--accent:#14B8A6">
-<div class="accent-bar"></div>
-<div class="tag">08 / F&O SIGNAL</div>
-<div class="emoji">📐</div>
-<h1 class="title">파생 시그널 — <b>T5 발동</b> (만기 7일권 아님)</h1>
-<div class="body">
-<div class="kv">
-<span class="label">T1 외인선물</span>·<span class="flat">데이터 미확보 (5/25 휴장)</span><br>
-<span class="label">T5 만기</span>·6/11 옵션만기까지 <b>D-16</b> → 임박 단계 아님<br>
-<span class="label">현재 단계</span>·만기 부담 약함, 평소 수급으로 판단
-</div>
-<div class="view view-bear">
-<div class="view-head">🔻 미확보 한계</div>
-<p>한국 휴장으로 외인 선물 누적 포지션·일일 변동 확인 불가. <b>5/26 09:30 이후 KRX 정보데이터시스템 재확인 필수.</b> 그 전 단정 금지.</p>
-<span class="src">KRX Data Marketplace</span>
-</div>
-<div class="hidden">
-<div class="view-head">🔍 정군 시각</div>
-<p>만기까지 2주+ → 옵션 콜·풋 비대칭은 아직 형성 전. 다만 SOX 신고가 + 美 강세 갭업 기대로 시초 외인 선물 매수 들어올 가능성 ★★★. 매수 시 KOSPI 갭업 +0.4%, 매도 시 보합~-0.3% 예상.</p>
-</div>
-</div>
-</section>
-
-<section class="card" style="--accent:#A78BFA">
-<div class="accent-bar"></div>
-<div class="tag">09 / ACTION</div>
-<div class="emoji">⚡</div>
-<h1 class="title">KICK 매트릭스 · <b>ELW 진입</b></h1>
-<div class="body">
-<div class="action">
-<div class="view-head">⏰ 당일 KICK (5/26)</div>
-<p>09:00 시초 ±0.4% 이내 갭업이면 <b>반도체 분할 매수</b> 시작. +0.7% 이상 갭업은 차익실현 우선. 환율 1,520 돌파 시 즉시 비중 축소.</p>
-</div>
-<div class="action">
-<div class="view-head">📅 1주 KICK</div>
-<p>5/28 PCE 부합 시 추가 매수, 상회 시 현금 ↑. 6/11 만기 D-7 진입 전(6/4)까지 핵심 보유 종목 점검 완료.</p>
-</div>
-<div class="view view-bull">
-<div class="view-head">🟢 ELW 콜 진입 후보</div>
-<p>SOX·美 강세 갭업 베팅 → <b>KOSPI200 콜 ELW</b> 시초 진입, 행사가 시장가 +1% 외가, 잔존 30일 이상. 손절 <b>-0.5% 즉시 컷</b>.</p>
-</div>
-<div class="alert">
-<div class="view-head">🔻 ELW 풋 헤지</div>
-<p>환율 1,520 돌파 + 외인 선물 매도 1.5조 발생 시 풋 ELW 동시 진입. 비중은 콜의 1/3, 손절 -0.5%.</p>
-</div>
-<div class="hidden">
-<div class="view-head">🔍 정군 종합 판단</div>
-<p>★★★ — 1·2위 지배력(외인선물 미확정·SOX 강세) 일부 확인 불가. 갭업 시도하되 <b>분할·트레일링 스탑 필수</b>. 단일 변수 단정 금지, 09:30 외인 흐름 재확인.</p>
-</div>
-</div>
+<section class="card" style="--c:#A78BFA">
+  <div class="accent"></div>
+  <div class="tag">08 / ACTION</div>
+  <div class="emoji">🎬</div>
+  <h1>오늘의 <b>KICK 매트릭스</b></h1>
+  <div class="body">
+    <div class="topic">
+      <div class="topic-num">⏰ KICK · 당일 (5/27)</div>
+      <div class="topic-head">SOX -5% 갭다운 대비 / KOSPI 8000 차익실현 압력</div>
+      <div class="topic-bull">9~10시: 갭다운 폭 확인 — 삼전·SK하닉 갭 1% 이상이면 관망</div>
+      <div class="topic-bull">11시: 외인 흐름 확정 — 매수 지속 시 매수 시도, 매도 전환 시 즉시 손절</div>
+      <div class="topic-bull">14시 이후: 5/28 PCE 대기 모드 — 신규 포지션 자제</div>
+    </div>
+    <div class="topic">
+      <div class="topic-num">⏰ KICK · 1주 (~6/3)</div>
+      <div class="topic-head">PCE 통과 후 안도 랠리 시나리오 / 갭 메우기</div>
+      <div class="topic-bull">5/28 PCE inline 이하 → SOX 갭 메우는 반등 시도 가능</div>
+      <div class="topic-bull">surprise upside → 美 10Y 4.6% 돌파 시 위험자산 동반 조정</div>
+      <div class="topic-bull">한국 반도체는 'AI 세금' 입법 텍스트 발표 전까지 박스권</div>
+    </div>
+    <div class="action">
+      <div class="action-head">⚡ ELW 전략</div>
+      <p>방향: <b>양방향 변동성 베팅 (스트래들 / 콜·풋 분할)</b><br>
+      손절: <b>-0.5% 엄격 적용</b> (단일 변수 단정 금지)<br>
+      이유: 美 신고가(+) / SOX -5%(-) / KOSPI 8000(+) / PCE 임박(?)으로 시그널 4축 엇갈림</p>
+    </div>
+    <div class="hidden">
+      <div class="hidden-head">🔍 정군 최종 판단 <span class="star">★★★★</span></div>
+      <p>정군이 보기엔 <b>추세 유지 + 단기 변동성 확대</b>가 가장 합리적. 한 가지 원인으로 시장 단정 금지 — 美 신고가/반도체 갭/한국 사상 첫 8000/PCE 임박 4축이 동시에 작용 중. 고객님, 오늘은 큰 베팅보다 데이터 확인 후 분할 진입이 답입니다.</p>
+    </div>
+  </div>
 </section>
 
 </body>
