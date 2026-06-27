@@ -3,163 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>정군 모닝 v11 — 2026.06.24 (수) POST-MARKET</title>
+<title>정군 모닝 v11 — 2026.06.27 (토) WEEKEND</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-html,body{height:100%;}
-body{background:#080C14;color:#E8EDF4;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard",system-ui,sans-serif;scroll-snap-type:y mandatory;overflow-y:scroll;height:100vh;-webkit-overflow-scrolling:touch;line-height:1.6;}
-.strip{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,12,20,.82);backdrop-filter:blur(10px);font-size:11.5px;letter-spacing:.4px;color:#7E8AA0;padding:8px 18px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06);}
-.strip b{color:#00D4FF;}
-.card{min-height:100vh;scroll-snap-align:start;scroll-snap-stop:always;padding:64px 22px 40px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
-.accent{position:absolute;top:0;left:0;right:0;height:4px;}
-.glow{position:absolute;top:-40px;left:50%;transform:translateX(-50%);width:220px;height:120px;border-radius:50%;filter:blur(60px);opacity:.32;}
-.tag{font-size:12px;font-weight:700;letter-spacing:2px;color:#7E8AA0;margin-bottom:14px;}
-.emoji{font-size:44px;line-height:1;margin-bottom:10px;}
-.title{font-size:28px;font-weight:800;line-height:1.25;margin-bottom:18px;letter-spacing:-.5px;}
-.body{font-size:16px;color:#C7D0DE;}
-.body p{margin-bottom:12px;}
-.kv{font-size:15px;color:#AEB8C8;margin:4px 0;}
-.kv b{color:#E8EDF4;}
-.src{font-size:11.5px;font-style:italic;color:#5E6A80;margin-top:4px;display:block;}
-.view{border-radius:12px;padding:13px 15px;margin:9px 0;font-size:14.5px;}
-.view-head{font-size:11.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:5px;}
-.view-bull{background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.4);}
-.view-bull .view-head{color:#34D399;}
-.view-bear{background:rgba(255,107,53,.07);border:1px solid rgba(255,107,53,.4);}
-.view-bear .view-head{color:#FF6B35;}
-.action{background:rgba(167,139,250,.09);border:1px solid rgba(167,139,250,.5);border-radius:12px;padding:13px 15px;margin:11px 0;font-size:14.5px;}
-.action .view-head{color:#A78BFA;}
-.alert{background:rgba(255,107,53,.09);border:1px solid rgba(255,107,53,.5);border-radius:12px;padding:13px 15px;margin:9px 0;font-size:14.5px;}
-.alert .view-head{color:#FF6B35;}
-.hidden{background:rgba(0,212,255,.05);border-left:3px solid #00D4FF;border-radius:6px;padding:11px 14px;margin-top:14px;font-size:13.5px;color:#9FB0C6;}
-.hidden b{color:#00D4FF;}
-.topic{border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:13px 15px;margin:10px 0;background:rgba(255,255,255,.018);}
-.topic-num{display:inline-block;font-size:11px;font-weight:800;color:#F472B6;letter-spacing:1px;margin-bottom:4px;}
-.topic-head{font-size:16px;font-weight:700;margin-bottom:7px;color:#F0F4FA;}
-.topic-line{font-size:14px;color:#BAC4D4;margin:5px 0;}
-.topic-line b{color:#E8EDF4;}
-.topic-src{font-size:11px;font-style:italic;color:#5E6A80;margin-top:5px;}
-.stars{font-size:15px;letter-spacing:2px;color:#FFD700;}
-.matrix{width:100%;border-collapse:collapse;margin:8px 0;font-size:13.5px;}
-.matrix td{border:1px solid rgba(255,255,255,.09);padding:9px 10px;vertical-align:top;}
-.matrix .mh{color:#A78BFA;font-weight:700;width:64px;}
-b.c1{color:#00D4FF;}b.c2{color:#F472B6;}b.c3{color:#FFD700;}b.c4{color:#34D399;}b.c5{color:#FF6B35;}b.c6{color:#06B6D4;}b.c7{color:#EC4899;}b.c8{color:#14B8A6;}b.c9{color:#A78BFA;}
-.scroll-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font-size:11px;color:#4E5A70;animation:bob 1.8s infinite;}
-@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(5px);}}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:#080C14;color:#E8EDF4;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",Pretendard,system-ui,sans-serif;scroll-snap-type:y mandatory;overflow-y:scroll;height:100vh;-webkit-font-smoothing:antialiased;line-height:1.6;}
+.strip{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(8,12,20,.82);backdrop-filter:blur(12px);font-size:12px;letter-spacing:.5px;color:#8A97AB;padding:8px 16px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;}
+.strip b{color:#00D4FF;font-weight:700}
+.card{height:100vh;scroll-snap-align:start;padding:64px 22px 40px;display:flex;flex-direction:column;position:relative;overflow:hidden;}
+.accent{position:absolute;top:0;left:0;right:0;height:4px}
+.glow{position:absolute;top:-40px;left:50%;transform:translateX(-50%);width:60%;height:120px;filter:blur(60px);opacity:.35;border-radius:50%}
+.tag{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.65;margin-bottom:14px}
+.emoji{font-size:44px;line-height:1;margin-bottom:8px}
+.title{font-size:28px;font-weight:800;line-height:1.25;margin-bottom:18px;letter-spacing:-.5px}
+.body{font-size:16px;color:#C5CFDC;flex:1;overflow-y:auto}
+.body::-webkit-scrollbar{width:0}
+.kv{font-size:15px;margin:5px 0;display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed rgba(255,255,255,.07);padding-bottom:5px}
+.kv span:first-child{color:#8A97AB}
+.kv b{font-weight:700}
+.up{color:#34D399}.down{color:#FF6B35}.flat{color:#FFD700}
+.view{border-radius:12px;padding:13px 15px;margin:11px 0;font-size:15px;line-height:1.55}
+.view-head{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;display:block}
+.view-bull{background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.45)}
+.view-bull .view-head{color:#34D399}
+.view-bear{background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.45)}
+.view-bear .view-head{color:#FF6B35}
+.src{font-size:12px;font-style:italic;color:#6B7689;margin-top:5px;display:block}
+.action{background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.5);border-radius:12px;padding:13px 15px;margin:11px 0;font-size:15px}
+.action .view-head{color:#A78BFA}
+.alert{background:rgba(255,107,53,.1);border:1px solid rgba(255,107,53,.55);border-radius:12px;padding:13px 15px;margin:11px 0;font-size:15px}
+.alert .view-head{color:#FF6B35}
+.hidden-box{background:rgba(0,212,255,.06);border-left:3px solid #00D4FF;border-radius:0 10px 10px 0;padding:11px 14px;margin:13px 0;font-size:14.5px;color:#B8C4D4}
+.hidden-box .view-head{color:#00D4FF}
+.topic{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:12px 14px;margin:10px 0}
+.topic-num{font-size:12px;font-weight:800;color:#F472B6;letter-spacing:1px}
+.topic-head{font-size:16.5px;font-weight:700;margin:3px 0 7px}
+.topic-row{font-size:14.5px;margin:4px 0;color:#C5CFDC}
+.topic-row b{color:#fff}
+.star{color:#FFD700;letter-spacing:2px;font-size:18px}
+.matrix{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+.matrix th{text-align:left;color:#8A97AB;font-weight:600;padding:7px 6px;border-bottom:1px solid rgba(255,255,255,.12);font-size:12.5px}
+.matrix td{padding:8px 6px;border-bottom:1px solid rgba(255,255,255,.05)}
 </style>
 </head>
 <body>
-<div class="strip">2026.06.24 (수) · <b>POST-MARKET</b> · v11 · 9/9</div>
+<div class="strip"><span>2026.06.27 <b>(토)</b> · WEEKEND · v11</span><span>9 / 9</span></div>
 
 <section class="card">
-<div class="accent" style="background:#00D4FF;"></div><div class="glow" style="background:#00D4FF;"></div>
-<div class="tag">01 / CORE THESIS</div><div class="emoji">🎯</div>
-<div class="title">반도체 <b class="c1">V자 변동성</b>, 마이크론·PCE가 방향 가른다</div>
-<div class="body">
-<p>정군이 보는 핵심: 6/23 美 반도체 패닉(SOX <b>-7.87%</b>, 나스닥 -2.21%)에 코스피가 6/23 <b>-9.99%</b> 폭락했다가, 6/24 <b>+3.26%</b>(8,471) 반등. 삼성전자 +9.11%, SK하이닉스 +2.74%. 하루 만에 V자가 그려진 전형적 변동성 국면입니다.</p>
-<div class="view view-bull"><div class="view-head">🟢 긍정론</div>신한투자증권: "이익 훼손이 아닌 속도가 유발한 <b>멀티플 일시 압축</b>, 기업 이익추정치는 유지 → PER 디레이팅 국면." 야간선물·MSCI Korea ETF 5~6% 반등.<span class="src">출처: 신한투자증권 인사이트(6월)</span></div>
-<div class="view view-bear"><div class="view-head">🔴 부정론</div>BoFA 금리인상 경계 노트가 셀오프 촉발. SK하이닉스 연초 대비 +320% 급등분 차익실현 집중, 외신은 HBM 가격조정·증설 경쟁 심화 경고.<span class="src">출처: TheStreet(6/23), 머니투데이(6/8)</span></div>
-<div class="hidden"><b>🔍 정군 종합:</b> 단일 변수로 단정 금지. 이익(견조) vs 멀티플(압축) vs 매크로(PCE·금리)의 3축 충돌입니다. 6/25 새벽 마이크론 실적과 PCE가 방향을 결정하기 전까지는 어느 쪽도 확정 불가 — 관망이 정석입니다.</div>
-</div><div class="scroll-hint">▼ 스크롤</div>
+  <div class="accent" style="background:#00D4FF"></div><div class="glow" style="background:#00D4FF"></div>
+  <div class="tag" style="color:#00D4FF">01 / CORE THESIS</div>
+  <div class="emoji">🧭</div>
+  <div class="title">결론: <b style="color:#00D4FF">AI 거품 경계 vs 조정 후 매수</b> — 6/26 코스피 서킷브레이커, 주말 변동성 점검 국면</div>
+  <div class="body">
+    <p>정군이 먼저 결론부터 말씀드립니다. 6월 26일(금) 코스피가 하루 <b class="down">-5.8%</b> 급락하며 서킷브레이커·사이드카가 동시 발동했습니다. 직전일(6/25)엔 <b class="up">+5.42%</b> 급등했던 자리라, 이번 주는 AI 모멘텀의 <b>변곡점</b>을 통과 중입니다. 단일 변수(OpenAI IPO 연기설)로 단정하면 위험합니다 — 복합 원인입니다.</p>
+    <div class="view view-bull"><span class="view-head">🟢 긍정론</span>AI 데이터센터 매출이 처음으로 감가상각비를 2분기 연속 상회(1Q26 250억$ &gt; 감가 210억$). <b>골드만삭스</b>는 2025~28년 빌드아웃을 구조적 수요로 평가. 조정은 과열 해소이며 우량주 매수 기회라는 시각.<span class="src">출처: Goldman Sachs, Yahoo Finance (2026.6)</span></div>
+    <div class="view view-bear"><span class="view-head">🔴 부정론</span>OpenAI는 8년간 1.4조$ 투자 약정에 매출은 130억$뿐. <b>모건스탠리</b>는 25~28년 데이터센터 지출 3조$ 추정, 절반이 사모신용 의존. IPO 2027 연기설에 소프트뱅크 급락 — 2024년 8월 이후 최대 낙폭.<span class="src">출처: Morgan Stanley, Bloomberg (2026.6.26)</span></div>
+    <div class="hidden-box"><span class="view-head">🔍 정군 종합 판단</span>시장 지배력 순위(외인선물→SOX→환율→10Y→WTI→VIX)로 보면, 핵심 트리거는 <b>SOX 반도체 매도</b>와 <b>AI 자본조달 불안</b>입니다. 다만 10Y 4.39%로 하락(주간 -7bp), WTI 69.4$로 급락 — 매크로(금리·유가)는 우호적입니다. 방향이 엇갈려 정군 신뢰도는 <span class="star">★★★</span>. 주말 미국發 추가 헤드라인 확인이 월요일 갭 방향을 가릅니다.</div>
+  </div>
 </section>
 
 <section class="card">
-<div class="accent" style="background:#F472B6;"></div><div class="glow" style="background:#F472B6;"></div>
-<div class="tag">02 / TODAY TOPICS</div><div class="emoji">📰</div>
-<div class="title">오늘의 <b class="c2">3대 토픽</b></div>
-<div class="body">
-<div class="topic"><span class="topic-num">TOPIC 1 · 반도체</span><div class="topic-head">삼전닉스 풍향계 = 마이크론</div><div class="topic-line">📰 <b>사건</b>: 코스피 6/23 -9.99% → 6/24 +3.26% V자 반등</div><div class="topic-line">⚡ <b>영향</b>: 6/25 새벽(KST 5:30) 마이크론 실적이 메모리 업황 분수령</div><div class="topic-line">💡 <b>권고</b>: 추격매수 자제, 실적 확인 후 대응</div><div class="topic-src">출처: News1, 파이낸셜뉴스(6/21)</div></div>
-<div class="topic"><span class="topic-num">TOPIC 2 · 유가/이란</span><div class="topic-head">WTI $73.4, 3개월래 최저</div><div class="topic-line">📰 <b>사건</b>: 美-이란 평화협상 진전, 테헤란 60일 원유판매 라이선스</div><div class="topic-line">⚡ <b>영향</b>: 공급 우려 완화 → 인플레 압력 경감, 호르무즈 리스크 잔존</div><div class="topic-line">💡 <b>권고</b>: 에너지·항공 차별화 대응</div><div class="topic-src">출처: Trading Economics(6/23)</div></div>
-<div class="topic"><span class="topic-num">TOPIC 3 · 금리/물가</span><div class="topic-head">10Y 4.49%, 5월 PCE 6/25 발표</div><div class="topic-line">📰 <b>사건</b>: 5월 PCE 컨센 YoY <b>+4.1%</b>, MoM +0.5%</div><div class="topic-line">⚡ <b>영향</b>: 상회 시 금리인상 재부각, 부합·하회 시 금리·달러 안정</div><div class="topic-line">💡 <b>권고</b>: 금리민감 성장주 비중 조절</div><div class="topic-src">출처: 파이낸셜뉴스(6/21), FRED</div></div>
-</div>
+  <div class="accent" style="background:#F472B6"></div><div class="glow" style="background:#F472B6"></div>
+  <div class="tag" style="color:#F472B6">02 / TODAY TOPICS</div>
+  <div class="emoji">📰</div>
+  <div class="title">오늘의 <b style="color:#F472B6">3대 토픽</b></div>
+  <div class="body">
+    <div class="topic"><div class="topic-num">TOPIC 1</div><div class="topic-head">OpenAI IPO 2027 연기설</div><div class="topic-row">📰 <b>사건</b>: NYT 보도 — OpenAI가 1조$ 밸류 위해 상장을 2027년으로 연기 검토. SpaceX 상장 후 급락이 경계심 자극.</div><div class="topic-row">⚡ <b>영향</b>: 소프트뱅크 급락, 글로벌 AI주 동반 매도. 나스닥 5거래일째 약세.</div><div class="topic-row">💡 <b>정군 권고</b>: AI 밸류 재평가 시작 신호일 수 있음. 추격 매수 자제, 분할 접근.</div><span class="src">출처: NYT, CNBC, Bloomberg (2026.6.26)</span></div>
+    <div class="topic"><div class="topic-num">TOPIC 2</div><div class="topic-head">코스피 서킷브레이커 발동</div><div class="topic-row">📰 <b>사건</b>: 6/26 코스피 -5.8%, 8,411 마감. SK하이닉스 -8%. 사이드카+서킷브레이커 동시.</div><div class="topic-row">⚡ <b>영향</b>: 반도체 쏠림 청산. 변동성 급등.</div><div class="topic-row">💡 <b>정군 권고</b>: 패닉 추격매도 금물. 우량 반도체는 분할 관망, 월요일 갭 확인.</div><span class="src">출처: 나무위키 코스피/2026, KRX (2026.6.26)</span></div>
+    <div class="topic"><div class="topic-num">TOPIC 3</div><div class="topic-head">유가·금리 동반 하락 (우호적 매크로)</div><div class="topic-row">📰 <b>사건</b>: WTI 69.40$ (-3.51%), 美 10Y 4.39% (주간 -7bp). PCE 물가 인라인.</div><div class="topic-row">⚡ <b>영향</b>: 위험자산엔 완충재. 그러나 주가 하락이 이를 압도.</div><div class="topic-row">💡 <b>정군 권고</b>: 매크로는 바닥 지지력. 금리·유가 안정 시 반등 트리거 가능.</div><span class="src">출처: Trading Economics, CNBC (2026.6.26)</span></div>
+  </div>
 </section>
 
 <section class="card">
-<div class="accent" style="background:#FFD700;"></div><div class="glow" style="background:#FFD700;"></div>
-<div class="tag">03 / PATTERN</div><div class="emoji">📊</div>
-<div class="title"><b class="c3">패닉-반등</b> 패턴, 6월 들어 반복</div>
-<div class="body">
-<p class="kv">• 6/8: 코스피 장중 <b>7,400선</b> 위협 급락 → 이후 반등</p>
-<p class="kv">• 6/23: 코스피 <b>-9.99%</b> 폭락 (3개월래 최대)</p>
-<p class="kv">• 6/24: <b>+3.26%</b> (8,471) 반등, 삼성 +9.11%</p>
-<p class="kv">• 야간선물·MSCI Korea ETF <b>5~6%</b> 반등 복원</p>
-<span class="src">출처: 신한투자증권, 머니투데이(6/8), Trading Economics</span>
-<div class="hidden"><b>🔍 정군 시각:</b> 6월 내내 '급락→이익추정 유지→멀티플 복원' 패턴이 반복됩니다. 변동성(ATR) 확대 자체가 신호 — 한 방향 베팅보다 양방향 시나리오 대비가 유효합니다.</div>
-</div>
+  <div class="accent" style="background:#FFD700"></div><div class="glow" style="background:#FFD700"></div>
+  <div class="tag" style="color:#FFD700">03 / PATTERN</div>
+  <div class="emoji">📊</div>
+  <div class="title">지표 <b style="color:#FFD700">대시보드</b> (6/26 마감)</div>
+  <div class="body">
+    <div class="kv"><span>S&amp;P 500</span><b class="down">7,354.02 (-0.05%)</b></div>
+    <div class="kv"><span>나스닥</span><b class="down">25,297.62 (-0.24%)</b></div>
+    <div class="kv"><span>다우</span><b class="down">51,876.11 (-0.09%)</b></div>
+    <div class="kv"><span>SOX 반도체</span><b class="flat">데이터 미확보 (6/22 高 14,655)</b></div>
+    <div class="kv"><span>코스피</span><b class="down">8,411 (-5.8%) 서킷</b></div>
+    <div class="kv"><span>원/달러</span><b class="flat">약 1,521~1,523</b></div>
+    <div class="kv"><span>WTI 유가</span><b class="down">69.40$ (-3.51%)</b></div>
+    <div class="kv"><span>美 10Y 국채</span><b class="up">4.39% (주 -7bp)</b></div>
+    <div class="kv"><span>SK하이닉스</span><b class="down">-8%</b></div>
+    <span class="src">출처: TheStreet, Trading Economics, CNBC, 나무위키 (2026.6.26)</span>
+    <div class="hidden-box"><span class="view-head">🔍 정군 시각</span>미국 3대 지수는 소폭 하락에 그쳤으나 <b>코스피는 -5.8%</b>로 과민 반응. 이는 한국 시장의 <b>반도체 쏠림(SK하닉·삼전 비중)</b>이 증폭기로 작동한 결과입니다. 한계 인정 — SOX 정확 종가·환율 정확 종가 미확보로 후속 점검 필요.</div>
+  </div>
 </section>
 
 <section class="card">
-<div class="accent" style="background:#34D399;"></div><div class="glow" style="background:#34D399;"></div>
-<div class="tag">04 / VALUATION</div><div class="emoji">⚖️</div>
-<div class="title"><b class="c4">PER 디레이팅</b> vs 이익 정점론</div>
-<div class="body">
-<div class="view view-bull"><div class="view-head">🟢 저평가 시각</div>신한투자증권: 주가 급락에도 이익추정치 유지 → <b>PER 디레이팅</b>. SK증권: AI 기업 상장·하이퍼스케일러 자금조달 감안 시 메모리의 구조적 병목과 실적 강세는 단기에 변하지 않는 가치.<span class="src">출처: 신한·SK증권 리서치</span></div>
-<div class="view view-bear"><div class="view-head">🔴 고평가 시각</div>SK하이닉스 1년 반 만에 약 <b>16배</b>, 올해만 +320% 상승. 외신·시장조사기관은 2026년 이후 증설·경쟁 심화로 <b>HBM 가격조정</b> 가능성 제기.<span class="src">출처: 머니투데이(6/8), wonforecast</span></div>
-<div class="hidden"><b>🔍 정군 판단:</b> 밸류 논쟁의 본질은 '이익의 지속성'입니다. 마이크론 가이던스가 이 논쟁의 1차 심판 — 데이터 확인 전 단정 금지.</div>
-</div>
+  <div class="accent" style="background:#34D399"></div><div class="glow" style="background:#34D399"></div>
+  <div class="tag" style="color:#34D399">04 / VALUATION</div>
+  <div class="emoji">⚖️</div>
+  <div class="title">밸류에이션 <b style="color:#34D399">양면</b></div>
+  <div class="body">
+    <div class="view view-bull"><span class="view-head">🟢 저평가론</span>급락 후 반도체 대형주 P/B·P/E 단기 디스카운트. AI 매출이 감가상각 상회 시작 — 펀더멘털은 살아있다는 시각. <b>JP모건</b>은 조정을 비중확대 기회로 분류한 바.<span class="src">출처: JP Morgan 분석 (2026.6)</span></div>
+    <div class="view view-bear"><span class="view-head">🔴 고평가론</span>6/25 +5.42% 급등 후 6/26 -5.8% — 변동성 자체가 거품 신호. OpenAI 매출 대비 투자 약정 100배 괴리. <b>마이클 버리</b>류 비관론자들은 AI 캐펙스 회수 불확실성 경고.<span class="src">출처: Morgan Stanley, 시장 코멘터리 (2026.6)</span></div>
+    <div class="hidden-box"><span class="view-head">🔍 정군 연쇄 분석</span>밸류는 "싸다/비싸다" 단정 불가 — <b>자본조달 환경(사모신용 3조$)</b>이 핵심 변수. 금리 하락(10Y 4.39%)은 밸류 우호적이나, AI 신용 사이클 경색 시 멀티플 재조정 위험. 양방향 시나리오 병행 권고.</div>
+  </div>
 </section>
 
 <section class="card">
-<div class="accent" style="background:#FF6B35;"></div><div class="glow" style="background:#FF6B35;"></div>
-<div class="tag">05 / HIDDEN RISK</div><div class="emoji">⚠️</div>
-<div class="title">보이는 vs <b class="c5">안 보이는</b> 리스크</div>
-<div class="body">
-<div class="alert"><div class="view-head">보이는 리스크</div>6/25 마이크론 실적 미스 가능성, 5월 PCE +4.1% 상회 시 금리인상 재점화. 가격 변동성 자체.</div>
-<div class="alert"><div class="view-head">안 보이는 리스크</div>외인 선물 누적 포지션 <b>데이터 미확보</b> — 차익잔고 부호 불확실. 호르무즈 봉쇄 재부각, 단기 반등에 따른 레버리지 재유입 후 되돌림.</div>
-<span class="src">출처: 파이낸셜뉴스(6/21), KRX(미확인)</span>
-<div class="hidden"><b>🔍 정군 경고:</b> "데이터 미확보 — 후속 점검 필요." 외인 선물 누적은 시장 지배 1순위 변수인데 현재 확인 불가. 이것이 미확정인 상태에서 방향 베팅은 위험합니다.</div>
-</div>
+  <div class="accent" style="background:#FF6B35"></div><div class="glow" style="background:#FF6B35"></div>
+  <div class="tag" style="color:#FF6B35">05 / HIDDEN RISK</div>
+  <div class="emoji">🕳️</div>
+  <div class="title">보이는 / <b style="color:#FF6B35">안 보이는</b> 리스크</div>
+  <div class="body">
+    <div class="alert"><span class="view-head">⚠️ 보이는 리스크</span>코스피 서킷브레이커, 반도체 -8%, OpenAI IPO 연기. 시장이 이미 반영 중.</div>
+    <div class="view view-bear"><span class="view-head">🔴 안 보이는 리스크</span>① <b>사모신용(private credit)</b> 데이터센터 지출 절반 의존 — 신용경색 전이 위험. ② 외인 선물 누적 포지션 <b>데이터 미확보</b> — 청산 추가 가능성 점검 필요. ③ 주말 미국 추가 헤드라인 → 월요일 갭다운 리스크.<span class="src">출처: Morgan Stanley 사모신용 추정 (2026.6)</span></div>
+    <div class="hidden-box"><span class="view-head">🔍 정군 시각</span>가장 위험한 건 "한 가지 원인(OpenAI)"으로 안심하는 것. 실제론 <b>반도체 쏠림+AI 신용 사이클+외인 수급</b>의 복합 구조. 정군은 단일 원인 단정을 경계합니다. 한계: 외인 선물·SOX 종가 미확보 — 월요일 개장 전 재점검.</div>
+  </div>
 </section>
 
 <section class="card">
-<div class="accent" style="background:#06B6D4;"></div><div class="glow" style="background:#06B6D4;"></div>
-<div class="tag">06 / SECTOR THEME</div><div class="emoji">🏭</div>
-<div class="title"><b class="c6">AI 메모리</b> vs 에너지 약세</div>
-<div class="body">
-<div class="view view-bull"><div class="view-head">🟢 강세 섹터</div>AI 메모리(HBM): 구조적 병목 지속 주장, 삼성 1Q D램 1위 탈환·HBM4 추격. 반등 시 베타 가장 큼.<span class="src">출처: SK증권, 시장조사기관</span></div>
-<div class="view view-bear"><div class="view-head">🔴 약세 섹터</div>에너지: WTI $73.4 3개월래 최저, 美-이란 협상으로 유가 하방. 정유·E&P 모멘텀 둔화.<span class="src">출처: Trading Economics(6/23)</span></div>
-<div class="hidden"><b>🔍 정군 시각:</b> 반도체는 변동성↑·기대수익↑, 에너지는 매크로 역풍. 같은 지수 안에서도 섹터 분산이 핵심 방어 수단입니다.</div>
-</div>
+  <div class="accent" style="background:#06B6D4"></div><div class="glow" style="background:#06B6D4"></div>
+  <div class="tag" style="color:#06B6D4">06 / SECTOR THEME</div>
+  <div class="emoji">🏭</div>
+  <div class="title">섹터 <b style="color:#06B6D4">테마</b> 양면</div>
+  <div class="body">
+    <div class="view view-bull"><span class="view-head">🟢 반등 후보</span>방어주·내수(통신·유틸·필수소비), 저PBR 가치주, 금리하락 수혜 채권/리츠. 매크로(유가·금리 하락)가 우호적이라 <b>경기방어 로테이션</b> 가능.</div>
+    <div class="view view-bear"><span class="view-head">🔴 약세 지속 후보</span>AI/반도체 고밸류주(HBM 체인), AI 인프라·전력주. 자본조달 불안 직격. 추격 진입 위험.<span class="src">출처: 시장 섹터 동향 (2026.6.26)</span></div>
+    <div class="hidden-box"><span class="view-head">🔍 정군 권고</span>쏠림 청산 국면엔 <b>바벨 전략</b> — 한쪽엔 우량 반도체 분할 관망, 다른 쪽엔 방어주. 단일 테마 올인 금지.</div>
+  </div>
 </section>
 
 <section class="card">
-<div class="accent" style="background:#EC4899;"></div><div class="glow" style="background:#EC4899;"></div>
-<div class="tag">07 / EVENT CATALYST</div><div class="emoji">📅</div>
-<div class="title">7일 내 <b class="c7">핵심 이벤트</b></div>
-<div class="body">
-<p class="kv">🔥 <b>6/25 새벽(KST 5:30)</b> 마이크론 FY3Q 실적 — EPS 컨센 <b>$20.76</b>, 매출 $357.5억(YoY 매출 +284%)</p>
-<p class="kv">🔥 <b>6/25</b> 美 5월 PCE — YoY +4.1%, MoM +0.5% 예상</p>
-<p class="kv">• FOMC: 기준금리 동결, <b>물가전망 상향</b> 조정</p>
-<span class="src">출처: 국제뉴스, 파이낸셜뉴스(6/21), News1</span>
-<div class="action"><div class="view-head">💡 정군 권고</div>마이크론과 PCE가 같은 날(6/25) 겹칩니다. 호재·악재 동시 노출 — 이벤트 통과 전 포지션 가볍게, 통과 직후 방향 확인하고 진입하는 것이 정석입니다.</div>
-</div>
+  <div class="accent" style="background:#EC4899"></div><div class="glow" style="background:#EC4899"></div>
+  <div class="tag" style="color:#EC4899">07 / EVENT CATALYST</div>
+  <div class="emoji">📅</div>
+  <div class="title">7일 이내 <b style="color:#EC4899">빅이벤트</b></div>
+  <div class="body">
+    <div class="kv"><span>6/29(월)</span><b>주말 美 헤드라인 반영 — 갭 방향</b></div>
+    <div class="kv"><span>7/1(수)</span><b>美 ISM 제조업·구인(JOLTS)</b></div>
+    <div class="kv"><span class="flat">7/2(목)</span><b class="flat">★ 6월 美 고용보고서 (최대 변수)</b></div>
+    <div class="kv"><span>상시</span><b>OpenAI/소프트뱅크 후속 보도</b></div>
+    <span class="src">출처: Investing.com 경제캘린더, KB증권 (2026.6)</span>
+    <div class="view view-bull"><span class="view-head">🟢 긍정 시나리오</span>고용 견조+물가 안정 → 연착륙 내러티브 복귀, AI 조정 후 반등.</div>
+    <div class="view view-bear"><span class="view-head">🔴 부정 시나리오</span>고용 둔화 → 경기 우려 가세, AI 매도와 결합 시 추가 하락. 7월 FOMC 매파 경계(현 3.50~3.75% 동결 유력).<span class="src">출처: KB증권, Fed (2026.6)</span></div>
+  </div>
 </section>
 
 <section class="card">
-<div class="accent" style="background:#14B8A6;"></div><div class="glow" style="background:#14B8A6;"></div>
-<div class="tag">08 / F&O SIGNAL</div><div class="emoji">📐</div>
-<div class="title"><b class="c8">선물·옵션</b> 시그널 — 관찰 모드</div>
-<div class="body">
-<p class="kv">• <b>T5 만기 임박</b>: 6월 선물옵션 만기(둘째 목 = 6/11) <b>경과</b>, 다음 분기물 9월 → 미발동</p>
-<p class="kv">• <b>T1 외인 ±1.5조</b>: 외인 선물 누적 <b>데이터 미확보</b> → 판정 보류</p>
-<span class="src">출처: 한국거래소 만기 캘린더, KRX(누적 미확인)</span>
-<div class="alert"><div class="view-head">관찰 포인트</div>6/23~24 극단적 변동(±10%)은 선물 주도 가능성이 큽니다. 외인 선물 순매수 부호 확인이 다음 방향의 1차 단서 — 장중 차익잔고 모니터링 필수.</div>
-<div class="hidden"><b>🔍 정군 인정:</b> F&O 시그널은 현재 핵심 데이터(외인 선물 누적) 미확보로 단정 불가. "후속 점검 필요"로 솔직히 남깁니다.</div>
-</div>
+  <div class="accent" style="background:#14B8A6"></div><div class="glow" style="background:#14B8A6"></div>
+  <div class="tag" style="color:#14B8A6">08 / F&amp;O SIGNAL</div>
+  <div class="emoji">🎯</div>
+  <div class="title">선물·옵션 <b style="color:#14B8A6">시그널</b></div>
+  <div class="body">
+    <div class="kv"><span>T1 외인선물 ±1.5조</span><b class="flat">데이터 미확보</b></div>
+    <div class="kv"><span>T5 옵션만기 7일내</span><b>미발동 (6/18 위칭 종료)</b></div>
+    <div class="kv"><span>다음 옵션만기</span><b>7월 둘째주 (&gt;7일)</b></div>
+    <span class="src">출처: KRX 파생 (확인 필요)</span>
+    <div class="alert"><span class="view-head">⚠️ 한계 인정</span>외인 선물 누적 포지션·일일 수급 <b>데이터 미확보</b>입니다. 정군은 추정으로 단정하지 않습니다. 월요일 개장 전 KRX 파생 데이터로 T1 발동 여부 재점검 필요.</div>
+    <div class="hidden-box"><span class="view-head">🔍 정군 시각</span>서킷브레이커 발동일 후엔 통상 <b>선물 베이시스 왜곡</b>과 외인 청산이 잔존. 만기는 멀어 만기 변수는 낮으나, 6/26 청산 잔여 물량이 월요일 변동성을 키울 수 있음.</div>
+  </div>
 </section>
 
 <section class="card">
-<div class="accent" style="background:#A78BFA;"></div><div class="glow" style="background:#A78BFA;"></div>
-<div class="tag">09 / ACTION</div><div class="emoji">🎬</div>
-<div class="title"><b class="c9">KICK 매트릭스</b> & ELW</div>
-<div class="body">
-<table class="matrix"><tr><td class="mh">당일</td><td>마이크론·PCE 발표 전 <b>관망</b>. V자 반등 추격 자제. 현금비중 유지.</td></tr><tr><td class="mh">1주</td><td>6/25 이벤트 통과 후 반도체 방향 확인 → 추세 확정 시 분할 대응.</td></tr></table>
-<div class="action"><div class="view-head">💡 ELW</div>양방향 변동성 국면. 방향 확정 전 콜 진입 시 <b>손절 -0.5%</b> 엄수. 이벤트 갭 리스크로 야간 오버나잇 보유 신중.</div>
-<p class="kv" style="margin-top:10px;">시장 지배력 정렬: 외인선물(미확보)→SOX(-7.87%↘후 반등)→환율(≈1,563 약세)→10Y(4.49%)→WTI($73.4 안정)→VIX</p>
-<p class="kv">신뢰도: 1~3순위 <b>엇갈림</b> → <span class="stars">★★★</span> (단일 방향 확신 불가)</p>
-<span class="src">출처: 종합(상기 카드 참조)</span>
-<div class="hidden"><b>🔍 정군 결론 먼저:</b> 오늘은 베팅의 날이 아니라 <b>대기의 날</b>입니다. 마이크론·PCE라는 두 관문을 통과해야 추세가 보입니다. 복합 원인(이익·멀티플·매크로·수급) 중 단 하나도 확정되지 않았습니다.</div>
-</div>
+  <div class="accent" style="background:#A78BFA"></div><div class="glow" style="background:#A78BFA"></div>
+  <div class="tag" style="color:#A78BFA">09 / ACTION</div>
+  <div class="emoji">✅</div>
+  <div class="title">정군 <b style="color:#A78BFA">KICK</b> 매트릭스</div>
+  <div class="body">
+    <table class="matrix"><tr><th>시간축</th><th>행동</th><th>신뢰</th></tr><tr><td>주말</td><td>美 AI 후속 헤드라인 모니터링, 현금비중 유지</td><td class="star">★★★★</td></tr><tr><td>월요일(6/29)</td><td>갭 확인 후 대응. 갭다운 시 패닉매도 금지, 우량주 분할 관망</td><td class="star">★★★</td></tr><tr><td>1주(~7/2)</td><td>고용보고서까지 방어주·현금 우위. 반도체 추격 자제</td><td class="star">★★★</td></tr></table>
+    <div class="action"><span class="view-head">💜 정군 종합 권고</span>변동성 국면 — <b>리스크 관리 최우선</b>. 양방향 시나리오 병행. 단일 변수 단정 금지. 매크로(금리·유가)는 우호적이나 AI 신용·수급은 경계. 분할·바벨 전략 유지.</div>
+    <div class="alert"><span class="view-head">⚡ ELW / 단기</span>방향: <b>중립~약세 편향</b> (반등 시도 가능). 진입 시 <b>손절 -0.5% 엄격 준수</b>. 서킷 후 변동성 확대로 레버리지 최소화 권고.</div>
+    <span class="src">정군 v11 · 2026.06.27(토) WEEKEND · 데이터 7/8 확보 · 한계 명시</span>
+  </div>
 </section>
 
 </body>
