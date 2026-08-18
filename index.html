@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>정군 모닝 v11 — 2026.08.17</title>
+<title>정군 모닝 v11 — 2026.08.18 (화) POST-MARKET</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{height:100%}
+html{scroll-behavior:smooth}
 body{
-  background:#080C14;color:#E8EDF5;
+  background:#080C14;color:#E6EDF7;
   font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",Pretendard,system-ui,"Malgun Gothic",sans-serif;
-  overflow-y:scroll;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;
-  line-height:1.62;letter-spacing:-0.2px;
+  height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;
+  -webkit-font-smoothing:antialiased;line-height:1.62;
 }
 body::-webkit-scrollbar{display:none}
 
@@ -19,375 +19,401 @@ body::-webkit-scrollbar{display:none}
   position:fixed;top:0;left:0;right:0;z-index:99;
   background:rgba(8,12,20,.92);backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(255,255,255,.07);
-  padding:10px 18px;font-size:12px;letter-spacing:.4px;color:#7C8CA5;
-  display:flex;justify-content:space-between;align-items:center;
+  padding:9px 16px;font-size:11.5px;letter-spacing:.06em;
+  color:#7A8AA0;text-align:center;font-weight:600;
 }
-.strip b{color:#00D4FF;font-weight:700}
-.strip .live{color:#34D399;font-weight:700}
+.strip b{color:#00D4FF}
+.strip .cnt{color:#A78BFA}
 
 .card{
   min-height:100vh;scroll-snap-align:start;scroll-snap-stop:always;
-  padding:64px 20px 40px;display:flex;flex-direction:column;justify-content:center;
-  position:relative;border-bottom:1px solid rgba(255,255,255,.04);
+  padding:64px 20px 44px;display:flex;flex-direction:column;justify-content:center;
+  position:relative;overflow:hidden;
 }
-.bar{position:absolute;top:0;left:0;right:0;height:4px}
-.glow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:110px;filter:blur(50px);opacity:.30;pointer-events:none}
+.card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--ac);box-shadow:0 0 22px var(--ac),0 0 44px var(--ac);
+}
+.card::after{
+  content:"";position:absolute;top:-140px;left:50%;transform:translateX(-50%);
+  width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle,var(--ac) 0%,transparent 68%);
+  opacity:.10;pointer-events:none;
+}
+.inner{position:relative;z-index:2;max-width:560px;margin:0 auto;width:100%}
 
-.tag{font-size:13px;font-weight:800;letter-spacing:2.2px;margin-bottom:14px;opacity:.9}
-.emo{font-size:44px;line-height:1;margin-bottom:12px}
-.title{font-size:28px;font-weight:800;line-height:1.33;margin-bottom:18px;letter-spacing:-0.7px}
-.title b{font-weight:800}
-.body{font-size:16px;color:#C3CEDE}
-.body p{margin-bottom:12px}
+.tag{
+  display:inline-block;font-size:11px;font-weight:800;letter-spacing:.18em;
+  color:var(--ac);border:1px solid var(--ac);border-radius:4px;
+  padding:4px 10px;margin-bottom:18px;opacity:.9;
+}
+.emoji{font-size:44px;line-height:1;margin-bottom:12px;display:block}
+h1{font-size:28px;font-weight:800;letter-spacing:-.02em;margin-bottom:18px;line-height:1.35}
+h1 b{color:var(--ac)}
+p{font-size:16px;color:#C3CEDE;margin-bottom:14px}
+p b{color:#fff;font-weight:700}
+.hl{color:var(--ac);font-weight:700}
 
-.kv{display:flex;justify-content:space-between;align-items:baseline;
-  padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px}
-.kv span:first-child{color:#8A9BB4}
-.kv span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
-.up{color:#FF5C5C}.dn{color:#4D9DFF}.fl{color:#9AA8BC}
-
-.view{border-radius:12px;padding:14px 15px;margin:11px 0;font-size:15px;line-height:1.58}
-.view-bull{background:rgba(52,211,153,.07);border-left:3px solid #34D399}
-.view-bear{background:rgba(255,107,53,.07);border-left:3px solid #FF6B35}
-.view-head{font-size:13px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:7px;display:block}
+.view{
+  border-radius:10px;padding:13px 15px;margin-bottom:11px;
+  background:rgba(255,255,255,.028);
+}
+.view-bull{border-left:3px solid #34D399}
+.view-bear{border-left:3px solid #FF6B35}
+.view-head{
+  font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:7px;display:block;
+}
 .view-bull .view-head{color:#34D399}
 .view-bear .view-head{color:#FF6B35}
+.view p{font-size:15px;margin-bottom:0;color:#C9D4E4}
 
-.src{display:block;font-style:italic;font-size:12px;color:#6E7D93;margin-top:7px}
+.src{
+  display:block;font-size:11.5px;font-style:italic;color:#5F7085;
+  margin-top:7px;letter-spacing:.01em;
+}
 
-.topic{background:rgba(255,255,255,.035);border-radius:12px;padding:14px 15px;margin-bottom:13px;border:1px solid rgba(255,255,255,.06)}
-.topic-num{font-size:12px;font-weight:800;letter-spacing:1.5px;color:#F472B6;margin-bottom:6px}
-.topic-head{font-size:17px;font-weight:800;margin-bottom:9px;line-height:1.4}
-.topic-bull{font-size:14.5px;color:#B8C4D6;margin-bottom:6px;padding-left:2px}
-.topic-bull b{color:#E8EDF5}
-.topic-src{font-style:italic;font-size:11.5px;color:#6E7D93;margin-top:6px}
+.kv{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:15px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.08);
+}
+.kv span:first-child{color:#8A99AD}
+.kv span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
+.up{color:#FF5C5C}.dn{color:#4D9FFF}.na{color:#7A8AA0;font-weight:500!important}
 
-.action{background:rgba(167,139,250,.09);border:1px solid rgba(167,139,250,.32);
-  border-radius:12px;padding:13px 15px;margin-top:12px;font-size:15px;line-height:1.58}
-.action .h{font-size:13px;font-weight:800;letter-spacing:1.3px;color:#A78BFA;margin-bottom:6px;display:block}
+.topic{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.06)}
+.topic:last-child{border-bottom:none;margin-bottom:0}
+.topic-num{
+  display:inline-block;font-size:11px;font-weight:800;color:#080C14;
+  background:var(--ac);border-radius:3px;padding:2px 7px;margin-bottom:8px;
+}
+.topic-head{font-size:17px;font-weight:800;color:#fff;margin-bottom:9px;line-height:1.4}
+.topic-bull{font-size:14.5px;color:#C3CEDE;margin-bottom:6px;padding-left:2px}
+.topic-bull b{color:#fff}
+.topic-src{font-size:11px;font-style:italic;color:#5F7085;margin-top:5px}
 
-.alert{background:rgba(255,107,53,.10);border:1px solid rgba(255,107,53,.34);
-  border-radius:12px;padding:13px 15px;margin-top:12px;font-size:15px;line-height:1.58}
-.alert .h{font-size:13px;font-weight:800;letter-spacing:1.3px;color:#FF6B35;margin-bottom:6px;display:block}
+.action{
+  border:1px solid rgba(167,139,250,.4);border-left:3px solid #A78BFA;
+  background:rgba(167,139,250,.07);border-radius:10px;padding:13px 15px;margin-top:12px;
+}
+.action .view-head{color:#A78BFA}
+.action p{font-size:15px;margin-bottom:0;color:#D5DCE8}
+.alert{
+  border:1px solid rgba(255,107,53,.42);border-left:3px solid #FF6B35;
+  background:rgba(255,107,53,.08);border-radius:10px;padding:13px 15px;margin-top:12px;
+}
+.alert .view-head{color:#FF6B35}
+.alert p{font-size:15px;margin-bottom:0;color:#E5D5CC}
+.hidden{
+  border:1px solid rgba(255,255,255,.11);border-radius:10px;
+  padding:13px 15px;margin-top:14px;background:rgba(255,255,255,.032);
+}
+.hidden .view-head{color:var(--ac)}
+.hidden p{font-size:14.5px;margin-bottom:0;color:#B6C2D3}
 
-.hidden{background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.16);
-  border-radius:12px;padding:13px 15px;margin-top:14px;font-size:14.5px;color:#AFBDD0;line-height:1.6}
-.hidden .h{font-size:13px;font-weight:800;letter-spacing:1.2px;color:#FFD700;margin-bottom:6px;display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.cell{background:rgba(255,255,255,.035);border-radius:9px;padding:11px 12px;text-align:center}
+.cell .l{font-size:11px;color:#7A8AA0;letter-spacing:.08em;margin-bottom:5px}
+.cell .v{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums}
 
-.mat{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
-.mat th{text-align:left;padding:8px 6px;color:#8A9BB4;font-weight:700;font-size:12.5px;
-  letter-spacing:.8px;border-bottom:1px solid rgba(255,255,255,.12)}
-.mat td{padding:9px 6px;border-bottom:1px solid rgba(255,255,255,.05);color:#C3CEDE}
-.mat td:first-child{font-weight:700;color:#E8EDF5;white-space:nowrap}
-.tag13{font-size:13px;color:#8A9BB4}
-.star{color:#FFD700;letter-spacing:1px}
-.foot{text-align:center;font-size:12px;color:#5F6E85;padding:26px 20px 40px;line-height:1.7}
+.stars{font-size:19px;letter-spacing:.1em;color:#FFD700}
+.foot{text-align:center;color:#4E5D71;font-size:11.5px;padding:26px 20px 46px;letter-spacing:.05em}
+.scrollhint{
+  position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
+  font-size:10.5px;color:#4E5D71;letter-spacing:.16em;animation:bob 2.1s infinite;
+}
+@keyframes bob{0%,100%{opacity:.35;transform:translate(-50%,0)}50%{opacity:.85;transform:translate(-50%,5px)}}
+@media(max-width:360px){h1{font-size:24px}p{font-size:15px}.emoji{font-size:38px}}
 </style>
 </head>
 <body>
 
-<div class="strip">
-  <span>2026.08.17 (월) · <span class="live">LIVE</span> · v11</span>
-  <span><b>9/9</b></span>
+<div class="strip">2026.08.18 (화) · <b>POST-MARKET</b> · v11 · <span class="cnt">9/9</span></div>
+
+<section class="card" style="--ac:#00D4FF">
+<div class="inner">
+  <span class="tag">01 / CORE THESIS</span>
+  <span class="emoji">🎢</span>
+  <h1>장중 <b>7,200 돌파</b> → 종가 <b>6,869.83</b>.<br>같은 날 두 개의 장이 열렸습니다</h1>
+
+  <div class="kv"><span>KOSPI 종가</span><span class="dn">6,869.83 (−108.11, −1.55%)</span></div>
+  <div class="kv"><span>장중 고점</span><span>7,200선 돌파 → 고점대비 약 −4.6%</span></div>
+  <div class="kv"><span>외국인</span><span class="up">+860억 (장초반 1조원대 → 축소)</span></div>
+  <div class="kv"><span>기관</span><span class="dn">−7,849억</span></div>
+  <div class="kv"><span>개인</span><span class="up">+7,312억</span></div>
+  <span class="src">출처: Businesskorea 「마감 시황」 2026.08.18 / 머니투데이 2026.08.18</span>
+
+  <div class="view view-bull">
+    <span class="view-head">🟢 긍정론</span>
+    <p>반도체 수급은 살아 있다. 개장 시점 외국인은 <b>6,000억대 폭풍 매수</b>로 지수를 7,200선 위로 올렸고, SK하이닉스는 장중 <b>+7.96%(177만6,000원)</b>까지 뛰었다. 원/달러 <b>1,412.46원 — 10개월 만의 최저</b>는 외국인 자금에 구조적 우호 환경이다.</p>
+    <span class="src">출처: Businesskorea 「개장 시황」 / 뉴스핌 2026.08.18</span>
+  </div>
+
+  <div class="view view-bear">
+    <span class="view-head">🔴 부정론</span>
+    <p>급등을 <b>기관이 −7,849억으로 되받아쳤다</b>. 삼성전자는 고가 288,000원 → 종가 <b>268,500원(−2.19%)</b>으로 장중 고점대비 <b>−6.8%</b> 반락. 상승분을 하루 안에 반납했다는 것은 매수 주체의 확신이 얕다는 신호다.</p>
+    <span class="src">출처: 톱스타뉴스·아시아뉴스통신 2026.08.18 (삼성전자 시 283,000 / 고 288,000 / 저 265,000 / 종 268,500)</span>
+  </div>
+
+  <div class="action">
+    <span class="view-head">💡 정군 종합 판단</span>
+    <p>단일 변수로 설명되지 않습니다. <b>① 중동 리스크(브렌트 90.87달러) ② 美 장기금리 급등 ③ 기관 차익실현 ④ 외국인 매수 축소</b> — 네 개가 겹쳤습니다. 다만 <b>환율은 반대 방향(우호)</b>이라 방향성 신뢰도는 <span class="stars">★★★</span>에 그칩니다. 확신 구간이 아닙니다.</p>
+  </div>
+
+  <div class="hidden">
+    <span class="view-head">🔍 정군 시각</span>
+    <p>정군이 재본 바로는 <b>외국인 선물 누적·SOX 당일 종가·VIX는 확보하지 못했습니다</b>. 지배력 1·2순위 지표가 비어 있는 상태의 판단이므로, 별 3개는 상한이 아니라 <b>데이터 결손을 반영한 하향치</b>입니다. 후속 점검 필요.</p>
+  </div>
 </div>
-
-<section class="card">
-  <div class="bar" style="background:#00D4FF"></div>
-  <div class="glow" style="background:#00D4FF"></div>
-  <div class="tag" style="color:#00D4FF">01 / CORE THESIS</div>
-  <div class="emo">🎯</div>
-  <div class="title">외국인 <b style="color:#00D4FF">3조원</b> 폭풍 매수 —<br>7000피 문턱에서 갈리는 시선</div>
-  <div class="body">
-    <p>정군이 먼저 결론부터 말씀드립니다. 8월 14일(금) KOSPI는 <b>6,977.94</b>로 전일 대비 <span class="up">+164.60p(+2.42%)</span> 마감, 5거래일 연속 상승했습니다. 장중 <b>7,010.86</b>까지 올라 7000선을 터치한 뒤 일부 반납했습니다. 주간 상승률은 <span class="up">+11.5%</span>.</p>
-
-    <div class="kv"><span>KOSPI (8/14)</span><span class="up">6,977.94 &nbsp;+2.42%</span></div>
-    <div class="kv"><span>외국인 순매수</span><span class="up">+3조 387억</span></div>
-    <div class="kv"><span>개인 / 기관</span><span class="dn">-1조 9,819억 / -1조 300억</span></div>
-    <div class="kv"><span>주간 등락</span><span class="up">+11.5%</span></div>
-    <span class="src">출처: 뉴스핌·머니투데이·비즈뉴데일리 2026.08.14 마감시황 / TradingKey</span>
-
-    <div class="view view-bull">
-      <span class="view-head">🟢 긍정론</span>
-      외국인 단일일 <b>3조원</b> 순매수는 올해 손꼽히는 규모입니다. 8월 1~10일 반도체 수출이 <b>100억 달러(전년비 +155.4%)</b>로 폭증했고, KOSPI 12개월 선행 PER은 <b>5.6배</b>로 여전히 역사적 저점 구간입니다. 파이낸셜뉴스 주간전망은 "밸류에이션 정상화 시동" 표현을 썼고, PER 7배 회복 시 <b>8,500선</b>까지 열려 있다고 봅니다.
-      <span class="src">출처: 파이낸셜뉴스 「여전히 저평가 코스피」 2026.08.16 / 관세청 수출입 속보</span>
-    </div>
-
-    <div class="view view-bear">
-      <span class="view-head">🔴 부정론</span>
-      한 주 <b>+11.5%</b>는 정상적인 상승 속도가 아닙니다. 불과 한 달 전인 7월 7~8일에는 2분기 호실적 발표에도 반도체가 급락해 <b>사이드카</b>가 발동됐고, 7월 14일에는 7000선이 무너지며 "반도체 피크아웃" 논쟁이 벌어졌습니다. 같은 지수대를 한 달 만에 왕복했다는 건, 이 구간의 지지력이 아직 검증되지 않았다는 뜻입니다.
-      <span class="src">출처: 파이낸셜뉴스 2026.07.14 「7000선마저 무너진 코스피」</span>
-    </div>
-
-    <div class="hidden">
-      <span class="h">🔍 정군 종합 판단</span>
-      단일 변수로 단정하지 않습니다. 이번 상승은 ① 美 7월 CPI·PPI 물가 둔화 ② 반도체 수출 급증 ③ 외국인 아시아 기술주 비중 재확대 — 최소 3개 요인의 <b>복합</b>입니다. 다만 셋 다 <b>같은 뿌리(반도체·금리)</b>에 걸려 있어, 하나가 꺾이면 동시에 꺾입니다. 분산이 아니라 <b>중첩된 베팅</b>이라는 점을 잊지 마십시오.
-    </div>
-  </div>
+<div class="scrollhint">SCROLL ↓</div>
 </section>
 
-<section class="card">
-  <div class="bar" style="background:#F472B6"></div>
-  <div class="glow" style="background:#F472B6"></div>
-  <div class="tag" style="color:#F472B6">02 / TODAY TOPICS</div>
-  <div class="emo">📰</div>
-  <div class="title">오늘 반드시 챙길 <b style="color:#F472B6">3가지</b></div>
-  <div class="body">
+<section class="card" style="--ac:#F472B6">
+<div class="inner">
+  <span class="tag">02 / TODAY TOPICS</span>
+  <span class="emoji">📌</span>
+  <h1>오늘 시장을 움직인 <b>3가지</b></h1>
 
-    <div class="topic">
-      <div class="topic-num">TOPIC 01</div>
-      <div class="topic-head">美 3대 지수 동반 상승 · S&amp;P500 사상 최고</div>
-      <div class="topic-bull">📰 <b>사건</b> — 8/14(금) S&amp;P500 <b>7,798.99</b>(+0.65%) 사상 최고치, 나스닥 <b>26,803.03</b>(+0.81%), 다우 <b>53,839.99</b>(+0.13%). 7월 PPI가 전월 대비 <b>보합</b>으로 예상치를 밑돌았습니다.</div>
-      <div class="topic-bull">⚡ <b>영향</b> — 물가 둔화 → 금리 동결 기대 → 국채값 상승. 다만 10년물은 오히려 <b>4.68~4.70%</b>로 <span class="up">+0.05%p</span> 올랐습니다. 채권시장은 물가 지표를 그대로 믿지 않았다는 신호입니다.</div>
-      <div class="topic-bull">💡 <b>권고</b> — 지수 신고가와 금리 상승이 <b>엇갈립니다</b>. 방향성 확신 구간이 아닙니다.</div>
-      <div class="topic-src">출처: 뉴스핌 글로벌마켓리포트 08.14 / TheStreet 08.14 / Seeking Alpha Treasury Yields Snapshot 08.14</div>
-    </div>
-
-    <div class="topic">
-      <div class="topic-num">TOPIC 02</div>
-      <div class="topic-head">SOX 12,417 · 반도체 대형주 동반 랠리</div>
-      <div class="topic-bull">📰 <b>사건</b> — 필라델피아 반도체지수(SOX) 8/14 종가 <b>12,417.05</b>. 국내는 삼성전자 <b>274,500원(+2.43%)</b>, SK하이닉스 <b>1,645,000원(+3.26%)</b>, 삼성전기 <b>+4.66%</b>, SK스퀘어 <b>+3.49%</b>.</div>
-      <div class="topic-bull">⚡ <b>영향</b> — 삼성전자+SK하이닉스가 KOSPI 시총에서 차지하는 비중이 압도적입니다. 즉 <b>지수 = 반도체 심리</b> 구조가 갈수록 심해지고 있습니다.</div>
-      <div class="topic-bull">💡 <b>권고</b> — 반도체 비중이 이미 높으시면 <b>추가</b>가 아니라 <b>점검</b>할 때입니다. 지수와 종목이 한 몸이면 분산 효과는 0입니다.</div>
-      <div class="topic-src">출처: 국제뉴스·파이낸셜뉴스 특징주 08.14 / INDEXerGO SOX 2026-08-16 확인</div>
-    </div>
-
-    <div class="topic">
-      <div class="topic-num">TOPIC 03</div>
-      <div class="topic-head">현대차 +3.46% — 자동차까지 붙었다</div>
-      <div class="topic-bull">📰 <b>사건</b> — 현대차 <b>+3.46%</b>, LG에너지솔루션 <b>+1.23%</b>. 반도체 단독 장세가 아니라 자동차·2차전지로 <b>매수 저변이 확대</b>됐습니다.</div>
-      <div class="topic-bull">⚡ <b>영향</b> — 환율 <b>1,417.53원</b>의 고환율은 수출주 실적에 우호적입니다. 반대로 외국인 입장에서는 원화 환차손 위험이 커진 상태에서 3조를 넣은 것이라, <b>환율 하락 베팅</b>이 섞여 있을 가능성이 있습니다.</div>
-      <div class="topic-bull">💡 <b>권고</b> — 환율이 1,400원 아래로 빠르게 내려가면 수출주 실적 논리는 약해지고 외국인 수급 논리는 강해집니다. <b>양날의 검</b>으로 보십시오.</div>
-      <div class="topic-src">출처: CBC뉴스·베타뉴스 08.14 / Investing.com USD/KRW</div>
-    </div>
+  <div class="topic">
+    <span class="topic-num">TOPIC 1</span>
+    <div class="topic-head">美·이란 MOU 만료 — 브렌트유 90달러 재돌파</div>
+    <p class="topic-bull">📰 <b>사건</b> — 6월 17일 체결된 미·이란 양해각서(MOU)가 <b>8월 17일 만료</b>. 휴전 연장이 불발되며 국제유가가 3% 급등했다.</p>
+    <p class="topic-bull">⚡ <b>영향</b> — 브렌트유 <b>90.87달러</b>, WTI <b>84.50달러</b>(8/17 마감). 인플레 우려가 되살아나며 <b>美 30년물 국채금리가 19년 만의 최고 수준</b>으로 치솟았다.</p>
+    <p class="topic-bull">💡 <b>권고</b> — 유가·장기금리 동반 상승은 성장주에 이중 압박이다. 정유·조선은 반사 수혜, 항공·화학은 원가 압박. <b>단, 이 라인은 협상 뉴스 한 줄에 되돌려진 전례가 5월·6월에 이미 두 번 있다</b>(5/28 급락, 6/11 재상승).</p>
+    <span class="topic-src">출처: 파이낸셜뉴스 2026.08.18 / 이데일리 「월스트리트in」 / 서울신문 2026.05.28·06.11</span>
   </div>
-</section>
 
-<section class="card">
-  <div class="bar" style="background:#FFD700"></div>
-  <div class="glow" style="background:#FFD700"></div>
-  <div class="tag" style="color:#FFD700">03 / PATTERN</div>
-  <div class="emo">📊</div>
-  <div class="title">숫자로 보는 <b style="color:#FFD700">시장 지배력</b> 순위</div>
-  <div class="body">
-    <p>정군은 감이 아니라 계기판 순서로 봅니다. 지배력 우선순위는 <b>외인 선물 → SOX → 환율 → 美 10Y → WTI → VIX</b>입니다.</p>
-
-    <div class="kv"><span>① 외국인 (현물)</span><span class="up">+3조 387억 ▲</span></div>
-    <div class="kv"><span>② SOX</span><span class="up">12,417.05 ▲</span></div>
-    <div class="kv"><span>③ 원/달러</span><span class="fl">1,417.53 (고점권)</span></div>
-    <div class="kv"><span>④ 美 10년물</span><span class="up">4.68~4.70% (+0.05%p) ▲</span></div>
-    <div class="kv"><span>⑤ WTI</span><span class="up">$82.40 (+1.42%) ▲</span></div>
-    <div class="kv"><span>⑥ VIX</span><span class="fl">데이터 미확보</span></div>
-    <span class="src">출처: 뉴스핌·머니투데이 08.14 / INDEXerGO / Investing.com / Seeking Alpha / tradingeconomics</span>
-
-    <p style="margin-top:16px">1~2순위(외인·SOX)는 <b>같은 방향(상승)</b>입니다. 그러나 3순위 환율은 고점권 유지, 4순위 금리는 <b>상승</b>이라 위험자산에 역풍입니다.</p>
-
-    <div class="hidden">
-      <span class="h">🔍 정군 시각 — 신뢰도 ★★★☆☆</span>
-      1~3순위가 모두 같은 방향이면 ★★★★★을 드립니다. 지금은 <b>1·2위는 강세, 3·4위는 역풍</b>으로 엇갈립니다. 따라서 <b>★★★</b>. 방향은 위쪽이지만 확신 강도는 중간입니다. 특히 <b>10년물 금리가 4.7%에서 더 오르면</b> 1·2순위의 힘을 상쇄합니다. 여기가 이번 주 최대 관전 포인트입니다.
-      <br><br>⚠️ VIX는 이번 수집에서 확보하지 못했습니다 — <b>미검증, 후속 점검 필요</b>.
-    </div>
+  <div class="topic">
+    <span class="topic-num">TOPIC 2</span>
+    <div class="topic-head">뉴욕 3대 지수 이틀 연속 하락 — 그런데 반도체만 반대로</div>
+    <p class="topic-bull">📰 <b>사건</b> — 8/17(현지) 다우 <b>53,459.78(−0.51%)</b>, S&amp;P500 <b>7,745.06(−0.52%)</b>, 나스닥 <b>26,644.91(−0.32%)</b>.</p>
+    <p class="topic-bull">⚡ <b>영향</b> — 빅테크는 밀렸으나(MS −3.04% 480.35달러, 메타 −3.54% 568.97달러) <b>마이크론은 1,000달러를 탈환</b>. 이 괴리가 다음날 국내 반도체 갭상승으로 그대로 이식됐다.</p>
+    <p class="topic-bull">💡 <b>권고</b> — 지수 하락 ≠ 반도체 하락. <b>메모리 사이클은 지수와 분리되어 움직이는 국면</b>으로 보되, 국내 개장 갭이 이미 반영분을 당겨쓴 만큼 갭 추격매수는 오늘 삼성전자 사례(−6.8% 반락)가 답이다.</p>
+    <span class="topic-src">출처: 뉴스핌 「글로벌 마켓 리포트」 2026.08.18 / 파이낸셜뉴스 「뉴욕증시」 2026.08.18 / 헤럴드경제 「투자360」</span>
   </div>
-</section>
 
-<section class="card">
-  <div class="bar" style="background:#34D399"></div>
-  <div class="glow" style="background:#34D399"></div>
-  <div class="tag" style="color:#34D399">04 / VALUATION</div>
-  <div class="emo">⚖️</div>
-  <div class="title">PER <b style="color:#34D399">5.6배</b> — 싼 건가,<br>싼 이유가 있는 건가</div>
-  <div class="body">
-    <div class="kv"><span>KOSPI 12M Fwd PER</span><span style="color:#34D399">5.6배</span></div>
-    <div class="kv"><span>PER 7배 환산 지수</span><span>약 8,500선</span></div>
-    <div class="kv"><span>현재 지수</span><span>6,977.94</span></div>
-    <div class="kv"><span>이론적 갭</span><span class="up">약 +21.8%</span></div>
-    <span class="src">출처: 파이낸셜뉴스 「여전히 저평가 코스피」 주간증시전망 2026.08.16</span>
-
-    <div class="view view-bull">
-      <span class="view-head">🟢 긍정론 — 저평가 해소론</span>
-      선행 PER <b>5.6배</b>는 역사적 저점 구간입니다. 증권가는 대형 반도체주 <b>실적 신뢰성 회복</b>과 금리 인상 부담 완화를 근거로 밸류에이션 정상화를 전망합니다. 5월 시점 증권가 하반기 전망은 <b>7,000~10,000</b> 범위, 8월 전망은 <b>7,500~8,000</b>이 다수였습니다.
-      <span class="src">출처: 글로벌이코노믹 2026.05.25 / 다음 「코스피 7500~8000 가능」 2026.08.04</span>
-    </div>
-
-    <div class="view view-bear">
-      <span class="view-head">🔴 부정론 — 싼 데는 이유가 있다</span>
-      PER이 낮다는 건 <b>분모(이익 전망)가 높게 잡혀 있다</b>는 뜻이기도 합니다. HBM4 원가가 HBM3E 대비 <b>약 2배</b>로 뛰면서 GPU 제조사 원가 부담이 커지는 국면이라, 메모리 판가 협상력이 예상대로 유지될지는 아직 검증되지 않았습니다. 이익 전망이 하향되면 PER 5.6배는 순식간에 7배가 됩니다 — <b>주가가 오르지 않고도</b>.
-      <span class="src">출처: 경제번역가 「2026 삼성전자 HBM 완벽 분석」 / 비즈니스포스트 HBM4 공급 지연 전망</span>
-    </div>
-
-    <div class="action">
-      <span class="h">💡 정군 권고</span>
-      "PER 5.6배니까 산다"는 <b>한 다리 논리</b>입니다. 반드시 확인하실 것 — <b>이익 추정치가 최근 상향인가 하향인가</b>. 상향이면 저평가 논리가 유효하고, 하향인데 PER만 낮으면 그건 <b>함정</b>입니다.
-    </div>
+  <div class="topic">
+    <span class="topic-num">TOPIC 3</span>
+    <div class="topic-head">원/달러 1,412.46원 — 10개월 만의 최저</div>
+    <p class="topic-bull">📰 <b>사건</b> — 원화가 10개월 만의 최고 강세. 달러 대비 <b>1,412.46원</b> 마감.</p>
+    <p class="topic-bull">⚡ <b>영향</b> — 외국인 원화자산 보유 유인은 커진다. 다만 오늘 외국인 순매수는 <b>1조원대 → 860억으로 축소</b>됐다. 환율 우호가 곧 매수로 이어지지 않았다.</p>
+    <p class="topic-bull">💡 <b>권고</b> — 환율 강세는 <b>수출주 마진에는 역풍</b>이다. 원화 강세를 무조건 호재로 읽지 말 것. 내수·항공·여행이 상대적 수혜 라인.</p>
+    <span class="topic-src">출처: Investing.com USD/KRW 2026.08.18 / Businesskorea 「마감 시황」</span>
   </div>
-</section>
-
-<section class="card">
-  <div class="bar" style="background:#FF6B35"></div>
-  <div class="glow" style="background:#FF6B35"></div>
-  <div class="tag" style="color:#FF6B35">05 / HIDDEN RISK</div>
-  <div class="emo">🕳️</div>
-  <div class="title">아무도 말 안 하는 <b style="color:#FF6B35">진짜 변수</b></div>
-  <div class="body">
-    <p style="color:#8A9BB4;font-size:14px;letter-spacing:1px;font-weight:700">■ 보이는 리스크</p>
-    <p>반도체 피크아웃, 환율 변동성, 차익 실현. 이건 다들 말합니다.</p>
-
-    <p style="color:#FF6B35;font-size:14px;letter-spacing:1px;font-weight:700;margin-top:14px">■ 안 보이는 리스크</p>
-    <p><b>Fed 의장이 바뀌었습니다.</b> Kevin Warsh 의장이 <b>5월 22일</b> 취임했고, <b>7월 29일 FOMC에서 선제 가이던스(forward guidance)를 성명서에서 전부 삭제</b>했습니다. 그리고 <b>18명 정책위원 중 9명이 2026년 중 최소 1회 금리 인상</b>을 전망하고 있습니다.</p>
-
-    <div class="alert">
-      <span class="h">⚠️ 이게 왜 위험한가</span>
-      시장은 지금 "물가 둔화 → 금리 동결 → 위험자산 랠리"로 읽고 있습니다. 그런데 <b>JP모건 수석이코노미스트는 2026년 인하 없음 + 2027년 인상</b>을 전망하고, <b>골드만삭스는 6월에 2026년 인하를 예측치에서 전부 제거</b>했습니다. 즉 <b>주식시장의 기대와 IB의 금리 전망이 정면으로 어긋나 있습니다.</b> 10년물이 물가 호재에도 <b>+0.05%p 올랐다</b>는 사실이 그 증거입니다.
-      <span class="src">출처: CNBC FOMC 2026.07.29 / TheStreet JPMorgan·Goldman Fed 전망</span>
-    </div>
-
-    <div class="hidden">
-      <span class="h">🔍 정군 연쇄 분석</span>
-      만약 8월 28일 Warsh 의장의 잭슨홀 첫 기조연설이 <b>매파</b>로 나오면 → 10년물 4.7% 돌파 → 달러 강세 → 원/달러 1,450원 시도 → 외국인 <b>환차손 회피 매도</b> → 이번에 들어온 3조가 그대로 역류할 수 있습니다.<br><br>
-      반대로 <b>비둘기</b>거나 "큰 그림" 원론 발언에 그치면 → 불확실성 해소 랠리로 7,500선 시도가 가능합니다.<br><br>
-      <b>정군의 결론: 8월 28일까지는 방향 확정이 아니라 대기 구간입니다.</b> 단정하지 않겠습니다.
-    </div>
-  </div>
-</section>
-
-<section class="card">
-  <div class="bar" style="background:#06B6D4"></div>
-  <div class="glow" style="background:#06B6D4"></div>
-  <div class="tag" style="color:#06B6D4">06 / SECTOR THEME</div>
-  <div class="emo">🏭</div>
-  <div class="title">반도체 — <b style="color:#06B6D4">HBM4</b>가 갈랐다</div>
-  <div class="body">
-    <div class="kv"><span>8/1~10 반도체 수출</span><span class="up">100억$ (+155.4% YoY)</span></div>
-    <div class="kv"><span>삼성전자</span><span class="up">274,500원 (+2.43%)</span></div>
-    <div class="kv"><span>SK하이닉스</span><span class="up">1,645,000원 (+3.26%)</span></div>
-    <div class="kv"><span>삼성전기</span><span class="up">+4.66%</span></div>
-    <span class="src">출처: 파이낸셜뉴스 2026.08.16 / 국제뉴스·남도일보 08.14</span>
-
-    <div class="view view-bull">
-      <span class="view-head">🟢 긍정론 — 삼성 HBM4 선점</span>
-      삼성전자가 SK하이닉스를 포함한 경쟁사보다 <b>먼저 HBM4 양산·출하를 공식화</b>했고, 엔비디아 초반 수요를 상당 부분 담당할 공산이 큽니다. 반면 <b>마이크론은 품질 인증 지연</b>으로 올해 엔비디아 공급 물량이 예상보다 줄어들 전망입니다. 코어위브·슈퍼마이크로 등 美 AI 인프라 기업 호실적으로 <b>전방 수요 우려도 완화</b>됐습니다.
-      <span class="src">출처: 비즈니스포스트 「마이크론 HBM4 공급 지연 전망」 / 파이낸셜뉴스 08.16</span>
-    </div>
-
-    <div class="view view-bear">
-      <span class="view-head">🔴 부정론 — 원가 2배의 역습</span>
-      HBM4 탑재 GPU의 <b>메모리 비용이 HBM3E 대비 약 2배</b>로 늘어납니다. 엔비디아를 포함한 GPU 제조사 원가 부담이 커지면, 결국 <b>메모리 단가 인하 압박</b>으로 되돌아옵니다. "많이 판다"와 "비싸게 판다"는 다른 얘기입니다. 또한 7월 7~8일에는 <b>호실적 발표에도 주가가 급락</b>한 전례가 있습니다 — 실적이 곧 주가가 아니라는 증거입니다.
-      <span class="src">출처: 경제번역가 HBM 분석 2026 / 파이낸셜뉴스 2026.07.14</span>
-    </div>
-
-    <div class="action">
-      <span class="h">💡 정군 권고</span>
-      반도체는 <b>수량(Q)은 확인됐고 가격(P)은 미확인</b>입니다. 수출 +155.4%는 실측 숫자라 신뢰합니다. 하지만 마진은 <b>8월 26일 엔비디아 실적</b>과 이후 메모리 판가 협상 결과를 봐야 압니다. 그 전까지는 <b>비중 확대보다 유지</b>가 정군 권고입니다.
-    </div>
-  </div>
-</section>
-
-<section class="card">
-  <div class="bar" style="background:#EC4899"></div>
-  <div class="glow" style="background:#EC4899"></div>
-  <div class="tag" style="color:#EC4899">07 / EVENT CATALYST</div>
-  <div class="emo">📅</div>
-  <div class="title">향후 <b style="color:#EC4899">2주</b> 일정표</div>
-  <div class="body">
-    <table class="mat">
-      <tr><th>일자</th><th>이벤트</th><th>중요도</th></tr>
-      <tr><td>8/26 (수)</td><td>엔비디아 실적 발표<br><span class="tag13">美 장마감 후 · 韓 8/27 06시경</span></td><td class="star">★★★★★</td></tr>
-      <tr><td>8/27~29</td><td>잭슨홀 심포지엄<br><span class="tag13">주제: 금융혁신과 결제·정책</span></td><td class="star">★★★★★</td></tr>
-      <tr><td>8/28 (금)</td><td><b>Warsh 의장 첫 기조연설</b><br><span class="tag13">현지 오전 · 취임 후 최초</span></td><td class="star">★★★★★</td></tr>
-      <tr><td>9/10 (목)</td><td>KOSPI200 9월 옵션만기<br><span class="tag13">8월물 8/13 이미 소화</span></td><td class="star">★★☆☆☆</td></tr>
-    </table>
-    <span class="src">출처: Regards of Wallstreet 「Jackson Hole 2026」 / 한국경제 2026.08.14 「26일 실적 내놓는 엔비디아」 / CNBC 07.29</span>
-
-    <div class="alert">
-      <span class="h">⚠️ 7일 이내 대형 이벤트 — 없음</span>
-      오늘(8/17) 기준 <b>7일 이내</b> 창에는 지수를 흔들 대형 이벤트가 잡혀 있지 않습니다. 즉 이번 주는 <b>수급과 모멘텀이 주도</b>하는 구간이고, 진짜 시험대는 <b>다음 주(8/26~28)</b>에 몰려 있습니다.
-    </div>
-
-    <div class="hidden">
-      <span class="h">🔍 정군 시각</span>
-      이벤트가 <b>비어 있는 주</b>가 오히려 위험할 수 있습니다. 촉매 없이 오르는 상승은 차익 실현 한 번에 되돌려지기 쉽기 때문입니다. 반대로 이벤트 전 <b>포지션을 정리할 시간</b>이 주어졌다는 뜻이기도 합니다. 어느 쪽으로 쓰실지는 고객님 판단입니다.
-    </div>
-  </div>
-</section>
-
-<section class="card">
-  <div class="bar" style="background:#14B8A6"></div>
-  <div class="glow" style="background:#14B8A6"></div>
-  <div class="tag" style="color:#14B8A6">08 / F&amp;O SIGNAL</div>
-  <div class="emo">🚨</div>
-  <div class="title"><b style="color:#14B8A6">T1 발동</b> — 외인 수급<br>임계치 2배 초과</div>
-  <div class="body">
-    <div class="kv"><span>T1 기준선</span><span>±1.5조원</span></div>
-    <div class="kv"><span>실측 (8/14 현물)</span><span class="up">+3조 387억</span></div>
-    <div class="kv"><span>기준 대비</span><span class="up">2.03배 초과 → 발동</span></div>
-    <div class="kv"><span>T5 (만기 7일)</span><span class="fl">미발동 (9/10, 24일 남음)</span></div>
-    <span class="src">출처: 뉴스핌·비즈뉴데일리 2026.08.14 투자자별 매매동향</span>
-
-    <div class="view view-bull">
-      <span class="view-head">🟢 긍정 해석</span>
-      외국인 <b>3조원</b> 순매수는 단기 트레이딩이 아니라 <b>패시브·벤치마크 비중 조정</b> 성격일 가능성이 있습니다. 이 경우 하루짜리가 아니라 며칠에 걸쳐 유입이 이어집니다. 실제로 <b>5거래일 연속 상승</b>이라는 지속성이 이를 뒷받침합니다.
-    </div>
-
-    <div class="view view-bear">
-      <span class="view-head">🔴 부정 해석</span>
-      같은 날 <b>개인 -1조 9,819억, 기관 -1조 300억</b>으로 국내 주체가 총 <b>3조원 가까이 팔았습니다</b>. 외국인 혼자 받아낸 구조입니다. 외국인 매수가 하루라도 멈추면 <b>받아줄 주체가 없습니다</b>. 이건 강세의 증거이자 동시에 <b>취약성의 증거</b>입니다.
-    </div>
-
-    <div class="alert">
-      <span class="h">⚠️ 정군 미검증 고지</span>
-      <b>외국인 선물 누적 포지션</b>은 이번 수집에서 확보하지 못했습니다. 현물 3조는 확인된 실측치이나, 선물 누적은 <b>미검증</b>입니다. 지배력 1순위 지표를 못 본 상태라는 점을 정직하게 말씀드립니다 — <b>후속 점검 필요</b>. 장중 KRX 투자자별 매매동향에서 재확인하시는 것을 권합니다.
-    </div>
-  </div>
-</section>
-
-<section class="card">
-  <div class="bar" style="background:#A78BFA"></div>
-  <div class="glow" style="background:#A78BFA"></div>
-  <div class="tag" style="color:#A78BFA">09 / ACTION</div>
-  <div class="emo">🎬</div>
-  <div class="title">시간축 <b style="color:#A78BFA">KICK</b> 매트릭스</div>
-  <div class="body">
-    <table class="mat">
-      <tr><th>시간축</th><th>판단</th><th>근거</th></tr>
-      <tr>
-        <td>당일<br><span class="tag13">8/17</span></td>
-        <td style="color:#34D399;font-weight:700">중립~강세 유지</td>
-        <td class="tag13">외인 3조 관성 + SOX 강세. 단 7,010 장중고점 돌파 여부가 관건</td>
-      </tr>
-      <tr>
-        <td>1주<br><span class="tag13">~8/21</span></td>
-        <td style="color:#FFD700;font-weight:700">관망 우위</td>
-        <td class="tag13">대형 촉매 공백. 잭슨홀 대기 심리로 상단 제한 가능</td>
-      </tr>
-      <tr>
-        <td>2주<br><span class="tag13">~8/28</span></td>
-        <td style="color:#FF6B35;font-weight:700">방향 결정</td>
-        <td class="tag13">엔비디아 실적(8/26) + Warsh 첫 연설(8/28) 연속 충돌</td>
-      </tr>
-    </table>
-
-    <div class="action">
-      <span class="h">💡 ELW / 레버리지 포지션</span>
-      <b>방향: 콜 우위, 단 경량.</b> 1~2순위(외인·SOX)가 상승 정렬이라 방향은 위쪽입니다. 그러나 3~4순위(환율·금리)가 역풍이라 신뢰도는 <b>★★★</b>에 그칩니다.<br><br>
-      <b>손절 -0.5% 기계적 준수.</b> 신뢰도 ★★★ 구간에서 손절을 늦추는 것은 도박입니다. 8/26~28 이벤트 <b>이전에 포지션 축소</b>를 권고합니다.
-    </div>
-
-    <div class="alert">
-      <span class="h">⚠️ 정군이 발견한 문제 1건</span>
-      <b>지수와 보유 종목의 상관관계가 사실상 1에 수렴</b>하고 있습니다. 삼성전자·SK하이닉스가 KOSPI 시총을 지배하는 구조에서 "코스피 ETF + 반도체 종목"을 함께 들고 계시다면 그건 분산이 아니라 <b>같은 베팅의 2배</b>입니다. 오늘 중 포트폴리오 중복도를 한 번 재보시길 권합니다.
-    </div>
-
-    <div class="hidden">
-      <span class="h">🔍 정군 최종 정리</span>
-      결론: <b>상승 방향은 살아 있으나 확신 구간은 아닙니다.</b> 오르면 따라가되, 8월 28일 전에는 <b>이익 확정 우선</b>. 정군이 재보지 않은 것(VIX, 외인 선물 누적)은 아직 모르는 것으로 남겨둡니다.
-    </div>
-  </div>
-</section>
-
-<div class="foot">
-  정군 모닝 브리프 v11 · 2026.08.17 (월) 10:13 KST · LIVE<br>
-  본 자료는 공개 정보 기반 정리이며 투자 판단은 고객님의 권한입니다.<br>
-  미검증 항목: VIX, 외국인 선물 누적 포지션
 </div>
+<div class="scrollhint">SCROLL ↓</div>
+</section>
+
+<section class="card" style="--ac:#FFD700">
+<div class="inner">
+  <span class="tag">03 / PATTERN</span>
+  <span class="emoji">📊</span>
+  <h1>실측 <b>계기판</b> — 숫자만</h1>
+
+  <div class="grid2">
+    <div class="cell"><div class="l">KOSPI</div><div class="v dn">6,869.83</div></div>
+    <div class="cell"><div class="l">USD/KRW</div><div class="v">1,412.46</div></div>
+    <div class="cell"><div class="l">브렌트유</div><div class="v up">$90.87</div></div>
+    <div class="cell"><div class="l">WTI</div><div class="v up">$84.50</div></div>
+  </div>
+
+  <div class="kv"><span>다우</span><span class="dn">53,459.78 (−0.51%)</span></div>
+  <div class="kv"><span>S&amp;P 500</span><span class="dn">7,745.06 (−0.52%)</span></div>
+  <div class="kv"><span>나스닥</span><span class="dn">26,644.91 (−0.32%)</span></div>
+  <div class="kv"><span>SOX (필라델피아)</span><span class="na">12,417.05 (8/14 확인) · 당일 종가 미확보</span></div>
+  <div class="kv"><span>美 30년물</span><span class="up">19년 만의 최고 수준 (정확치 미확보)</span></div>
+  <div class="kv"><span>美 10년물</span><span class="na">미확보 — 후속 점검 필요</span></div>
+  <div class="kv"><span>VIX</span><span class="na">미확보 — 후속 점검 필요</span></div>
+  <span class="src">출처: 뉴스핌·파이낸셜뉴스·Investing.com·INDEXerGO / 조회 2026.08.18 20:35 KST</span>
+
+  <div class="alert">
+    <span class="view-head">⚠ 정군 자기신고 — 데이터 결손</span>
+    <p>8개 항목 중 <b>완전 확보 5개, 부분·미확보 3개</b>(SOX 당일종가 / 美 10Y·VIX / 외국인 선물 누적). 검색 과정에서 WTI가 <b>66.8달러</b>로 표기된 소스를 하나 발견했으나, 8/17 기사 3건과 교차대조해 <b>구데이터로 판정하고 폐기</b>했습니다. 채택값은 84.50달러입니다.</p>
+  </div>
+
+  <div class="hidden">
+    <span class="view-head">🔍 정군 시각</span>
+    <p>정군이 직접 재보지 못한 값에 "약 ○○" 식으로 살을 붙이지 않았습니다. <b>빈칸은 빈칸으로 둡니다</b> — 채워진 것처럼 보이는 보고서가 비어 있는 보고서보다 위험합니다.</p>
+  </div>
+</div>
+<div class="scrollhint">SCROLL ↓</div>
+</section>
+
+<section class="card" style="--ac:#34D399">
+<div class="inner">
+  <span class="tag">04 / VALUATION</span>
+  <span class="emoji">⚖️</span>
+  <h1>KOSPI <b>6,800~7,200</b>, 비싼가 싼가</h1>
+
+  <div class="view view-bull">
+    <span class="view-head">🟢 긍정론 — 아직 이익이 따라온다</span>
+    <p>SK하이닉스 뉴스룸은 2026년을 <b>"HBM이 이끄는 메모리 슈퍼사이클"</b>로 규정. 카운터포인트·트렌드포스 기준 <b>2026년 서버당 평균 D램 탑재량 전년비 +15%</b> 전망. 지수 레벨이 높아도 <b>분모(이익)가 같이 커지면 배수는 안 비싸진다</b>는 논리다.</p>
+    <span class="src">출처: SK hynix Newsroom 「2026년 시장 전망」 / 카운터포인트리서치 / 매거진한경 「2026 대전망」</span>
+  </div>
+
+  <div class="view view-bear">
+    <span class="view-head">🔴 부정론 — 가격 상승률은 이미 꺾이는 중</span>
+    <p><b>BofA와 트렌드포스 모두</b> DRAM·NAND ASP 상승률이 <b>2026년 상반기를 정점으로 2분기부터 전분기 대비 상승폭이 크게 축소</b>된다고 본다. DDR5-HBM3E 가격차도 2025년 상반기 <b>5배 → 2026년 하반기 2배</b>로 축소 전망. <b>가격이 오르긴 하지만 오르는 속도가 느려지는 구간</b> — 주가는 통상 이 지점에서 먼저 반응한다.</p>
+    <span class="src">출처: BofA·TrendForce 인용(2026) / 매거진한경 2025.12</span>
+  </div>
+
+  <div class="action">
+    <span class="view-head">💡 정군 권고</span>
+    <p>"슈퍼사이클이냐 아니냐"는 잘못된 질문입니다. 맞는 질문은 <b>"주가가 이미 몇 분기 앞의 이익을 당겨썼는가"</b>입니다. 오늘 삼성전자가 고가 288,000 → 종가 268,500으로 <b>−6.8% 반락한 것 자체가 시장의 답변</b>일 수 있습니다. 단정은 하지 않습니다.</p>
+  </div>
+</div>
+<div class="scrollhint">SCROLL ↓</div>
+</section>
+
+<section class="card" style="--ac:#FF6B35">
+<div class="inner">
+  <span class="tag">05 / HIDDEN RISK</span>
+  <span class="emoji">🕳️</span>
+  <h1>보이는 위험, <b>안 보이는 위험</b></h1>
+
+  <p><b>👁 보이는 위험</b> — 이란, 유가 90달러, 기관 매도 −7,849억. 다들 본다. 본 순간 이미 가격에 들어간다.</p>
+
+  <div class="alert">
+    <span class="view-head">🕳 안 보이는 위험 ① — 금리의 만기 구조</span>
+    <p>오늘 뉴스의 주어는 <b>30년물이 19년 만의 최고</b>였습니다. 단기가 아니라 <b>초장기가 올랐다</b>는 것은 시장이 "일시적 유가 충격"이 아니라 <b>구조적 인플레·재정 리스크</b>를 가격에 넣기 시작했다는 뜻입니다. 이건 금리인하 한 번으로 안 풀립니다.</p>
+    <span class="src">출처: 이데일리 「월스트리트in」 2026.08.18</span>
+  </div>
+
+  <div class="alert">
+    <span class="view-head">🕳 안 보이는 위험 ② — 연준 의장이 바뀌었다</span>
+    <p>현 연준 의장은 <b>파월이 아니라 케빈 워시</b>(파월 2026년 5월 임기 종료). 보도에 따르면 <b>워시 체제 첫 FOMC는 금리 동결, 연내 인상 가능성까지 거론</b>됐습니다. 과거 "파월 풋"을 전제로 짜인 포지션은 <b>전제 자체가 사라진 상태</b>입니다.</p>
+    <span class="src">출처: MBC 뉴스투데이 「워시 체제 첫 FOMC 금리 동결‥연내 인상 가능성」 2026 / bullstory 연준 일정 정리</span>
+  </div>
+
+  <div class="hidden">
+    <span class="view-head">🔍 연쇄 분석</span>
+    <p>유가↑ → 인플레 기대↑ → 초장기금리↑ → 매파 의장이 이를 "인상 명분"으로 채택 → 성장주 할인율↑ → 반도체 밸류에이션 압축. <b>고리 4개가 이미 3개까지 관측됐습니다.</b> 다만 4번째(실제 인상)는 아직 발생하지 않았습니다 — 단정 금지.</p>
+  </div>
+</div>
+<div class="scrollhint">SCROLL ↓</div>
+</section>
+
+<section class="card" style="--ac:#06B6D4">
+<div class="inner">
+  <span class="tag">06 / SECTOR THEME</span>
+  <span class="emoji">🏭</span>
+  <h1>반도체 <b>투톱</b>, 하루에 천당과 지옥</h1>
+
+  <div class="kv"><span>SK하이닉스</span><span class="up">장중 1,776,000원 (+7.96%) · 종가 미확보</span></div>
+  <div class="kv"><span>삼성전자 종가</span><span class="dn">268,500원 (−6,000, −2.19%)</span></div>
+  <div class="kv"><span>삼성전자 시/고/저</span><span>283,000 / 288,000 / 265,000</span></div>
+  <div class="kv"><span>고가→종가 낙폭</span><span class="dn">−19,500원 (−6.77%)</span></div>
+  <span class="src">출처: 뉴스핌 「특징주」 2026.08.18 09:48 / 톱스타뉴스·아시아뉴스통신 2026.08.18</span>
+
+  <div class="view view-bull">
+    <span class="view-head">🟢 긍정론</span>
+    <p>미국 반도체 강세(마이크론 1,000달러 탈환)가 국내로 전이됐고, <b>AI 반도체 투자심리 개선</b>이 개장 갭의 실체였다. HBM4 납품이 하반기 가시화되면 이익 모멘텀은 아직 앞에 있다.</p>
+    <span class="src">출처: 뉴스핌 2026.08.18 / SK hynix Newsroom</span>
+  </div>
+
+  <div class="view view-bear">
+    <span class="view-head">🔴 부정론</span>
+    <p>같은 날 <b>SK하이닉스는 +8%, 삼성전자는 −2.19%</b>로 갈렸다. "반도체 랠리"가 아니라 <b>HBM 경쟁력 격차에 대한 선별 베팅</b>이었다는 해석이 가능하다. 지수를 끌어올린 힘이 광범위하지 않다는 뜻이다.</p>
+    <span class="src">출처: 정군 산출 — 뉴스핌·톱스타뉴스 데이터 대조</span>
+  </div>
+
+  <div class="action">
+    <span class="view-head">💡 정군 권고</span>
+    <p>"반도체 산다"가 아니라 <b>"어느 반도체냐"</b>가 오늘의 질문이 됐습니다. 다만 SK하이닉스 <b>종가를 정군이 확보하지 못했습니다</b> — 장중 +7.96%가 종가까지 유지됐는지 미확인. 삼성전자가 고점대비 −6.8% 반납한 날이므로 <b>동반 반락 가능성을 배제할 수 없습니다.</b> 확인 후 판단하십시오.</p>
+  </div>
+</div>
+<div class="scrollhint">SCROLL ↓</div>
+</section>
+
+<section class="card" style="--ac:#EC4899">
+<div class="inner">
+  <span class="tag">07 / EVENT CATALYST</span>
+  <span class="emoji">📅</span>
+  <h1>앞으로 <b>7~11일</b>의 방아쇠</h1>
+
+  <div class="kv"><span>8/19~ (수)</span><span>미·이란 협상 재개 여부 — 유가 방향 결정</span></div>
+  <div class="kv"><span>8/20~26</span><span>美 소매 실적 발표 구간 (소비 체력 점검)</span></div>
+  <div class="kv"><span class="hl">8/27~29</span><span class="hl">잭슨홀 심포지엄 (한국시간 8/28~30)</span></div>
+  <div class="kv"><span class="hl">8/28 (금) 밤</span><span class="hl">키노트 — 워시 의장 첫 잭슨홀</span></div>
+  <div class="kv"><span>9/10 (목)</span><span>KOSPI200 옵션 만기 (D−23)</span></div>
+  <span class="src">출처: bullstory 「2026년 하반기 FOMC·잭슨홀 일정」 / TheStreet 2026.08.17 / KRX 만기 규정(둘째 목요일) 기준 정군 산출 — 미검증 추정</span>
+
+  <div class="view view-bull">
+    <span class="view-head">🟢 긍정 시나리오</span>
+    <p>워시 의장이 잭슨홀에서 <b>유가발 물가를 "일시적 공급 충격"으로 규정</b>하면 초장기금리가 되돌려지고 성장주 할인율이 낮아진다. 이 경우 오늘의 반락은 되돌림 매수 기회로 재해석된다.</p>
+  </div>
+
+  <div class="view view-bear">
+    <span class="view-head">🔴 부정 시나리오</span>
+    <p>매파 성향의 신임 의장이 <b>인상 가능성을 명시</b>하면, 이미 19년 최고인 30년물이 한 번 더 밀려 올라간다. 이때 원/달러 1,412원의 원화 강세도 되돌려질 수 있다 — <b>오늘의 유일한 우호 변수가 사라지는 시나리오</b>다.</p>
+  </div>
+
+  <div class="alert">
+    <span class="view-head">⚠ 정군 경고</span>
+    <p>8월 28일까지 <b>10일간은 "방향을 맞히는 구간"이 아니라 "포지션 크기를 줄이는 구간"</b>입니다. 신임 의장의 첫 잭슨홀은 <b>선례 데이터가 0건</b>입니다 — 예측 근거가 존재하지 않습니다.</p>
+  </div>
+</div>
+<div class="scrollhint">SCROLL ↓</div>
+</section>
+
+<section class="card" style="--ac:#14B8A6">
+<div class="inner">
+  <span class="tag">08 / F&amp;O SIGNAL</span>
+  <span class="emoji">🎯</span>
+  <h1>T1 · T5 <b>점검 결과</b></h1>
+
+  <div class="kv"><span>T5 — 옵션만기 7일 이내</span><span class="na">미발동 (D−23, 9/10 목)</span></div>
+  <div class="kv"><span>T1 — 외인 선물 ±1.5조</span><span class="na">판정 불가 — 데이터 미확보</span></div>
+  <div class="kv"><span>외인 현물 (참고)</span><span class="up">+860억 (장초반 1조원대→축소)</span></div>
+  <span class="src">출처: Businesskorea·머니투데이 2026.08.18 (현물 기준) / 선물 누적은 KRX 원자료 미조회</span>
+
+  <div class="alert">
+    <span class="view-head">⚠ 정군 정직 보고</span>
+    <p><b>정군은 오늘 외국인 선물 누적 순매수를 재보지 못했습니다.</b> 웹검색 4축(만기일·누적순매수·KRX·선물시세)에서 2026년 8월 당일 값이 나오지 않았습니다. 시장 지배력 <b>1순위 지표가 공란</b>이라는 뜻입니다.</p>
+  </div>
+
+  <div class="action">
+    <span class="view-head">💡 정군 권고</span>
+    <p>T1 미확보 상태에서는 <b>어떤 방향 베팅도 근거가 반쪽</b>입니다. 대체 관측점으로 <b>현물 외국인의 "1조원대 → 860억" 축소 패턴</b>을 씁니다 — 이는 <b>매도 전환이 아니라 매수 강도 약화</b>입니다. 둘은 다릅니다. 확대 해석하지 마십시오.</p>
+  </div>
+
+  <div class="hidden">
+    <span class="view-head">🔍 정군이 발견한 문제</span>
+    <p>이 스킬의 8번 데이터(선물 누적)는 <b>웹검색으로는 구조적으로 확보가 어렵습니다</b> — 언론이 특이치일 때만 보도하기 때문입니다. <b>KRX Data Marketplace 직접 조회 경로를 파이프라인에 넣을 것</b>을 건의합니다. 오늘 판정 불가는 일회성 사고가 아니라 <b>설계 결함</b>입니다.</p>
+  </div>
+</div>
+<div class="scrollhint">SCROLL ↓</div>
+</section>
+
+<section class="card" style="--ac:#A78BFA">
+<div class="inner">
+  <span class="tag">09 / ACTION</span>
+  <span class="emoji">🧭</span>
+  <h1>KICK <b>매트릭스</b></h1>
+
+  <div class="kv"><span>당일 (8/19)</span><span>갭 추격 금지 · 관망</span></div>
+  <div class="kv"><span>1주 (~8/26)</span><span>비중 축소 유지 · 현금 확보</span></div>
+  <div class="kv"><span>이벤트 (8/28)</span><span>잭슨홀 통과 후 재진입 판단</span></div>
+  <div class="kv"><span>방향 신뢰도</span><span class="stars">★★★</span></div>
+
+  <div class="action">
+    <span class="view-head">💡 KICK 정렬</span>
+    <p>지배력 순위로 재보면 — <b>①외인선물(공란) ②SOX(공란) ③환율(우호) ④美장기금리(악재) ⑤유가(악재) ⑥VIX(공란)</b>. 확인된 3개 중 <b>2개가 악재, 1개가 호재</b>, 상위 2개는 미확보. <b>엇갈림 구간 → ★★★</b>. 방향 베팅이 아니라 크기 조절의 시간입니다.</p>
+  </div>
+
+  <div class="alert">
+    <span class="view-head">⚠ ELW / 레버리지</span>
+    <p>방향 신뢰도 ★★★ 구간에서 <b>ELW·레버리지 신규 진입은 권하지 않습니다</b>. 기보유분은 <b>손절 −0.5% 기계적 집행</b>. 오늘처럼 장중 4.6% 왕복하는 변동성에서는 <b>손절폭이 아니라 포지션 크기로 리스크를 관리</b>해야 합니다.</p>
+  </div>
+
+  <div class="hidden">
+    <span class="view-head">🔍 정군의 한계 고백</span>
+    <p>이 보고서는 <b>8개 항목 중 5개만 완전 확보</b>한 상태에서 작성됐습니다. 또한 정군은 <b>20:35 POST-MARKET 시점에 발화</b>했습니다(정규 06:58 PRE-MARKET 아님) — 즉 <b>내일 아침 개장 전까지 뉴욕장 하루가 더 지나갑니다.</b> 이 문서의 유효기간은 <b>8/19 개장 전까지</b>이며, 그 사이 뉴욕 변수는 반영돼 있지 않습니다.</p>
+  </div>
+</div>
+</section>
+
+<div class="foot">정군 모닝 v11 · 2026.08.18 (화) 20:35 KST · POST-MARKET<br>실측 기반 · 미확보 항목 명시 · 단정 금지</div>
 
 </body>
 </html>
