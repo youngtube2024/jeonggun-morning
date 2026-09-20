@@ -2,216 +2,241 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>정군 모닝 v11 — 2026.09.18 (금) PRE-MARKET</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>정군 모닝 v11 — 2026.09.21 (월) PRE-MARKET</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:#080C14;color:#E6EAF2;font-family:-apple-system,"Apple SD Gothic Neo",Pretendard,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-body{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;scroll-behavior:smooth}
-.strip{position:fixed;top:0;left:0;right:0;z-index:9;padding:8px 16px;font-size:12px;letter-spacing:.06em;color:#8B95A8;background:rgba(8,12,20,.85);backdrop-filter:blur(8px);border-bottom:1px solid #131A28;display:flex;justify-content:space-between}
-.strip b{color:#E6EAF2;font-weight:600}
-.card{min-height:100vh;height:100vh;scroll-snap-align:start;padding:52px 18px 28px;display:flex;flex-direction:column;position:relative;overflow-y:auto}
+html,body{height:100%;background:#080C14;color:#E6EAF2;font-family:-apple-system,"Apple SD Gothic Neo",Pretendard,system-ui,sans-serif;font-size:16px;line-height:1.55}
+body{scroll-snap-type:y mandatory;overflow-y:scroll;height:100vh}
+.strip{position:fixed;top:0;left:0;right:0;z-index:9;background:rgba(8,12,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid #1E2634;padding:8px 14px;font-size:13px;color:#8B95A7;letter-spacing:.02em}
+.card{position:relative;min-height:100vh;scroll-snap-align:start;padding:52px 18px 40px;display:flex;flex-direction:column;justify-content:flex-start;border-bottom:1px solid #141A26}
 .bar{position:absolute;top:0;left:0;right:0;height:4px;background:var(--c);box-shadow:0 0 18px var(--c)}
-.tag{font-size:13px;letter-spacing:.14em;color:var(--c);font-weight:700;margin-bottom:10px}
-.emo{font-size:44px;line-height:1;margin-bottom:8px}
+.tag{font-size:13px;color:var(--c);letter-spacing:.14em;font-weight:700;margin-bottom:8px;text-transform:uppercase}
+.emoji{font-size:44px;line-height:1;margin-bottom:6px}
 h1{font-size:28px;line-height:1.25;font-weight:800;margin-bottom:14px;letter-spacing:-.01em}
 h1 b{color:var(--c)}
-p,li{font-size:16px;line-height:1.6;color:#C9D1DF}
-.kv{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
-.kv div{background:#0E1420;border:1px solid #1A2334;border-radius:10px;padding:10px 12px;font-size:15px;line-height:1.4}
-.kv small{display:block;color:#8B95A8;font-size:12px;margin-bottom:2px}
-.up{color:#34D399}.dn{color:#FF6B35}.fl{color:#FFD700}
-.view{border-radius:12px;padding:12px 14px;margin:10px 0;border:1px solid}
-.view-bull{border-color:#34D399;background:rgba(52,211,153,.07)}
-.view-bear{border-color:#FF6B35;background:rgba(255,107,53,.07)}
-.view-head{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:6px}
+p{margin-bottom:10px}
+.kv{font-size:15px;background:#0E1420;border:1px solid #1E2634;border-radius:10px;padding:10px 12px;margin-bottom:10px}
+.kv div{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px dashed #1E2634}
+.kv div:last-child{border-bottom:0}
+.kv span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
+.up{color:#34D399}.dn{color:#FF6B35}.fl{color:#8B95A7}
+.src{display:block;font-size:12px;font-style:italic;color:#6B7689;margin-top:4px}
+.view{border-radius:10px;padding:11px 13px;margin-bottom:10px;background:#0C121C}
+.view-bull{border:1px solid #34D399;border-left:4px solid #34D399}
+.view-bear{border:1px solid #FF6B35;border-left:4px solid #FF6B35}
+.view-head{font-size:12px;letter-spacing:.12em;font-weight:800;text-transform:uppercase;margin-bottom:4px}
 .view-bull .view-head{color:#34D399}.view-bear .view-head{color:#FF6B35}
-.src{display:block;font-size:12px;font-style:italic;color:#7C869B;margin-top:6px}
-.topic{background:#0E1420;border:1px solid #1A2334;border-radius:12px;padding:12px 14px;margin:10px 0}
-.topic-num{font-size:12px;color:var(--c);font-weight:800;letter-spacing:.12em}
-.topic-head{font-size:17px;font-weight:700;margin:4px 0 8px;color:#fff}
-.topic-bull{font-size:15px;line-height:1.55;color:#C9D1DF;margin:4px 0}
-.topic-src{font-size:12px;font-style:italic;color:#7C869B;margin-top:4px}
-.action{border:1px solid #A78BFA;background:rgba(167,139,250,.09);border-radius:12px;padding:12px 14px;margin:10px 0}
+.hidden{border:1px solid #2A3446;border-radius:10px;padding:11px 13px;background:#0B1018;margin-top:6px}
+.hidden .view-head{color:#00D4FF}
+.action{border:1px solid #A78BFA;border-left:4px solid #A78BFA;border-radius:10px;padding:11px 13px;background:#100F1E;margin-bottom:10px}
 .action .view-head{color:#A78BFA}
-.alert{border:1px solid #FF6B35;background:rgba(255,107,53,.10);border-radius:12px;padding:12px 14px;margin:10px 0}
+.alert{border:1px solid #FF6B35;border-radius:10px;padding:11px 13px;background:#1A0F0A;margin-bottom:10px}
 .alert .view-head{color:#FF6B35}
-.hidden{border:1px dashed #2A3550;background:#0B111C;border-radius:12px;padding:12px 14px;margin-top:auto;font-size:15px;line-height:1.55;color:#B8C2D4}
-.hidden b{color:#fff}
-.stars{color:#FFD700;letter-spacing:2px}
-table{width:100%;border-collapse:collapse;margin:8px 0;font-size:14px}
-th,td{padding:8px 6px;border-bottom:1px solid #1A2334;text-align:left;vertical-align:top;line-height:1.4}
-th{color:#8B95A8;font-weight:600;font-size:12px;letter-spacing:.08em}
-.foot{font-size:12px;color:#5E6980;margin-top:10px;line-height:1.5}
+.topic{border:1px solid #1E2634;border-radius:10px;padding:11px 13px;margin-bottom:10px;background:#0C121C}
+.topic-num{font-size:12px;color:var(--c);font-weight:800;letter-spacing:.1em}
+.topic-head{font-size:17px;font-weight:800;margin:2px 0 6px}
+.topic-bull{font-size:15px;margin-bottom:4px;padding-left:2px}
+.topic-src{font-size:12px;font-style:italic;color:#6B7689}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:10px}
+th,td{border:1px solid #1E2634;padding:6px 7px;text-align:left;vertical-align:top}
+th{background:#0E1420;color:#8B95A7;font-weight:700;font-size:12px;letter-spacing:.06em}
+.star{color:#FFD700;letter-spacing:.05em}
+.small{font-size:13px;color:#8B95A7}
+.foot{font-size:12px;color:#6B7689;margin-top:auto;padding-top:14px}
 </style>
 </head>
 <body>
-<div class="strip"><span><b>2026.09.18 (금)</b> · PRE-MARKET · v11</span><span>08:33 KST · 9/9</span></div>
+<div class="strip">2026.09.21 (월) · PRE-MARKET · v11 · 9/9</div>
 
 <!-- C1 -->
 <section class="card" style="--c:#00D4FF">
 <div class="bar"></div>
 <div class="tag">01 / CORE THESIS</div>
-<div class="emo">🧭</div>
-<h1>美 <b>안도 반등</b>은 왔다.<br>외인 <b>7일 연속 매도</b>는 안 끝났다.</h1>
-<p>정군의 결론: 오늘은 <b style="color:#00D4FF">갭업 출발 → 상단 저항</b> 구도입니다. 밤사이 SOX +3.14%가 밀어올리지만, 외인이 하루 2.46조를 판 시장에서 갭업은 '팔 자리'가 되기 쉽습니다.</p>
+<div class="emoji">🧭</div>
+<h1><b>외인 선물 +5,942억</b>·SOX +2.78%가 위, <b>10Y 5.00%</b>·주간 외인 -8.76조가 아래 — 사흘 장, 방향은 24일 미·중 회담이 쥔다</h1>
 <div class="kv">
-<div><small>S&amp;P 500</small><span class="up">7,637.76 (+1.14%)</span></div>
-<div><small>나스닥</small><span class="up">26,418.30 (+1.69%)</span></div>
-<div><small>SOX 반도체</small><span class="up">11,599.49 (+3.14%)</span></div>
-<div><small>달러/원 (17일 마감)</small><span class="dn">1,382.2 (+13.6원)</span></div>
-<div><small>美 10Y</small><span class="up">4.947% (-5.9bp)</span></div>
-<div><small>WTI</small><span class="up">$101.10 (-1.30%)</span></div>
+<div><span>KOSPI (9/18)</span><span class="up">6,894.23 (+2.66%)</span></div>
+<div><span>외인 현물 / 선물 (9/18)</span><span class="up">+4,262억 / +5,942억</span></div>
+<div><span>외인 현물 주간 (9/14~18)</span><span class="dn">-8조 7,627억</span></div>
+<div><span>SOX (9/18)</span><span class="up">11,921.69 (+2.78%, 주간 +7.1%)</span></div>
+<div><span>원/달러 (9/18)</span><span class="fl">1,383.3 (+1.1원)</span></div>
+<div><span>美 10Y / 2Y</span><span class="dn">5.00% (+5.3bp) / 4.756% (52주 고점)</span></div>
+<div><span>WTI (9/18)</span><span class="up">$100.30 (-1.58%)</span></div>
+<div><span>VIX (9/18)</span><span class="up">14.81 (-4.1%)</span></div>
+<div><span>KOSPI200 야간선물</span><span class="up">+0.22%</span></div>
 </div>
-<span class="src">출처: Yahoo Finance 종가 실측(9/17), CNBC 마감시황, 뉴스핌 외환 마감</span>
-<div class="view view-bull"><div class="view-head">🟢 긍정론</div>
-<p>Fed 인상(3.75~4.00%) 직후 10Y가 8일 연속 상승을 멈추고 -5.9bp, VIX 17.71→15.44(-12.8%). '인상은 선반영' 논리. 대신증권 이경민 "시장 충격 제한적, 유가 진정으로 투심 양호".</p><span class="src">CNBC 9/17 마감, 뉴스핌 마감시황</span></div>
-<div class="view view-bear"><div class="view-head">🔴 부정론</div>
-<p>외인 현물 2.46조 순매도(NXT 포함)·7일 연속. 5~8월 100조 이상 매도 후 9월 초 반짝 매수가 다시 매도로 반전. 환율 1,382원은 외인에게 '팔고 나갈 명분'. 서울경제 "외인 85억달러 투매·거래대금 연중 최저".</p><span class="src">뉴스핌 9/17, 뉴스핌 9/8, Seoul Economic Daily 9/16</span></div>
-<div class="hidden">🔍 <b>정군 시각</b> — 美가 올랐는데 외인이 계속 팔면, 그건 미국 탓이 아니라 '한국 물량 정리'입니다. 오늘 오전 외인 현물이 순매수로 돌아서는지가 유일한 진짜 시그널. 지배력 정렬: 외인선물 <b>미확보</b> / SOX ↑ / 환율 ↓(원화약세) → 엇갈림 = <span class="stars">★★★</span></div>
+<span class="src">출처: 한국거래소·뉴스1·서울경제(9/20)·TheStreet Treasury Watch(9/18)·NASDAQ SOX 공식·머니투데이·CBOE(야후 종가)</span>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>외인이 8거래일 만에 현·선물 동시 매수(+1.02조)로 돌아섰고, SOX는 주간 +7.1%로 금리 5%를 이겨냈다. 삼성자산운용은 "MSCI Korea 선행 PER 5.06배, 2006년 이후 최저 밸류에이션 — PER 6배만 가도 상승여력"이라 진단. NH투자증권 주간 밴드 6,400~7,500.<span class="src">아시아투데이(9/16)·서울경제(9/20)</span></div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>하루 매수 4,262억은 한 주 매도 8.76조의 4.9%에 불과하다. 美 10Y는 5.00%로 주간 마감(19년 만의 고점권), 2Y는 52주 고점. 삼성전자+SK하이닉스 합산 영업이익 컨센서스는 7/10 661조 → 9/11 640조로 두 달간 21조 하향(연합인포맥스). 삼전·하닉 자사주 매입은 10월 종료 예정(세계일보 9/20).<span class="src">TheStreet·아시아투데이·세계일보</span></div>
+<div class="hidden"><div class="view-head">🔍 정군 시각</div>지배력 1순위 외인 선물(+)·2순위 SOX(+) 같은 방향, 3순위 환율은 중립(1,383 보합권), 4순위 10Y는 역방향(5.00%). 정렬도 <span class="star">★★★★☆</span>. 만점이 아닌 이유는 하나 — 금리 5%가 안 꺾였다. 사흘 장(21·22·23)에 24일 회담은 휴장 중 터진다. 연휴 전 5거래일 평균 -0.42%(최근 10년)라는 계절성까지 겹치므로 "오르되 가볍게 오르는 장"이 기본 시나리오.</div>
+<div class="foot">데이터 기준: 9/18(금) 종가 · 9/21(월) 06:58 KST 작성</div>
 </section>
 
 <!-- C2 -->
 <section class="card" style="--c:#F472B6">
 <div class="bar"></div>
 <div class="tag">02 / TODAY TOPICS</div>
-<div class="emo">📰</div>
-<h1>오늘 <b>3가지</b>가 방향을 정한다</h1>
-<div class="topic"><div class="topic-num">TOPIC 1</div><div class="topic-head">Fed 3년 만의 첫 인상, 시장은 하루 만에 반등</div>
-<div class="topic-bull">📰 <b>사건</b> — 9/16 FOMC 25bp 인상 → 3.75~4.00%, 12-0 만장일치. 12월 추가 인상 프라이싱.</div>
-<div class="topic-bull">⚡ <b>영향</b> — 16일 다우 -1.21%·S&amp;P -0.45% → 17일 나스닥 +1.69%, 엔비디아·아마존 +2%, 인텔 +7%. 10Y는 2007년 이후 최고치에서 반락.</div>
-<div class="topic-bull">💡 <b>권고</b> — 반등은 '숏커버' 성격. 10Y가 다시 5.0% 위로 가면 반등 소멸. 5.0%를 기준선으로 봅니다.</div>
-<div class="topic-src">CNBC 9/16·9/17, Federal Reserve 성명</div></div>
-<div class="topic"><div class="topic-num">TOPIC 2</div><div class="topic-head">외인 7일 연속 매도 vs 삼전·하닉 자사주 6,800억</div>
-<div class="topic-bull">📰 <b>사건</b> — 외인 KRX 2.28조(NXT 포함 2.46조) 순매도. 개인 +5,261억, 기관 +2,291억 방어. 삼전·하닉 자사주 6,800억 매입.</div>
-<div class="topic-bull">⚡ <b>영향</b> — 삼전 -0.39%(252,500) 하닉 -0.80%(1,745,000) 현대차 +0.28%(363,000). 전기전자 -0.57%, 운수장비 +2.40%로 순환매.</div>
-<div class="topic-bull">💡 <b>권고</b> — 자사주가 외인 매물을 받아주는 동안은 급락 방어. 단, 자사주는 '바닥 완충'일 뿐 '상승 동력'이 아닙니다.</div>
-<div class="topic-src">뉴스핌 마감시황 9/17, 아시아경제, EBN</div></div>
-<div class="topic"><div class="topic-num">TOPIC 3</div><div class="topic-head">오늘 정오 BOJ 결정 + 10시 대통령 기자회견</div>
-<div class="topic-bull">📰 <b>사건</b> — BOJ 9/17~18 회의, 1.00→1.25% 인상 예상(로이터 조사 58%). 이재명 대통령 기자회견 10시(부동산·호르무즈 파병·대미투자).</div>
-<div class="topic-bull">⚡ <b>영향</b> — 엔 강세 시 엔캐리 청산 → 아시아 위험자산 매도 압력. 회견에서 증시 관련 발언 나오면 오전 변동성.</div>
-<div class="topic-bull">💡 <b>권고</b> — 11:30~12:30 사이 포지션 최소화. BOJ 결과 확인 후 오후 재진입이 안전.</div>
-<div class="topic-src">글로벌이코노믹 9/2, Investing.com, 뉴스핌 9/17</div></div>
+<div class="emoji">📰</div>
+<h1>오늘의 <b>3대 토픽</b> — 사건 → 영향 → 권고</h1>
+<div class="topic">
+<div class="topic-num">TOPIC 1</div>
+<div class="topic-head">Fed 3년 만의 인상(3.75~4.00%) 후 첫 주말 — 10Y 5.00% 고착</div>
+<div class="topic-bull">📰 사건: 9/16 FOMC 12-0 만장일치 25bp 인상. 점도표 18명 중 16명 추가 인상, 4명은 2회 전망. 연말 중간값 4.1%(6월 3.8%). 워시 의장 "인플레가 너무 오래 너무 높았다".</div>
+<div class="topic-bull">⚡ 영향: 인상 당일(9/16) 다우·S&P 급락 → 9/17 급반등 → 9/18 혼조(S&P +0.17%, 러셀 -0.50%). 채권시장은 "드디어 올렸다"는 안도(Wolf Street)와 "5% 돌파 여부"(DePorre)가 공존.</div>
+<div class="topic-bull">💡 권고: 10Y 5.05% 상향 돌파 시 코스피 반등은 반도체 한 종목군 장으로 좁아진다. 지수보다 SOX 연동 비중을 우선.</div>
+<div class="topic-src">출처: CNBC(9/16)·Yahoo Finance·Schwab·TheStreet</div>
+</div>
+<div class="topic">
+<div class="topic-num">TOPIC 2</div>
+<div class="topic-head">9/24 백악관 미·중 정상회담 — AI·반도체 수출통제·희토류가 의제</div>
+<div class="topic-bull">📰 사건: 24일(현지) 백악관 개최. 국내는 24~25일 추석 휴장이라 결과를 <b>장이 닫힌 채</b> 맞는다.</div>
+<div class="topic-bull">⚡ 영향: 완화 시그널 → 하닉·삼전 수급 급반전(NH·대신 공통 시각). 결렬 시 연휴 뒤 첫날 갭 위험. 방향을 미리 알 수 없는 "이벤트 리스크"가 3일 장 전체를 누른다.</div>
+<div class="topic-bull">💡 권고: 23일(수) 장 마감 전 레버리지·ELW 노출은 절반 이하로. 결과 확인 후 재진입이 손실 기대값이 작다.</div>
+<div class="topic-src">출처: 이데일리·서울경제·파이낸셜뉴스 주간전망(9/20)</div>
+</div>
+<div class="topic">
+<div class="topic-num">TOPIC 3</div>
+<div class="topic-head">중동 — 후티, 리야드·얀부 동시 타격(9/20) · 트럼프 "이란 대공세 큰 결정"</div>
+<div class="topic-bull">📰 사건: 호르무즈 유조선 피격(9/18), 후티의 사우디 리야드·얀부 타격(9/20), 트럼프 "annihilate 여부 big decision"(Axios). 美, 사우디 F-35 48대 243억달러 판매 승인.</div>
+<div class="topic-bull">⚡ 영향: 그럼에도 WTI는 3일 연속 하락 $100.30. PVM "브렌트 100달러 하회 장기화는 펀더멘털상 정당화 안 됨" — 즉 하방은 제한, 상방은 사건 하나면 열린다.</div>
+<div class="topic-bull">💡 권고: 유가 재상승 = 10Y 재상승 = 코스피 이중 압박. WTI $105 재돌파를 위험 스위치로 둔다.</div>
+<div class="topic-src">출처: TheStreet Oil Update(9/18)·Reuters·CBS·아시아투데이(9/20)</div>
+</div>
 </section>
 
 <!-- C3 -->
 <section class="card" style="--c:#FFD700">
 <div class="bar"></div>
 <div class="tag">03 / PATTERN</div>
-<div class="emo">📐</div>
-<h1>'美 반등 다음날 코스피'는 <b>갭업 후 반납</b>이 반복</h1>
-<p>17일이 딱 그 패턴이었습니다. +0.91% 갭업(6,779) → 고점 6,795 → 종가 6,715(-0.04%). 개장 상승분 64pt를 전부 반납.</p>
-<table><tr><th>일자</th><th>코스피</th><th>외인 현물</th><th>비고</th></tr>
-<tr><td>9/11</td><td>6,909.91</td><td>매도</td><td>고점권</td></tr>
-<tr><td>9/14</td><td>6,684.37 <span class="dn">-3.26%</span></td><td>매도</td><td>SOX -5.9% 동조</td></tr>
-<tr><td>9/15</td><td>6,627.26 <span class="dn">-0.85%</span></td><td>매도</td><td>FOMC 대기</td></tr>
-<tr><td>9/16</td><td>6,717.97 <span class="up">+1.37%</span></td><td>매도</td><td>선반영 반등</td></tr>
-<tr><td>9/17</td><td>6,715.41 <span class="fl">-0.04%</span></td><td>-2.46조</td><td>갭업 반납</td></tr></table>
-<span class="src">Yahoo Finance ^KS11 종가 실측, 뉴스핌 9/17. 외인 일별 금액은 17일만 확보 — 나머지는 '매도 방향'만 확인</span>
-<div class="view view-bull"><div class="view-head">🟢 긍정론</div><p>6,627(9/15 저점)이 지지로 작동 중. 3거래일 저점 상승. 코스닥은 7거래일 연속 양봉(822.18).</p><span class="src">신한투자증권 강진혁, 뉴스핌</span></div>
-<div class="view view-bear"><div class="view-head">🔴 부정론</div><p>9/11 고점 6,910 대비 -2.8%인데 외인은 계속 팔고 있음. 거래대금 연중 최저 = 반등에 '실린 돈'이 없음.</p><span class="src">Seoul Economic Daily 9/16</span></div>
-<div class="hidden">🔍 <b>정군 시각</b> — 패턴상 오늘도 갭업이면 6,780~6,800에서 외인 매물이 나올 확률이 높습니다. 패턴이 깨지는 조건은 단 하나: 외인 현물 <b>오전 순매수 전환</b>.</div>
+<div class="emoji">📐</div>
+<h1>패턴 — <b>"외인 첫 매수일"</b>의 다음 날, 그리고 <b>연휴 전 3일</b></h1>
+<table>
+<tr><th>데이터</th><th>수치</th><th>출처</th></tr>
+<tr><td>추석 전 5거래일 KOSPI 평균 (최근 10년)</td><td class="dn">-0.42%</td><td>서울경제·이데일리</td></tr>
+<tr><td>추석 후 5거래일 평균</td><td class="up">+0.68%</td><td>서울경제·이데일리</td></tr>
+<tr><td>6월 고점 → 9/16 저점</td><td class="dn">9,063.84 → 6,598.87 (-27.2%)</td><td>한국거래소·아시아투데이</td></tr>
+<tr><td>9/16 저점 → 9/18 종가</td><td class="up">+4.5% (2일)</td><td>한국거래소</td></tr>
+<tr><td>SOX 9/14 → 9/18</td><td class="up">11,131 → 11,922 (+7.1%)</td><td>NASDAQ 공식</td></tr>
+<tr><td>9/18 하닉+삼전 거래대금</td><td>13.3조 (낮 이후 9.5조 증가)</td><td>광주일보</td></tr>
+</table>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>SOX 5일 연속 상승 + 국내 외인 복귀 + VIX 14.81은 "패닉 종료" 조합. 2일간 +4.5%는 저점 확인 패턴의 전형.<span class="src">NASDAQ·CBOE·KRX</span></div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>9/18 거래대금이 오후에 9.5조 몰린 것은 숏커버·트리플위칭(美)·기관 배당 매수 등 <b>기계적 수급</b> 가능성. DePorre "트리플위칭 마지막 1시간 변동은 펀더멘털 변화로 읽지 말라". 연휴 전 계절성 -0.42%는 반대 방향.<span class="src">TheStreet Pro·광주일보</span></div>
+<div class="hidden"><div class="view-head">🔍 정군 시각</div>"외인이 8일 만에 산 다음 날"의 통계는 정군이 직접 재보지 못했다 — 데이터 미확보, 후속 점검 필요. 확실한 것은 2가지: 기관 1.72조 매수는 배당·연기금 성격이 섞여 지속성이 약하고, 개인 -3.6조는 반등 시 차익실현 대기 물량이라는 점.</div>
 </section>
 
 <!-- C4 -->
 <section class="card" style="--c:#34D399">
 <div class="bar"></div>
 <div class="tag">04 / VALUATION</div>
-<div class="emo">⚖️</div>
-<h1>IB는 <b>12,000</b>을 말하고, 외인은 <b>판다</b></h1>
-<p>같은 시장을 보고 정반대로 행동하는 두 집단. 둘 중 하나는 틀렸습니다.</p>
-<div class="view view-bull"><div class="view-head">🟢 긍정론 — 골드만·JP모건</div>
-<p>골드만삭스 티모시 모 "코스피 12,000 유지, 약 80% 상승여력. 시장은 메모리 AI 사이클이 갑자기 끝날 것처럼 가격 매기고 있다." JP모건 기본 목표 12,500, 아시아 최선호. 메모리가 코스피 시총 절반·올해 상승분의 70%.</p><span class="src">Bloomberg 9/6, Korea Herald, CNBC</span></div>
-<div class="view view-bear"><div class="view-head">🔴 부정론 — 모건스탠리</div>
-<p>MS 숀 김 "메모리 계약가격 4Q26 피크". 실적 상향 비율 92%→77%로 둔화. 7/24 하닉·삼전 장중 -8%, 코스피 -6% 촉발 전례. 3Q 실적이 기대 미달일 경우 외인 선제 매도가 현재 진행형.</p><span class="src">Morgan Stanley 7/21 리포트, BigGo Finance, Seoul Economic Daily</span></div>
-<div class="hidden">🔍 <b>정군 시각</b> — 목표가 12,000은 '12개월'이고 외인 매도는 '오늘'입니다. 시간축이 다릅니다. 고객님의 ELW·KICK은 오늘 시간축이므로 <b>외인 수급이 IB 목표가보다 우선</b>입니다. 밸류 논쟁은 추석 이후 3Q 프리뷰(10월 초)에서 결판.</div>
+<div class="emoji">⚖️</div>
+<h1>밸류에이션 — <b>PER 5배</b>는 싼가, 이익이 의심받는 값인가</h1>
+<div class="kv">
+<div><span>MSCI Korea 12M 선행 PER (8월말)</span><span>5.06배</span></div>
+<div><span>삼전+하닉 '26 영업이익 컨센</span><span class="dn">661조 → 640조 (-21조, 7/10→9/11)</span></div>
+<div><span>원/달러 7/10 → 9/11</span><span class="dn">1,501.4 → 1,345.9 (-10.4%)</span></div>
+<div><span>시총 상위 9종목 중 최저 목표가 하회</span><span>8종목 (하닉 제외)</span></div>
+</div>
+<span class="src">출처: 아시아투데이(9/16, 연합인포맥스 집계)·서울경제(9/18, 에프앤가이드)</span>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>삼성자산운용 임태혁 본부장: "2006년 이후 최저 밸류 구간, 6,500~7,000은 시장이 생각하는 마지노선, PER 6배만 가도 상승여력 충분". 삼전·하닉 제외 기업 영업이익도 전년比 +50% 전망. 대형주 8종목이 증권사 <b>최저</b> 목표가조차 밑돈다 = 괴리가 역대급.<span class="src">아시아투데이·서울경제</span></div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>PER 5배는 "이익이 유지된다"는 가정 위의 숫자다. 컨센이 두 달간 21조 깎였고, 환율 10% 하락은 원화 환산 이익을 계속 갉아먹는다. 이익 추정치가 내려가는 동안의 PER은 바닥이 움직이는 바닥이다.<span class="src">연합인포맥스 집계(아시아투데이 재인용)</span></div>
+<div class="hidden"><div class="view-head">🔍 정군 시각</div>싼 것은 맞고, 싸다는 이유만으로 오르지 않는 것도 맞다. 촉매는 ① 10Y 5% 하향 이탈 ② 미·중 회담 반도체 완화 ③ 컨센 하향 멈춤 — 셋 중 하나가 확인돼야 PER 5→6배 재평가가 시작된다. 지금은 셋 다 "대기".</div>
 </section>
 
 <!-- C5 -->
 <section class="card" style="--c:#FF6B35">
 <div class="bar"></div>
 <div class="tag">05 / HIDDEN RISK</div>
-<div class="emo">🕳️</div>
-<h1>보이는 위험은 <b>금리</b>, 안 보이는 위험은 <b>연휴 유동성</b></h1>
-<div class="alert"><div class="view-head">⚠️ 보이는 위험</div>
-<p>① 美 10Y 4.947% — 5.0% 재돌파 시 성장주 재압박 ② WTI $101 — 호르무즈 협상 기대로 -1.3%지만 100달러 위 ③ 환율 1,382원 — 원화 약세가 외인 환차손 유발 → 매도 가속.</p><span class="src">Yahoo Finance 실측, 이데일리·UBS 스타우노보</span></div>
-<div class="alert"><div class="view-head">🕳️ 안 보이는 위험</div>
-<p>① 추석 연휴(9/24~25 휴장, 9/28 재개장) 전 <b>4거래일</b>만 남음 — 연휴 중 해외 변동 리스크로 포지션 축소 → 거래대금 더 마름 ② KRX가 9/23 야간파생 휴장 결정 = 거래소도 변동성을 경계 ③ 9/30 마이크론 실적·PCE가 연휴 직후 대기 ④ 호르무즈 파병 NSC 연기 — 지정학 변수 미해소.</p><span class="src">뉴스핌 9/9 KRX 공시, Micron IR, NY Fed 캘린더, 뉴스핌 9/17</span></div>
-<div class="hidden">🔍 <b>정군 시각</b> — 연휴 전 마지막 주에 외인 매도 + 거래대금 최저가 겹치면, 작은 매물에도 지수가 크게 흔들립니다. 오늘 美 쿼드러플 위칭(9/18)까지 겹쳐 밤 변동성도 큽니다. <b>오버나잇 포지션 축소</b>가 정군 권고.</div>
+<div class="emoji">🕳️</div>
+<h1>보이는 위험 vs <b>안 보이는 위험</b></h1>
+<div class="alert"><div class="view-head">보이는 위험</div>① 美 10Y 5.00%·2Y 52주 고점 ② 후티 리야드 타격·트럼프 이란 결정 ③ 미·중 회담 결렬 ④ 연휴 이틀 휴장 갭 리스크<span class="src">TheStreet·아시아투데이·서울경제</span></div>
+<div class="alert"><div class="view-head">안 보이는 위험 1 — 자사주 매입 종료</div>삼전·하닉은 외인·기관이 팔 때 하루 약 1.6조의 자사주 매입으로 지수를 떠받쳐 왔다(파이낸셜뉴스 9/4). 이 매입이 <b>10월 종료</b> 예정(세계일보 9/20). 안전판이 빠지는 시점에 외인 복귀가 이어지지 않으면 수급 공백이 그대로 노출된다.</div>
+<div class="alert"><div class="view-head">안 보이는 위험 2 — 환율 착시</div>원화가 7월 1,501 → 1,346까지 강세였다가 다시 1,383으로 되돌아왔다. 강세 구간에 잡힌 이익 컨센(640조)은 환율이 1,400을 넘으면 오히려 상향될 수 있고, 반대로 외인은 환차손 우려로 매도한다 — 이익과 수급이 반대로 움직이는 구간.</div>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>골드만삭스: "추가 인상은 베이스라인 아님, 12월엔 인플레 개선 근거로 추가 인상 불필요해질 것". VIX 14.81은 시장이 이미 위험을 소화했다는 신호.<span class="src">Yahoo Finance·TheStreet</span></div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>JP모건: "9월·12월 각 25bp". 점도표 16/18명 추가 인상. 5% 금리에서 PER 5배가 싸 보여도 무위험 수익률 5%와 경쟁해야 한다.<span class="src">Yahoo Finance·CNBC</span></div>
+<div class="hidden"><div class="view-head">🔍 정군 시각</div>가장 큰 숨은 위험은 "24일 회담 결과를 장이 닫힌 채 맞는다"는 구조 자체. 좋든 나쁘든 연휴 후 첫날은 갭으로 시작한다. 포지션 크기가 곧 리스크 관리다.</div>
 </section>
 
 <!-- C6 -->
 <section class="card" style="--c:#06B6D4">
 <div class="bar"></div>
 <div class="tag">06 / SECTOR THEME</div>
-<div class="emo">🔀</div>
-<h1>반도체 <b>쉬는 날</b>, 돈은 <b>조선·방산·정유</b>로</h1>
+<div class="emoji">🧩</div>
+<h1>섹터 — <b>반도체 외인 복귀</b>, 그런데 삼전은 팔고 하닉만 샀다</h1>
 <div class="kv">
-<div><small>운수장비</small><span class="up">+2.40%</span></div>
-<div><small>기계장비</small><span class="up">+1.97%</span></div>
-<div><small>전기전자</small><span class="dn">-0.57%</span></div>
-<div><small>HD현대중공업</small><span class="up">장중 +6%</span></div>
-<div><small>S-Oil (유가 100$)</small><span class="up">+5%</span></div>
-<div><small>삼성전기</small><span class="dn">-3.69%</span></div>
+<div><span>SK하이닉스</span><span class="up">1,857,000 (+6.42%) 외인 집중매수</span></div>
+<div><span>삼성전자</span><span class="up">261,000 (+3.37%) 외인 순매도</span></div>
+<div><span>현대차</span><span class="up">365,000 (+0.55%)</span></div>
+<div><span>SK스퀘어 / 삼성전기</span><span class="up">+7.04% / +4.36%</span></div>
+<div><span>주간 외인 순매수 1위</span><span>가온전선 +1,198억 (전선주)</span></div>
 </div>
-<span class="src">뉴스핌 마감시황·특징주 9/17, 아시아경제 업종 등락</span>
-<div class="view view-bull"><div class="view-head">🟢 긍정론</div><p>SOX +3.14%(인텔 +7%, 퀄컴 +2%)가 오늘 반도체 갭업을 지원. 자사주 6,800억이 하방 받침. 순환매는 '시장이 살아있다'는 증거.</p><span class="src">CNBC 9/17</span></div>
-<div class="view view-bear"><div class="view-head">🔴 부정론</div><p>외인 매도가 반도체에 집중 — 코스피 시총 50%가 반도체인 시장에서 반도체가 빠지면 순환매로 지수를 못 지킵니다. 조선·방산은 시총이 작아 지수 기여 제한.</p><span class="src">Goldman Sachs 시총 비중 분석, 뉴스핌</span></div>
-<div class="hidden">🔍 <b>정군 시각</b> — 오늘 반도체 갭업이 <b>10시 30분까지 유지</b>되면 순환매 종료·지수 상승. 갭 메우면 어제 패턴 반복. 시장 지배력 없는 소형주 거론은 하지 않습니다.</div>
+<span class="src">출처: 한국거래소·세계비즈·핀포인트뉴스 투자자별 매매동향(9/18)·연합뉴스(9/20)</span>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>美 9/18 엔비디아·브로드컴·AMD·마이크론 동반 상승, SMH 주간 강세. 샌디스크 S&P100 편입(9/21)·SpaceX 나스닥100 비중 2배(155~220억달러 프로그램 매수)로 美 대형 기술주 수급 우호. NH 추천: 반도체·ESS·AI플랫폼·증권·바이오.<span class="src">TheStreet·뉴시안·주간전망</span></div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>외인이 삼전을 팔고 하닉만 산 것은 "반도체 전체"가 아니라 "HBM 한 종목"에 대한 베팅. 삼전 자사주 종료(10월)와 겹치면 삼전은 외인·자사주 양쪽 매수가 동시에 사라진다. 대신증권은 IT하드웨어·소매유통·자동차·전력기기로 <b>분산</b>을 권고.<span class="src">핀포인트뉴스·세계일보·주간전망</span></div>
+<div class="hidden"><div class="view-head">🔍 정군 시각</div>전선주(가온전선 주간 외인 1위, 20% 급등)는 美 인프라 투자 기대의 순수 수혜로 반도체와 상관이 낮다 — 24일 회담 결과와 무관하게 갈 수 있는 분산 축. 반면 자동차(현대차 +0.55%)는 GM -5%·폭스바겐 가이던스 하향(115억달러 손실)의 역풍을 받는 중.</div>
 </section>
 
 <!-- C7 -->
 <section class="card" style="--c:#EC4899">
 <div class="bar"></div>
 <div class="tag">07 / EVENT CATALYST</div>
-<div class="emo">📅</div>
-<h1>7일 안에 <b>4개</b>, 연휴 뒤에 <b>2개</b></h1>
-<table><tr><th>일시</th><th>이벤트</th><th>정군 판단</th></tr>
-<tr><td>9/18 10:00</td><td>이재명 대통령 기자회견(90분)</td><td>부동산·파병·대미투자 발언 → 원화·건설주 변수</td></tr>
-<tr><td>9/18 정오</td><td>BOJ 금리 결정(1.25% 예상 58%)</td><td>인상 시 엔 강세 → 아시아 리스크오프</td></tr>
-<tr><td>9/18 밤</td><td>美 쿼드러플 위칭</td><td>변동성 확대, 월요일 갭 리스크</td></tr>
-<tr><td>9/23 18:00</td><td>KRX 야간파생 휴장</td><td>연휴 전 포지션 정리 수요</td></tr>
-<tr><td>9/24~25</td><td>추석 휴장 (9/28 재개장)</td><td>해외 변동 무방비 구간</td></tr>
-<tr><td>9/30</td><td>마이크론 FQ4 실적 + 美 PCE</td><td>메모리 논쟁(GS vs MS) 1차 판정</td></tr>
-<tr><td>10/8</td><td>KOSPI200 옵션 만기</td><td>20일 전 — T5 미발동</td></tr></table>
-<span class="src">청와대 브리핑(뉴스핌), Reuters 조사, OptionAlpha 2026 위칭 일정, KRX 공시, Micron IR, NY Fed</span>
-<div class="hidden">🔍 <b>정군 시각</b> — 연휴 전 마지막 주의 핵심은 '이벤트가 많다'가 아니라 '이벤트 결과를 <b>반영할 거래일이 4일</b>밖에 없다'는 점. 마이크론 실적은 연휴 직후 첫 거래일(9/28)이 아닌 9/30 — 10/1 개장에 반영됩니다.</div>
+<div class="emoji">📅</div>
+<h1>7일 이벤트 — <b>사흘 장</b>, 그리고 휴장 중의 <b>빅이벤트</b></h1>
+<table>
+<tr><th>일자</th><th>이벤트</th><th>중요도</th></tr>
+<tr><td>9/21(월)</td><td>한국 9월 1~20일 수출입 속보 · 中 LPR · 네오사피엔스 코스닥 상장 · SpaceX 나스닥100 비중 확대 발효 · 샌디스크 S&P100 편입</td><td class="star">★★★</td></tr>
+<tr><td>9/22(화)</td><td>美 리치몬드 연은 제조업 · 브릴스 공모 환불</td><td class="star">★★</td></tr>
+<tr><td>9/23(수)</td><td><b>연휴 전 마지막 거래일</b> · 美·유럽·일본 S&P글로벌 PMI 예비치 · LG 분기배당 지급</td><td class="star">★★★★</td></tr>
+<tr><td>9/24(목)</td><td><b>미·중 정상회담(백악관)</b> · 트럼프-걸프 6개국 정상 회동 · 美 신규주택매매 — <span class="dn">국내 휴장</span></td><td class="star">★★★★★</td></tr>
+<tr><td>9/25(금)</td><td>美 내구재·자본재 수주 — <span class="dn">국내 휴장(추석)</span></td><td class="star">★★</td></tr>
+<tr><td>10/8(목)</td><td>KOSPI200 옵션 만기 (D-17)</td><td class="star">★★</td></tr>
+</table>
+<span class="src">출처: 서울경제·이데일리·파이낸셜뉴스 주간전망(9/20)·TheStreet(9/18)·Firebat 주간일정(교차검증: 회담·PMI만 채택)</span>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>PMI 3종 동반 약세 → 연준 추가 인상 우려 후퇴 → 위험자산 반등. 회담에서 반도체 통제 완화 언급 시 연휴 후 갭업.</div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>美 서비스 PMI 상회 → 추가 인상 재점화 → 달러 강세·환율 1,400 재시도. 회담 결렬 시 연휴 후 갭다운을 이틀 동안 손쓸 수 없다.</div>
+<div class="hidden"><div class="view-head">🔍 정군 시각</div>23일(수) 15:30 마감 = 이번 주의 실질 마감. 22일부터 "연휴 전 축소" 물량이 나오는 것이 계절성의 실체다. 21일 오전 강세를 23일 포지션 정리 기회로 쓰는 것이 시간축상 합리적.</div>
 </section>
 
 <!-- C8 -->
 <section class="card" style="--c:#14B8A6">
 <div class="bar"></div>
 <div class="tag">08 / F&amp;O SIGNAL</div>
-<div class="emo">📡</div>
-<h1>T1 <b>발동</b> — 외인 현물 -2.46조</h1>
+<div class="emoji">📡</div>
+<h1>선물·옵션 — <b>T1 발동</b>(누적) · T5 미발동</h1>
 <div class="kv">
-<div><small>T1 외인 ±1.5조</small><span class="dn">발동 (-2.46조, 임계 1.6배)</span></div>
-<div><small>T5 만기 7일 이내</small><span class="fl">미발동 (10/8, D-20)</span></div>
-<div><small>외인 선물 (17일)</small><span class="fl">데이터 미확보</span></div>
-<div><small>외인 선물 9월 누적</small><span class="fl">9/7까지 +2.86조 매수 후 미확보</span></div>
+<div><span>T1 외인 현물 ±1.5조</span><span class="dn">발동 — 주간 누적 -8.76조 (일간 +0.43조는 미달)</span></div>
+<div><span>T5 옵션만기 7일 이내</span><span class="fl">미발동 — 10/8 만기 D-17</span></div>
+<div><span>외인 KOSPI200 선물 9/18</span><span class="up">+5,942억 매수우위</span></div>
+<div><span>KOSPI200 야간선물</span><span class="up">+0.22%</span></div>
+<div><span>美 트리플위칭 (9/18)</span><span>통과 — 6.2조달러 옵션 만기(Investing.com)</span></div>
 </div>
-<span class="src">뉴스핌 9/17(현물), 뉴스핌 9/8(선물 누적). 17일 선물·베이시스는 검색 3회로도 미확보 — 후속 점검 필요</span>
-<div class="view view-bull"><div class="view-head">🟢 긍정론</div><p>9월 초 외인은 현·선물 동반 매수(선물 3거래일 +5.8조)로 전환한 바 있음. 현물 매도가 '선물 헤지 매수'와 짝이면 지수 하방은 제한.</p><span class="src">뉴스핌 9/8</span></div>
-<div class="view view-bear"><div class="view-head">🔴 부정론</div><p>현물 7일 연속 매도는 헤지가 아닌 '비중 축소'. 선물까지 매도 전환 확인되면 ★ 등급 하향, 프로그램 매도 → 지수 급락 경로.</p><span class="src">정군 판단 (미검증 시나리오)</span></div>
-<div class="hidden">🔍 <b>정군 시각</b> — 1순위 지표(외인 선물)가 없어서 오늘 등급은 <span class="stars">★★★</span>에서 멈춥니다. 정직하게: 정군이 재보지 않은 것은 아직 모르는 것입니다. 장 시작 후 외인 선물 첫 30분 방향이 나오면 등급을 다시 매겨야 합니다.</div>
+<span class="src">출처: 한국거래소·세계일보·SBS(9/18)·Investing.com</span>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>외인 선물 +5,942억은 현물 +4,262억보다 크다 — 현물 복귀보다 선물 숏커버가 먼저 왔다는 뜻이고, 숏커버는 보통 2~3일 이어진다. 美 트리플위칭 통과로 기계적 매도 압력 소멸.</div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>숏커버는 "새 롱"이 아니다. 주간 -8.76조 매도가 되돌아오려면 현물 매수가 3일 연속 5,000억 이상 찍혀야 한다(정군 기준선). 야간선물 +0.22%는 SOX +2.78%에 비해 <b>미지근</b>하다 — 외인이 밤에 크게 따라오지 않았다.</div>
+<div class="hidden"><div class="view-head">🔍 정군 시각</div>21일 관전 포인트 1개: 외인 현물이 오전 10시 기준 +2,000억 이상이면 T1 해제 시작으로, -1,000억 이하이면 18일은 일회성 숏커버로 판정한다. 숫자 하나로 시나리오가 갈린다.</div>
 </section>
 
 <!-- C9 -->
 <section class="card" style="--c:#A78BFA">
 <div class="bar"></div>
 <div class="tag">09 / ACTION</div>
-<div class="emo">🎯</div>
-<h1>갭업은 <b>추격 금지</b>, 외인 전환 확인 후 <b>따라가기</b></h1>
-<div class="action"><div class="view-head">💡 KICK 매트릭스</div>
-<table><tr><th>시간축</th><th>방향</th><th>기준선</th></tr>
-<tr><td>당일 (9/18)</td><td>갭업 → 상단 저항 → 외인 확인 후 재판단</td><td>상단 6,800 / 하단 6,650 / 중심 6,715</td></tr>
-<tr><td>1주 (연휴 전 4일)</td><td>포지션 축소 우위, 오버나잇 최소</td><td>6,627 이탈 시 하락 전환 인정</td></tr>
-<tr><td>1개월 (10월)</td><td>3Q 프리뷰·마이크론이 메모리 논쟁 판정</td><td>10Y 5.0% 위 = 성장주 재압박</td></tr></table></div>
-<div class="action"><div class="view-head">💡 ELW</div>
-<p><b>오전 콜 소폭 우위</b> — SOX +3.14%·VIX -12.8% 근거. 단 <b>외인 현물 순매도 지속 확인(10:30 기준)</b> 시 콜 정리 → 풋 전환. BOJ 발표 전후(11:30~12:30) 무포지션. <b>손절 -0.5%</b> 기계적 준수, 오버나잇 홀딩 금지(쿼드러플 위칭).</p></div>
-<div class="view view-bull"><div class="view-head">🟢 상방 시나리오</div><p>외인 오전 순매수 전환 + BOJ 동결 → 6,800 돌파, 반도체 주도 +1%대.</p></div>
-<div class="view view-bear"><div class="view-head">🔴 하방 시나리오</div><p>외인 8일째 매도 + BOJ 인상 + 환율 1,390 → 갭 반납 후 6,650 시험.</p></div>
-<div class="hidden">🔍 <b>정군 종합</b> — 확률은 어느 쪽도 60%를 넘지 않습니다. 오늘은 '맞추는 날'이 아니라 '<b>외인이 보여주는 걸 확인하는 날</b>'입니다. 데이터 확보: 8/8 항목 중 외인 선물 1건 미확보. 한계 인정.<div class="foot">v11 · 2026.09.18 08:33 KST 생성 · 수치는 Yahoo Finance 종가 실측 + 국내외 언론 마감 보도 기반 · 결론은 정군 추론이며 검토 필요</div></div>
+<div class="emoji">🎯</div>
+<h1>KICK 매트릭스 — <b>정렬 ★★★★☆</b>, 방향 위·크기 절반</h1>
+<table>
+<tr><th>시간축</th><th>방향</th><th>근거 (숫자)</th><th>무효 조건</th></tr>
+<tr><td>당일 (9/21)</td><td class="up">▲ 완만 상승</td><td>SOX +2.78%, 외인 선물 +5,942억, VIX 14.81, WTI -1.58%</td><td>외인 현물 10시 -1,000억 이하 / 10Y 5.05% 돌파</td></tr>
+<tr><td>1주 (9/21~23, 3일)</td><td class="fl">◆ 상승 후 축소</td><td>연휴 전 5일 평균 -0.42%, 24일 회담 휴장 중 개최, NH 밴드 6,400~7,500</td><td>회담 전 반도체 완화 사전 보도 → 축소 보류</td></tr>
+<tr><td>1개월</td><td class="fl">◆ 6,500~7,200 박스</td><td>PER 5.06배 하방 지지 vs 10Y 5%·자사주 10월 종료 상방 저항</td><td>10Y 4.8% 하향 or 5.25% 상향 이탈</td></tr>
+</table>
+<div class="action"><div class="view-head">💡 정군 권고 — 종합</div>
+<p><b>21일:</b> 시초 갭업 추격 금지. 외인 현물 10시 숫자 확인 후 진입. 하닉(외인 집중매수) &gt; 삼전(외인 매도) 순서.</p>
+<p><b>22~23일:</b> 위험자산 비중을 23일 14시 이전에 <b>평소의 50% 이하</b>로. 회담 결과는 장 닫힌 채 맞는다.</p>
+<p><b>ELW:</b> 방향 콜(하닉·KOSPI200) 우위, 단 손절 -0.5% 기계적 집행. 23일 14시 이후 신규 진입 금지 — 이틀 휴장 중 시간가치 소멸 + 갭 리스크 이중 부담.</p>
+<p><b>분산 축:</b> 전선(가온전선 주간 외인 1위)·전력기기 — 회담 결과와 상관 낮음.</p></div>
+<div class="view view-bull"><div class="view-head">🟢 상방 시나리오</div>회담 완화 + PMI 온건 → 연휴 후 7,000 재도전 (NH 상단 7,500).</div>
+<div class="view view-bear"><div class="view-head">🔴 하방 시나리오</div>회담 결렬 + 10Y 5.1% + 유가 재상승 → 6,600 재시험 (9/16 저점 6,598.87).</div>
+<div class="hidden"><div class="view-head">🔍 정군 시각 · 한계 고백</div>WTI는 야후 연속물이 96.08로 찍히나 국내 보도(서경·연합)는 $100.30 — 월물 교체 차이로 추정, 미검증. "외인 첫 매수일 다음 날" 통계는 미확보. 위 판단은 복합 원인 전제이며 단일 변수로 뒤집힐 수 있다.</div>
+<div class="foot">정군 모닝 v11 · 2026.09.21 (월) PRE-MARKET · 본 자료는 시장 정보 정리이며 특정 매매를 권유하지 않습니다 · 데이터 9/18 종가 기준</div>
 </section>
 </body>
 </html>
