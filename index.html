@@ -1,16 +1,90 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>정군 모닝 v11</title><style>*{box-sizing:border-box;margin:0}html,body{background:#080C14;color:#E6EAF2;font-family:-apple-system,"Apple SD Gothic Neo",Pretendard,system-ui,sans-serif}
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>정군 모닝 v11</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#080C14;color:#E6EAF2;font-family:-apple-system,"Apple SD Gothic Neo",Pretendard,system-ui,sans-serif;font-size:16px;line-height:1.55}
 body{scroll-snap-type:y mandatory;height:100vh;overflow-y:scroll}
-.strip{position:fixed;top:0;left:0;right:0;z-index:9;background:#0d1320ee;font-size:12px;padding:8px 12px;color:#9aa6bd;text-align:center}
-.card{scroll-snap-align:start;min-height:100vh;padding:48px 18px 28px;position:relative;overflow-y:auto;background:radial-gradient(circle at 50% -10%,color-mix(in srgb,var(--c) 18%,transparent),transparent 55%)}
-.bar{position:absolute;top:0;left:0;right:0;height:4px;background:var(--c);box-shadow:0 0 18px var(--c)}
-.tag{font-size:13px;color:var(--c);letter-spacing:.1em;margin-bottom:8px}
-.ttl{display:flex;gap:10px;align-items:center;margin-bottom:14px}.em{font-size:44px}h1{font-size:28px;line-height:1.25}h1 b{color:var(--c)}
-.view{border:1px solid;border-radius:10px;padding:12px;margin:10px 0;font-size:16px;line-height:1.5;background:#0d1320}
-.view-bull{border-color:#34D399}.view-bear{border-color:#FF6B35}.view-head{font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;font-weight:700}
+.strip{position:fixed;top:0;left:0;right:0;z-index:9;background:#0d1322ee;font-size:12px;padding:6px 14px;color:#8fa0bd;text-align:center;border-bottom:1px solid #1b2540}
+.card{--c:#00D4FF;height:100vh;scroll-snap-align:start;padding:42px 16px 14px;position:relative;overflow-y:auto;border-bottom:1px solid #141c30}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--c);box-shadow:0 0 22px var(--c)}
+.tag{font-size:13px;letter-spacing:.08em;color:var(--c);font-weight:700;margin-bottom:4px}
+.emo{font-size:44px;line-height:1.1}
+h1{font-size:28px;line-height:1.2;margin:2px 0 10px}h1 b{color:var(--c)}
+p,li{font-size:16px}
+.kv{font-size:15px;color:#c9d2e4;margin:3px 0}.kv b{color:#fff}
+.view{border-left:4px solid;border-radius:8px;padding:8px 11px;margin:8px 0;background:#0f1628}
+.view-bull{border-color:#34D399}.view-bear{border-color:#FF6B35}
+.view-head{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:3px}
 .view-bull .view-head{color:#34D399}.view-bear .view-head{color:#FF6B35}
-.src,.topic-src{font-size:12px;font-style:italic;color:#7d8aa3;margin:4px 0 8px}
-.kv{display:flex;justify-content:space-between;gap:10px;font-size:15px;padding:7px 0;border-bottom:1px solid #1b2436}.kv span{color:#9aa6bd}.kv b{text-align:right;font-weight:600}
-.topic{background:#0d1320;border-radius:10px;padding:10px 12px;margin:8px 0;font-size:16px;line-height:1.45}.topic-num{color:var(--c);font-weight:800;font-size:13px}.topic-head{font-weight:700;margin:2px 0 4px}.topic-bull{margin:3px 0}
-.action{border:1px solid #A78BFA;background:#A78BFA14;border-radius:10px;padding:10px 12px;margin:8px 0;font-size:16px;line-height:1.5}
-.alert{border:1px solid #FF6B35;background:#FF6B3514;border-radius:10px;padding:10px 12px;margin:8px 0;font-size:15px;line-height:1.5}
-.hidden{margin-top:10px;font-size:14px;color:#aab4c8;background:#0b101b;border-left:3px solid var(--c);padding:8px 10px;line-height:1.5}</style></head><body><div class="strip">2026.10.02 (금) · PRE-MARKET · v11 · 9/9</div><section class="card" style="--c:#00D4FF"><div class="bar"></div><div class="tag">01 / CORE THESIS</div><div class="ttl"><span class="em">🧭</span><h1>한 줄 진단: 반도체 <b>실적 훈풍</b> vs 美 10Y <b>5.3% 금리 압박</b></h1></div><div class="view view-bull"><div class="view-head">🟢 긍정론</div>마이크론 FQ4 매출 $54.23B(컨센 $50.07B), 매출총이익률 87%(예상 85.2%). 9월 한국 반도체 수출 $60.3B(+262.8% YoY), 총수출 $120.94B(+83.5%). D.A. Davidson: 메모리 수요 "내년 하반기 전 꺾이지 않는다".<div class="src">출처: 머니투데이/뉴시스·Businesskorea·Yahoo Finance</div></div><div class="view view-bear"><div class="view-head">🔴 부정론</div>美 10Y 장중 5.34%(2002년 4월 이후 최고), 30Y 5.67%. 8월 근원 PCE 전년비 3.0%. 10/28 FOMC 25bp 추가 인상 확률 64~70%, 12월 약 95%(Mitrade 집계). 외인 9월 삼성전자·SK하이닉스 합산 16.45조 순매도.<div class="src">출처: TheStreet·Mitrade·Newspim 9/30</div></div><div class="action">💡 정군 종합: 어제 KOSPI 6,971.35(+1.95%)는 실적 반등이고 금리·외인 매도 구조는 그대로입니다. 방향 단정 금지, 양방향 시나리오 유지.</div><div class="hidden"><b>🔍 정군 시각/연쇄 분석</b><br>복합 원인: ①마이크론 서프라이즈 ②수출 쇼크급 호조 ③숏커버 성격 가능성(외인은 5일 연속 순매도 -3,366억). 반등의 질은 외인 매수 전환 여부로만 검증됩니다. 한계: 외인 선물 수급·SOX 종가는 데이터 미확보 — 후속 점검 필요.</div></section><section class="card" style="--c:#F472B6"><div class="bar"></div><div class="tag">02 / TODAY TOPICS</div><div class="ttl"><span class="em">📰</span><h1>오늘의 <b>3대 토픽</b></h1></div><div class="topic"><div class="topic-num">1</div><div class="topic-head">마이크론 어닝 서프라이즈</div><div class="topic-bull">📰 사건: 마이크론 FQ4 매출 $54.23B, 마진 87%, 가이던스 상향. 美 장중 마이크론 +2.28%.</div><div class="topic-bull">⚡ 시장 영향: 삼성전자 +2.79%(276,000원), SK하이닉스 +3.21%(1,833,000원), 삼성전자우 +4.76%. 장비주 리오스 +10.90%, PSK +9.02%. KOSDAQ +4.48%(894.29).</div><div class="action">💡 정군 권고: 추격보다 장비·소재 확산 여부 확인. 메모리 2투톱은 외인 순매수 전환 전 비중 확대 보류.</div><div class="topic-src">출처: Businesskorea·Getnews·Yahoo Finance</div></div><div class="topic"><div class="topic-num">2</div><div class="topic-head">美 채권시장 — 10Y 5.3%대</div><div class="topic-bull">📰 사건: 10Y 장중 5.3338%(+4bp), 종가 기준 5.24%대 보도 혼재. 2Y 4.883%. 이란 협상 교착으로 WTI $92.28(+2.06%), Brent $100.60.</div><div class="topic-bull">⚡ 시장 영향: 고금리+고유가 조합은 외인 현물 매도(원화 약세)로 연결. 원/달러 1,358.4원(+5.6원), 달러인덱스 101.60.</div><div class="action">💡 정군 권고: 환율 1,360원 안착 여부 모니터링. 상회 시 외인 매도 재개 시나리오 가산.</div><div class="topic-src">출처: TheStreet·Newsis·Yahoo</div></div><div class="topic"><div class="topic-num">3</div><div class="topic-head">오늘 밤 美 9월 고용(21:30 KST)</div><div class="topic-bull">📰 사건: 컨센 +10만 명(8월 +16.2만), 실업률 4.1% 예상. 전일 ADP +9만, 신규 실업수당 19.7만(4주 연속 감소).</div><div class="topic-bull">⚡ 시장 영향: 강하면 인상 확률↑·금리↑, 약하면 금리↓ 성장 우려. 한국장 마감(15:30) 이후 발표라 월요일 갭 리스크.</div><div class="action">💡 정군 권고: 금요일 장 후반 포지션 경량화 검토. 발표 전 방향성 베팅 회피.</div><div class="topic-src">출처: Mitrade·Yahoo Finance</div></div><div class="hidden"><b>🔍 정군 시각/연쇄 분석</b><br>세 토픽이 한 사슬: 고용↑→금리↑→환율↑→외인 매도↑→반도체 밸류 부담. 반대로 고용↓→금리 안도→반도체 실적 모멘텀 부각. 어느 쪽도 단정 불가.</div></section><section class="card" style="--c:#FFD700"><div class="bar"></div><div class="tag">03 / PATTERN</div><div class="ttl"><span class="em">📊</span><h1>美 마감 &amp; <b>수급 패턴</b></h1></div><div class="kv"><span>S&amp;P 500</span><b>7,673.89 (+0.29%)</b></div><div class="src">출처: Yahoo Finance 10/1</div><div class="kv"><span>Nasdaq</span><b>26,929.52 (+0.25%)</b></div><div class="kv"><span>Dow</span><b>50,912.33 (+0.01%)</b></div><div class="kv"><span>SOX 종가</span><b>미확보 — 후속 점검 필요</b></div><div class="kv"><span>KOSPI 전일</span><b>6,971.35 (+1.95%), 4거래일 하락 후 반등</b></div><div class="src">출처: Newspim</div><div class="kv"><span>투자자별</span><b>기관 +4,171억 / 외인 -3,366억(5일 연속) / 개인 -1.71조</b></div><div class="src">출처: Newspim</div><div class="alert">⚠ 정군 발견 문제: 美 지수 종가 보도가 소스별로 상이(UK Yahoo는 S&amp;P -0.3%, 7,651.54로 9/30 세션 추정). 10/1 세션 값은 Yahoo Finance 라이브 + TheStreet(전 지수 상승) 일치분 채택. 미검증 잔여.</div><div class="hidden"><b>🔍 정군 시각/연쇄 분석</b><br>외인 매도가 5일 연속인데 지수가 +1.95%면 기관·프로그램 주도 반등입니다. 주도 주체가 외인이 아니면 지속성 ★★ 수준으로 봅니다.</div></section><section class="card" style="--c:#34D399"><div class="bar"></div><div class="tag">04 / VALUATION</div><div class="ttl"><span class="em">💹</span><h1>밸류에이션 <b>양면</b></h1></div><div class="view view-bull"><div class="view-head">🟢 긍정론</div>마이크론 마진 87%·매출 약 5배(YoY). 삼성전자 276,000원, SK하이닉스 1,833,000원의 이익 가시성은 "메모리 부족" 지속이 근거.<div class="src">출처: Newspim·D.A. Davidson</div></div><div class="view view-bear"><div class="view-head">🔴 부정론</div>무위험금리 5.3%대에서 성장주 할인율 급상승. 외인 5~8월 100조원+ 순매도, 9월 삼성·하닉 16.45조 추가 매도.<div class="src">출처: Newspim 9/8, 9/30</div></div><div class="action">💡 정군 권고: 외인이 ETF(TIGER 반도체TOP10 641억 등 합 1,084억)는 매수 중 — 개별 메모리 대신 장비·소재로 분산하는 흐름 확인 후 대응.</div><div class="hidden"><b>🔍 정군 시각/연쇄 분석</b><br>밸류 자체보다 "금리 vs 이익 성장" 경주입니다. PER 수치는 이번 조사에서 미확보 — 단정 보류.</div></section><section class="card" style="--c:#FF6B35"><div class="bar"></div><div class="tag">05 / HIDDEN RISK</div><div class="ttl"><span class="em">🕳️</span><h1><b>보이는 위험</b> vs 안 보이는 위험</h1></div><div class="kv"><span>보이는</span><b>10Y 5.3%, WTI $92.28, 환율 1,358.4원</b></div><div class="kv"><span>안 보이는 ①</span><b>중국 연료 수출 중단 → 에너지 인플레 재가속(Yahoo 보도)</b></div><div class="kv"><span>안 보이는 ②</span><b>8월 PCE에 디젤 급등 미반영(Newsis) → 9월 지표 상방 위험</b></div><div class="kv"><span>안 보이는 ③</span><b>개인 -1.71조 순매도 — 반등장 매물 소화 부담</b></div><div class="alert">⚠ 이란 협상 교착 + 고유가 + 연준 긴축 장기화가 동시에 겹치면 외인 매도 재가속. 확률 수치는 데이터 미확보.</div><div class="hidden"><b>🔍 정군 시각/연쇄 분석</b><br>복합 원인형 리스크: 유가→물가→금리→환율이 한 방향으로 증폭됩니다.</div></section><section class="card" style="--c:#06B6D4"><div class="bar"></div><div class="tag">06 / SECTOR THEME</div><div class="ttl"><span class="em">🔌</span><h1>섹터 테마: <b>반도체 확산</b></h1></div><div class="view view-bull"><div class="view-head">🟢 긍정론</div>장비주 급등(리오스 +10.90%, PSK +9.02%), 신한자산운용: "capex 확대 시 장비·소재로 수혜 확산". Synopsys 美 +4.8~12%(AWS $1B·OpenAI 협력).<div class="src">출처: Getnews·Newspim·TheStreet</div></div><div class="view view-bear"><div class="view-head">🔴 부정론</div>Micron 반응은 +2.28%로 제한적, 한국 반도체는 장중 하락 출발(삼성 264,500, 하닉 1,749,000)에서 반전 — 변동성 큼. 금리 상승 시 고밸류 반도체 우선 타격.<div class="src">출처: Vegannews·Yahoo</div></div><div class="action">💡 정군 권고: 메모리 투톱 단일 베팅보다 장비·소재 병행, 금요일 고용 발표 전 신규 진입 최소화.</div><div class="hidden"><b>🔍 정군 시각/연쇄 분석</b><br>KOSDAQ +4.48%는 과열 신호일 수 있어 다음 거래일 눌림 시 체력 점검 필요.</div></section><section class="card" style="--c:#EC4899"><div class="bar"></div><div class="tag">07 / EVENT CATALYST</div><div class="ttl"><span class="em">📅</span><h1>7일 이내 <b>이벤트</b></h1></div><div class="kv"><span>10/2(금) 21:30 KST</span><b>美 9월 비농업 고용 (컨센 +10만, 실업률 4.1%)</b></div><div class="src">출처: Mitrade</div><div class="kv"><span>10/8(목)</span><b>KOSPI200 선물옵션 동시만기 (D-6, 둘째 목요일 산출)</b></div><div class="kv"><span>10/28</span><b>FOMC — 25bp 인상 확률 64~70%</b></div><div class="src">출처: Mitrade</div><div class="kv"><span>진행</span><b>美-이란 협상, Anthropic 11월 중순 IPO 보도(Yahoo)</b></div><div class="action">💡 정군 권고: 고용 발표→주말→월요일 갭 순서로 시나리오 2개(강/약) 사전 설정.</div><div class="hidden"><b>🔍 정군 시각/연쇄 분석</b><br>10/8 만기일은 달력 계산값(둘째 목요일)이며 거래소 공시 원문 미확인.</div></section><section class="card" style="--c:#14B8A6"><div class="bar"></div><div class="tag">08 / F&amp;O SIGNAL</div><div class="ttl"><span class="em">🎯</span><h1>F&amp;O 시그널: <b>T5 발동</b> / T1 미발동</h1></div><div class="kv"><span>T1 외인 ±1.5조</span><b>미발동 — 현물 -3,366억(선물 수급 미확보)</b></div><div class="kv"><span>T5 만기 7일 이내</span><b>발동 — 10/8 D-6</b></div><div class="alert">⚠ 9월 외인 현·선물 동반 매수(선물 +2.86조는 9/7까지, Newspim)가 이후 어떻게 변했는지 최신 누적치 미확보 — 후속 점검 필요.</div><div class="view view-bull"><div class="view-head">🟢</div>만기 전 외인 선물 매수 유지 시 베이시스 지지<div class="src">출처: Newspim 9/8</div></div><div class="view view-bear"><div class="view-head">🔴</div>현물 5일 연속 매도 속 선물 청산 시 만기 변동성 확대<div class="src">출처: Newspim 10/1</div></div><div class="hidden"><b>🔍 정군 시각/연쇄 분석</b><br>9월 급락 후 외인 매수 전환 사례(9/2 -4% 이후)가 있어 선물 방향이 SOX보다 선행했습니다. 오늘 최우선 확인 데이터입니다.</div></section><section class="card" style="--c:#A78BFA"><div class="bar"></div><div class="tag">09 / ACTION</div><div class="ttl"><span class="em">⚡</span><h1><b>KICK</b> 매트릭스 + ELW</h1></div><div class="kv"><span>시장 지배력 신호등</span><b>외인선물 ? / SOX ? / 환율 ▼(1,358.4) / 美10Y ▼(5.3%) / WTI ▼($92) → 엇갈림 ★★★</b></div><div class="kv"><span>KICK 당일</span><b>시초 갭 추격 금지, 외인 현물 방향 확인 후 진입</b></div><div class="kv"><span>KICK 1주</span><b>10/2 고용 → 10/8 만기 → 10/28 FOMC 순서로 비중 조절</b></div><div class="action">💡 ELW: 방향 중립(콜 소액 관망). 진입 시 손절 -0.5% 고정. 고용 발표 전 신규 방향성 베팅 회피.</div><div class="hidden"><b>🔍 정군 시각/연쇄 분석</b><br>1~3순위(외인선물·SOX·환율) 중 2개가 미확보라 별점을 ★★★로 보수 산정했습니다.</div></section></body></html>
+.src{font-size:12px;font-style:italic;color:#7d8aa6;margin-top:3px}
+.topic{background:#0f1628;border-radius:10px;padding:9px 11px;margin:8px 0;border:1px solid #1c2640}
+.topic-num{color:var(--c);font-weight:800;font-size:13px}.topic-head{font-weight:700;font-size:16px}
+.topic-bull{font-size:15px;color:#c9d2e4;margin:2px 0}.topic-src{font-size:12px;font-style:italic;color:#7d8aa6}
+.action{background:#1a1433;border:1px solid #A78BFA;border-radius:8px;padding:8px 11px;margin:8px 0;font-size:15px}
+.alert{background:#2a150b;border:1px solid #FF6B35;border-radius:8px;padding:8px 11px;margin:8px 0;font-size:15px}
+.hidden{background:#0b1220;border:1px dashed #2a3a5e;border-radius:8px;padding:8px 11px;margin:8px 0;font-size:14px;color:#aab6cf}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0}.tbl td,.tbl th{border-bottom:1px solid #1c2640;padding:4px 3px;text-align:left}
+.lim{font-size:12px;color:#8a95ad;margin-top:6px}
+</style></head><body>
+<div class="strip">2026.10.05 (월) · HOLIDAY→PRE-MARKET(10/6 개장 대비) · v11 · 9/9</div>
+
+<section class="card" style="--c:#00D4FF"><div class="tag">01 / CORE THESIS</div><div class="emo">🧭</div><h1>美 <b>고용 쇼크가 금리인상 공포를 눌렀다</b>, 그러나 10Y 5.28%·외인 매도가 발목</h1>
+<p>결론: 10/6(화) 개장은 <b>상방 재료(반도체·인상 확률 급락)와 하방 재료(고금리·외인 1조+ 매도)가 맞서는 ★★★ 혼조</b>. 단정 불가.</p>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>9월 비농업 +2.9만(예상 +8.4만), 실업률 4.2%(4.1%↑). 10월 금리인상 확률 64%→16%로 하락. 엔비디아 장중 $237.87 사상 최고, 나스닥 +1.19%.<div class="src">출처: Yahoo Finance(10/2), TheStreet(10/2)</div></div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>美 10Y 5.28%(+0.76%), 30Y 약 5.63%로 고금리 지속. 코스피는 연휴 전 외국인 1조원+ 순매도(SK하이닉스 -1,272억, 삼성전자 -544억).<div class="src">출처: Yahoo Finance(10/2), 파이어뱃 마감(10/2)</div></div>
+<div class="hidden">🔍 정군 시각: 고용 악화가 '호재(인상 확률↓)'로 읽히는 구간이라, 경기둔화 우려로 뒤집히면 급반전 위험. 휴장 3일(10/3~5) 동안 한국만 반영 못 한 갭이 변수.</div></section>
+
+<section class="card" style="--c:#F472B6"><div class="tag">02 / TODAY TOPICS</div><div class="emo">📌</div><h1>오늘의 <b>3 토픽</b></h1>
+<div class="topic"><div class="topic-num">TOPIC 1</div><div class="topic-head">美 9월 고용 +2.9만</div><div class="topic-bull">📰 예상(+8.4만~9만) 대비 1/3 수준, 실업률 4.2%.</div><div class="topic-bull">⚡ 10월 인상 확률 64%→16%, VIX 15.31(-6.59%).</div><div class="topic-bull">💡 정군: 위험자산 우호지만 10Y 5.28%가 상단 제약.</div><div class="topic-src">출처: Yahoo Finance, TheStreet(10/2)</div></div>
+<div class="topic"><div class="topic-num">TOPIC 2</div><div class="topic-head">G7 원유 1억 배럴 비축 방출</div><div class="topic-bull">📰 WTI 선물 $89.39(-3.75%, TheStreet) / $91.11(-1.90%, Yahoo) — 출처별 상이.</div><div class="topic-bull">⚡ 코스피는 10/2 S-Oil +10.69%, SK이노 +9.10% 등 에너지·방산 강세 → 유가 하락 시 되돌림 위험.</div><div class="topic-bull">💡 정군: 에너지 급등주 추격 금지, 유가 $89~91 지지 여부 확인.</div><div class="topic-src">출처: TheStreet, Yahoo Finance, 파이어뱃(10/2)</div></div>
+<div class="topic"><div class="topic-num">TOPIC 3</div><div class="topic-head">스토리지 급락·엔비디아 신고가</div><div class="topic-bull">📰 시게이트 -14.29%, 웨스턴디지털 -12.18%(도시바 HDD 증설), 엔비디아 시총 $5.7조 돌파.</div><div class="topic-bull">⚡ AI 연산 쏠림 vs 스토리지 이탈 — 반도체 내부 차별화.</div><div class="topic-bull">💡 정군: 하이닉스·삼성 영향은 HBM/DRAM 쪽 확인 필요(미검증).</div><div class="topic-src">출처: TheStreet(10/2)</div></div></section>
+
+<section class="card" style="--c:#FFD700"><div class="tag">03 / PATTERN</div><div class="emo">📊</div><h1>시장 <b>지배력 순서</b> 데이터</h1>
+<table class="tbl"><tr><th>지표</th><th>수치</th><th>출처</th></tr>
+<tr><td>S&amp;P500</td><td>7,722.72 (+0.73%)</td><td>Yahoo(10/2)</td></tr>
+<tr><td>나스닥</td><td>27,190.86 (+1.19%)</td><td>Yahoo</td></tr>
+<tr><td>다우</td><td>51,176.96 (+0.49%)</td><td>Yahoo</td></tr>
+<tr><td>SOX</td><td>10/1 +1.59% (10/2 미확보)</td><td>서울신문(10/1)</td></tr>
+<tr><td>원/달러</td><td>1,350.60 (-7.80원)</td><td>철강금속신문(10/2 15:30)</td></tr>
+<tr><td>美 10Y</td><td>5.28% (+0.76%)</td><td>Yahoo</td></tr>
+<tr><td>WTI</td><td>$89.39~91.11</td><td>TheStreet/Yahoo</td></tr>
+<tr><td>VIX</td><td>15.31 (-6.59%)</td><td>Yahoo</td></tr>
+<tr><td>KOSPI</td><td>약 7,004 (+0.48%)</td><td>파이어뱃(10/2)</td></tr></table>
+<div class="alert">⚠ 출처 충돌: S&amp;P 등락 +0.73%(Yahoo) vs +0.89%(TheStreet). 서울신문은 코스피 6,946.55(-0.36%, 장중으로 추정)로 상이 — 파이어뱃 7,004는 전일 6,971.35×1.0048과 맞아 종가로 채택.</div>
+<div class="hidden">🔍 정군 시각: 1순위 외인 선물(누적 미확보), 2 SOX(전일 +1.59%), 3 환율 1,350원대 안정 → 방향 혼재, ★★★.</div></section>
+
+<section class="card" style="--c:#34D399"><div class="tag">04 / VALUATION</div><div class="emo">⚖️</div><h1>코스피 <b>7,000선</b> 밸류 양면</h1>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>골드만삭스는 삼성전자 26만원·SK하이닉스 135만원 목표가를 제시(기사 시점 상이, 현 주가 대비 괴리 미검증).<div class="src">출처: 인포스탁데일리/Investing.com 인용</div></div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>코스피 7,000 재탈환이 외국인 1조원+ 매도와 동반 → 개인·에너지/방산 테마 주도로 질이 낮을 수 있음. 美 10Y 5.28%는 할인율 부담.<div class="src">출처: 파이어뱃(10/2), Yahoo</div></div>
+<div class="action">💡 정군 권고: 지수 밸류 단정 불가. PER·EPS 컨센서스 데이터는 이번 회차 미확보 — 후속 점검 필요.</div></section>
+
+<section class="card" style="--c:#FF6B35"><div class="tag">05 / HIDDEN RISK</div><div class="emo">⚠️</div><h1><b>보이는 것 / 안 보이는 것</b></h1>
+<div class="view view-bull"><div class="view-head">보이는 것</div>고용 부진→인상 확률 16%, 나스닥 신고가권, VIX 15대.</div>
+<div class="view view-bear"><div class="view-head">안 보이는 것</div>① 휴장 3일 갭(한국 미반영) ② 외인 선물 누적 미확보 ③ 에너지주 +9~10% 급등 후 유가 하락 시 되돌림 ④ 고용 악화의 '경기침체' 해석 전환.</div>
+<div class="alert">정군 점검: 코스피 6,971→7,004 상승이 외인 1조+ 매도 속 이뤄짐 — 수급 질 약함.</div></section>
+
+<section class="card" style="--c:#06B6D4"><div class="tag">06 / SECTOR THEME</div><div class="emo">🧩</div><h1>반도체 vs <b>에너지·방산</b></h1>
+<div class="view view-bull"><div class="view-head">🟢 긍정론</div>SOX 10/1 +1.59%, 마이크론 +3.03%($1,097.39), SK하이닉스 ADR +5.08%($193.50).<div class="src">출처: 서울신문(10/1)</div></div>
+<div class="view view-bear"><div class="view-head">🔴 부정론</div>스토리지 쇼크(STX -14.29%, WDC -12.18%), 외인이 하이닉스 -1,272억·삼성 -544억 순매도. 에너지는 G7 비축 방출로 유가 하락 압력.<div class="src">출처: TheStreet, 파이어뱃(10/2)</div></div>
+<div class="hidden">🔍 연쇄: 유가↓ → 에너지주 되돌림 → 자금이 반도체로 이동? 가설 단계, 미검증.</div></section>
+
+<section class="card" style="--c:#EC4899"><div class="tag">07 / EVENT CATALYST</div><div class="emo">🗓️</div><h1>7일 이내 <b>이벤트</b></h1>
+<p class="kv"><b>10/6(화)</b> 코스피 휴장 후 개장 · Paramount/WBD 합병 종료</p>
+<p class="kv"><b>10/8(목)</b> 코스피200 옵션만기(2번째 목요일 기준 산정)</p>
+<p class="kv"><b>주중</b> FOMC 의사록, ISM 서비스, 우에다 BOJ 총재 발언</p>
+<div class="view view-bull"><div class="view-head">🟢</div>인상 확률 16%로 낮아져 의사록이 매파적이어도 충격 제한 가능.<div class="src">출처: Yahoo, DailyForex 주간전망</div></div>
+<div class="view view-bear"><div class="view-head">🔴</div>의사록에서 인상 의지 재확인 시 10Y 5.3%대 돌파 위험.</div></section>
+
+<section class="card" style="--c:#14B8A6"><div class="tag">08 / F&amp;O SIGNAL</div><div class="emo">🎯</div><h1><b>T5 발동</b> (만기 D-3 거래일)</h1>
+<p>T5: 10/8 옵션만기까지 거래일 3일(10/6·7·8) → 발동. T1(외인 ±1.5조): 현물 -1조+로 근접하나 정확치 미확보 → 미발동 판정(미검증).</p>
+<div class="alert">외인 선물 누적 순매수 데이터 미확보 — 후속 점검 필요. 만기 주간 변동성 확대 전제.</div>
+<div class="view view-bull"><div class="view-head">🟢</div>인상 확률 하락으로 만기 전 하방 헤지 수요 감소 가능.</div>
+<div class="view view-bear"><div class="view-head">🔴</div>휴장 갭 + 외인 매도 → 만기 전 프로그램 매물 가능.</div></section>
+
+<section class="card" style="--c:#A78BFA"><div class="tag">09 / ACTION</div><div class="emo">🧠</div><h1><b>KICK 매트릭스</b> + ELW</h1>
+<table class="tbl"><tr><th>시간축</th><th>점검 KICK</th></tr>
+<tr><td>당일 10/6</td><td>개장 갭, 외인 현물·선물 방향, 원/달러 1,350 지지</td></tr>
+<tr><td>1주</td><td>10/8 만기, FOMC 의사록, 美 10Y 5.28% 상단</td></tr></table>
+<div class="action">💡 ELW: 방향 중립(★★★). 시나리오A 외인 매수 전환+환율 안정 → 콜 소액 / B 외인 매도 지속+10Y 5.3% 돌파 → 풋. 어느 쪽이든 손절 -0.5%. 투자 판단은 고객님 몫입니다.</div>
+<div class="lim">한계: 외인 선물 누적·SOX 10/2 종가·EPS 컨센서스 미확보, 일부 수치 출처 충돌. 후속 점검 필요.</div></section>
+</body></html>
